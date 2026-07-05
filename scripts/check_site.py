@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+"""Lightweight checks for the static landing page."""
+
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+SITE = ROOT / "site"
+
+
+def require_file(path: Path) -> str:
+    if not path.exists():
+        raise AssertionError(f"Missing file: {path}")
+    return path.read_text(encoding="utf-8")
+
+
+def main() -> int:
+    try:
+        html = require_file(SITE / "index.html")
+        css = require_file(SITE / "styles.css")
+        require_file(SITE / "README.md")
+        require_file(ROOT / "README.md")
+        require_file(ROOT / "examples" / "sample_audit.md")
+
+        for text in ["GitHub Income Scout", "Starter Audit", "No spam PRs", "scripts/issue_scout.py", "./styles.css"]:
+            if text not in html:
+                raise AssertionError(f"Missing expected HTML text: {text}")
+
+        for text in ["@media", ".hero", ".feature-grid", ".button.primary"]:
+            if text not in css:
+                raise AssertionError(f"Missing expected CSS text: {text}")
+    except AssertionError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 1
+
+    print("site checks OK")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+

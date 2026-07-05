@@ -1,0 +1,11 @@
+{
+  "per_page": 8,
+  "queries": [
+    "label:bounty is:open is:issue language:Python",
+    "bounty is:open is:issue language:Python",
+    "label:\"good first issue\" label:\"help wanted\" is:open is:issue language:Python",
+    "\"GitHub Actions\" label:\"help wanted\" is:open is:issue",
+    "README label:\"help wanted\" is:open is:issue"
+  ]
+}
+

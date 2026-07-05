@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GitHub Income Scout</title>
+    <meta name="description" content="Find and score low-risk GitHub issue opportunities for practical open-source contribution and Starter Audit services.">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">GitHub Income Scout</div>
+      <nav aria-label="Primary">
+        <a href="#tool">Tool</a>
+        <a href="#service">Service</a>
+        <a href="#boundaries">Boundaries</a>
+        <a href="#start">Start</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Low-risk GitHub opportunity research</p>
+          <h1>Find GitHub work worth doing before you spend a weekend on it.</h1>
+          <p class="lede">
+            A small Python tool and Starter Audit workflow for screening public GitHub issues,
+            rejecting unsafe matches, and turning practical opportunities into a focused action plan.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="../README.md">Read the README</a>
+            <a class="button" href="../examples/sample_audit.md">View sample audit</a>
+          </div>
+        </div>
+        <div class="terminal" aria-label="Example report output">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+          </div>
+          <pre><code>| Score | Project        | Task       | Time      |
+| ---:  | ---            | ---        | ---       |
+| 68    | abduznik/bitbox| Small tool | 1-4 hours |
+
+Rejected:
+- fake-engagement risk
+- security exploitation work</code></pre>
+        </div>
+      </section>
+
+      <section id="tool" class="band">
+        <div class="section-head">
+          <p class="eyebrow">Free tool</p>
+          <h2>Screen issues with a conservative filter.</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <h3>Configurable queries</h3>
+            <p>Search for Python, GitHub Actions, documentation, CI, README, and small-tool issues.</p>
+          </article>
+          <article>
+            <h3>Safety filtering</h3>
+            <p>Reject exploit work, fake engagement, credential-sensitive tasks, and platform bypasses.</p>
+          </article>
+          <article>
+            <h3>Useful exports</h3>
+            <p>Generate Markdown for review, CSV for spreadsheets, and JSON for dashboards or automation.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="service" class="service">
+        <div>
+          <p class="eyebrow">Paid service angle</p>
+          <h2>Starter Audit</h2>
+          <p>
+            A fixed-scope report for developers who want a practical GitHub contribution plan without chasing vague bounties.
+          </p>
+        </div>
+        <div class="price-box">
+          <div class="price">USD 29-49</div>
+          <ul>
+            <li>10 screened issue opportunities</li>
+            <li>Top 3 recommended actions</li>
+            <li>Acceptance criteria and risk notes</li>
+            <li>Rejected match summary</li>
+            <li>One profile or README positioning note</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="boundaries" class="band">
+        <div class="section-head">
+          <p class="eyebrow">Clear boundaries</p>
+          <h2>Designed for sustainable work.</h2>
+        </div>
+        <div class="boundary-list">
+          <span>No spam PRs</span>
+          <span>No fake stars or reviews</span>
+          <span>No credential handling</span>
+          <span>No exploit abuse</span>
+          <span>No platform bypasses</span>
+          <span>No income guarantees</span>
+        </div>
+      </section>
+
+      <section id="start" class="start">
+        <h2>Run a local audit</h2>
+        <pre><code>python scripts/issue_scout.py --config examples/queries.json --min-score 60 --include-rejected --output reports/audit_report.md
+python scripts/issue_scout.py --config examples/queries.json --min-score 60 --include-rejected --format csv --output reports/opportunities.csv
+python scripts/issue_scout.py --config examples/queries.json --min-score 60 --include-rejected --format json --output reports/opportunities.json</code></pre>
+      </section>
+    </main>
+  </body>
+</html>
+

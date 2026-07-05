@@ -1,0 +1,22 @@
+[project]
+name = "github-income-scout"
+version = "0.1.0"
+description = "Score low-risk GitHub issue opportunities for practical open-source contribution and service packaging."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "GitHub Income Scout Contributors" }
+]
+keywords = ["github", "open-source", "automation", "issues", "freelance"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Version Control :: Git"
+]
+
+[tool.unittest]
+start-directory = "tests"

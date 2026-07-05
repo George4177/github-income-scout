@@ -1,0 +1,8 @@
+interface:
+  display_name: "GitHub Income Scout"
+  short_description: "Find low-risk GitHub opportunities"
+  default_prompt: "Use $github-income-scout to find low-risk GitHub issue opportunities and package a Starter Audit report."
+
+policy:
+  allow_implicit_invocation: true
+

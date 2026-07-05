@@ -1,0 +1,55 @@
+name: Starter Audit Request
+description: Request a low-risk GitHub opportunity audit.
+title: "[starter-audit] "
+labels:
+  - starter-audit
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to request a scoped GitHub opportunity audit. Do not include passwords, private tokens, payment details, or private repository secrets.
+  - type: input
+    id: github_profile
+    attributes:
+      label: GitHub profile
+      description: Link to the public GitHub profile to review.
+      placeholder: https://github.com/username
+    validations:
+      required: true
+  - type: textarea
+    id: skills
+    attributes:
+      label: Skills and preferred work
+      description: Languages, tools, task types, and areas you want to focus on.
+      placeholder: Python, GitHub Actions, README cleanup, data scripts, small tools
+    validations:
+      required: true
+  - type: textarea
+    id: avoid
+    attributes:
+      label: Work to avoid
+      description: List anything you do not want included.
+      placeholder: Security exploit work, fake engagement, spammy PRs, trading, scraping behind logins
+    validations:
+      required: true
+  - type: dropdown
+    id: weekly_time
+    attributes:
+      label: Weekly time available
+      options:
+        - 1-2 hours
+        - 3-5 hours
+        - 6-10 hours
+        - 10+ hours
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Boundaries
+      options:
+        - label: I understand this audit does not guarantee income, bounty awards, merged PRs, or sponsorship.
+          required: true
+        - label: I will not ask for spam PRs, fake engagement, exploit work, credential handling, or platform bypasses.
+          required: true
+

@@ -1,0 +1,53 @@
+name: Custom Automation Request
+description: Request a scoped GitHub, Python, reporting, or workflow automation project.
+title: "[automation] "
+labels:
+  - custom-automation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for fixed-scope automation requests. Do not include secrets, passwords, tokens, payment details, or private account credentials.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Describe the repeated manual work or workflow bottleneck.
+    validations:
+      required: true
+  - type: textarea
+    id: inputs_outputs
+    attributes:
+      label: Inputs and expected outputs
+      description: List files, public URLs, formats, or reports involved.
+      placeholder: Input CSV -> Markdown report; GitHub issues -> weekly summary; PDF notes -> structured outline
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - GitHub Actions / CI
+        - Python script
+        - Data/report automation
+        - README/docs cleanup
+        - Codex workflow
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How should we know the work is complete?
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Boundaries
+      options:
+        - label: This request does not require secrets, payment information, fake engagement, exploit work, or platform bypasses.
+          required: true
+

@@ -1,0 +1,46 @@
+{
+  "source": "examples/sample_issues.json",
+  "accepted": [
+    {
+      "score": 68,
+      "repository": "algora-io/algora",
+      "title": "[UI Bug] Unauthorized Edit and Delete buttons visible on /bounties page",
+      "url": "https://github.com/algora-io/algora/issues/238",
+      "task_type": "Bug fix",
+      "difficulty": "Medium",
+      "estimated_time": "3-8 hours",
+      "repo_health": "active-looking"
+    },
+    {
+      "score": 68,
+      "repository": "pyfenn/fenn",
+      "title": "Add basic SingleLayerPerceptron Class",
+      "url": "https://github.com/pyfenn/fenn/issues/220",
+      "task_type": "Open-source contribution",
+      "difficulty": "Medium",
+      "estimated_time": "3-8 hours",
+      "repo_health": "small/needs manual check"
+    },
+    {
+      "score": 63,
+      "repository": "abduznik/bitbox",
+      "title": "[tool] seconds_to_hms",
+      "url": "https://github.com/abduznik/bitbox/issues/99",
+      "task_type": "Small tool",
+      "difficulty": "Low-Medium",
+      "estimated_time": "1-4 hours",
+      "repo_health": "small/needs manual check"
+    }
+  ],
+  "rejected": [
+    {
+      "repository": "example/fake-engagement",
+      "rejection_reason": "fake-engagement risk"
+    },
+    {
+      "repository": "example/high-risk",
+      "rejection_reason": "security exploit work; impersonation risk; security exploitation work"
+    }
+  ]
+}
+

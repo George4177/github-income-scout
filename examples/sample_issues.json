@@ -1,0 +1,89 @@
+[
+  {
+    "title": "[tool] seconds_to_hms",
+    "html_url": "https://github.com/abduznik/bitbox/issues/99",
+    "repository_url": "https://api.github.com/repos/abduznik/bitbox",
+    "labels": [
+      {"name": "help wanted"},
+      {"name": "good first issue"},
+      {"name": "tool request"}
+    ],
+    "comments": 0,
+    "created_at": "2026-07-05T11:01:29Z",
+    "updated_at": "2026-07-05T11:01:29Z",
+    "repository": {
+      "stargazers_count": 24,
+      "forks_count": 3,
+      "pushed_at": "2026-07-05T10:00:00Z",
+      "archived": false,
+      "disabled": false
+    },
+    "body": "Converts a number of seconds to h:mm:ss format. Signature run(seconds: str) -> str. Example seconds_to_hms \"3661\" -> \"1:01:01\"."
+  },
+  {
+    "title": "[UI Bug] Unauthorized Edit and Delete buttons visible on /bounties page",
+    "html_url": "https://github.com/algora-io/algora/issues/238",
+    "repository_url": "https://api.github.com/repos/algora-io/algora",
+    "labels": [],
+    "comments": 2,
+    "created_at": "2026-01-01T00:00:00Z",
+    "updated_at": "2026-07-05T00:00:00Z",
+    "repository": {
+      "stargazers_count": 7200,
+      "forks_count": 510,
+      "pushed_at": "2026-07-04T00:00:00Z",
+      "archived": false,
+      "disabled": false
+    },
+    "body": "Unauthorized edit amount and delete buttons are shown to non-owners on a bounty listing page. Backend prevents the action, but UI should hide controls."
+  },
+  {
+    "title": "Add basic SingleLayerPerceptron Class",
+    "html_url": "https://github.com/pyfenn/fenn/issues/220",
+    "repository_url": "https://api.github.com/repos/pyfenn/fenn",
+    "labels": [
+      {"name": "enhancement"},
+      {"name": "help wanted"},
+      {"name": "good first issue"},
+      {"name": "new-contributors-only"}
+    ],
+    "comments": 0,
+    "created_at": "2026-07-05T10:41:21Z",
+    "updated_at": "2026-07-05T11:10:24Z",
+    "repository": {
+      "stargazers_count": 12,
+      "forks_count": 2,
+      "pushed_at": "2026-07-05T08:00:00Z",
+      "archived": false,
+      "disabled": false
+    },
+    "body": "Support creation of SLPs for classification and regression tasks with an API inspired by scikit-learn. Internally use existing Trainers and do not write training-related code here."
+  },
+  {
+    "title": "[BUG] HTTP Desync Attack (Request Smuggling) -> User Impersonation $100",
+    "html_url": "https://github.com/example/high-risk/issues/1",
+    "repository_url": "https://api.github.com/repos/example/high-risk",
+    "labels": [
+      {"name": "bug"},
+      {"name": "bounty"},
+      {"name": "security"}
+    ],
+    "comments": 1,
+    "created_at": "2026-07-05T00:00:00Z",
+    "updated_at": "2026-07-05T00:00:00Z",
+    "body": "Exploit request smuggling to demonstrate user impersonation."
+  },
+  {
+    "title": "[ONBOARD] Star + Review an Open PR",
+    "html_url": "https://github.com/example/fake-engagement/issues/1",
+    "repository_url": "https://api.github.com/repos/example/fake-engagement",
+    "labels": [
+      {"name": "good first issue"},
+      {"name": "bounty"}
+    ],
+    "comments": 0,
+    "created_at": "2026-07-05T00:00:00Z",
+    "updated_at": "2026-07-05T00:00:00Z",
+    "body": "Star the project and review an open PR."
+  }
+]

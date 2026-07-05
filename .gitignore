@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+reports/offline_check.md
+reports/opportunities.md
+

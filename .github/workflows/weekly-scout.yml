@@ -1,0 +1,33 @@
+name: Weekly GitHub Opportunity Scout
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 1 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate Markdown opportunity report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/issue_scout.py --config examples/queries.json --min-score 60 --include-rejected --output -
+      - name: Generate JSON opportunity report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/issue_scout.py --config examples/queries.json --min-score 60 --include-rejected --format json --output -
+      - name: Generate Starter Audit bundle summary
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/build_audit_bundle.py --config examples/queries.json --min-score 60 --enrich-repos --dry-run
