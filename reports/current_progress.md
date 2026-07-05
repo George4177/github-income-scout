@@ -112,6 +112,8 @@ Date: 2026-07-06
 - GitHub CLI is not installed in this environment, so the logged-in GitHub username could not be read from `gh`; Bitbox PR author header still needs confirmation before external PR work.
 - GitHub connector attempted to comment on `abduznik/bitbox#99` but GitHub returned 403 `Resource not accessible by integration`; external comment/PR still needs browser, `gh`, or a connector with broader write access.
 - GitHub connector currently returns no installed repositories for publishing targets.
+- GitHub App is installed for account `George4177`, but repository access currently returns an empty list, so connector-backed publishing cannot proceed until a repository is granted to the app or another GitHub write path is available.
+- The 5-hour heartbeat automation was refreshed on 2026-07-06 with the current next steps: publish the repository if a write path becomes available, otherwise prepare a low-risk Waggle-mcp documentation PR or continue improving service assets.
 
 ## PR Status
 
@@ -124,6 +126,9 @@ Date: 2026-07-06
 - Default branch: `main`
 - Initial commit: `d8c17c2 Initial GitHub Income Scout MVP`
 - Follow-up status commit: `707b166 Record local repository status`
+- Launch asset commit: `dab374b Add launch release assets`
+- Latest opportunity snapshot commit: `d77cd2f Record latest GitHub opportunity snapshot`
+- Starter Audit client brief generator commit: `3d7e584 Add Starter Audit client brief generator`
 - Remote publishing is still pending because the current environment has no usable GitHub repository creation/write path.
 
 ## Most Likely Income Action
