@@ -52,6 +52,12 @@ Build a full Starter Audit delivery bundle:
 C:\Users\77\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe scripts\build_audit_bundle.py --config examples\queries.json --output-dir reports\starter_audit_bundle --min-score 60 --enrich-repos
 ```
 
+Build a client-ready Starter Audit brief from a generated JSON report:
+
+```powershell
+C:\Users\77\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe scripts\build_client_brief.py --opportunities examples\starter_audit_bundle\opportunities.json --client-profile examples\client_profile.json --output reports\client_brief.md --max-items 3
+```
+
 ```powershell
 $env:GITHUB_TOKEN = "ghp_your_token_here"
 ```
@@ -118,6 +124,8 @@ C:\Users\77\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\pyth
 ## Example Service Package
 
 The repository includes a sample client-facing audit in [examples/sample_audit.md](examples/sample_audit.md). It shows how the free tool can support a paid Starter Audit without promising income or submitting low-quality pull requests.
+
+It also includes [examples/sample_client_brief.md](examples/sample_client_brief.md), a short client-ready brief generated from opportunity JSON and a client profile.
 
 ## Launch Assets
 

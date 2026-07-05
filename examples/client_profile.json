@@ -1,0 +1,8 @@
+{
+  "client_name": "Independent Python automation developer",
+  "skills": ["Python", "GitHub Actions", "documentation", "small CLI tools"],
+  "weekly_hours": "3-5",
+  "preferred_tasks": ["small tools", "CI fixes", "docs improvements", "README cleanup"],
+  "avoid": ["security exploit work", "fake engagement", "large unpaid rewrites", "unclear bounty terms"],
+  "budget_note": "Starter Audit scope: USD 29-49 for a hand-curated shortlist and first-action recommendation."
+}

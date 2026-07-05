@@ -31,6 +31,25 @@ def check_example_bundle() -> bool:
     return True
 
 
+def check_client_brief_example() -> bool:
+    print("\n== client brief example ==")
+    path = ROOT / "examples" / "sample_client_brief.md"
+    required = [
+        "Starter Audit Brief",
+        "No income, bounty, merge, or sponsorship guarantees.",
+        "Optional Follow-Up Service",
+    ]
+    if not path.exists():
+        print(f"Missing client brief example: {path}", file=sys.stderr)
+        return False
+    content = path.read_text(encoding="utf-8")
+    for marker in required:
+        if marker not in content:
+            print(f"Missing marker {marker!r} in {path}", file=sys.stderr)
+            return False
+    return True
+
+
 def check_outreach_templates() -> bool:
     print("\n== outreach templates ==")
     template_dir = ROOT / "templates" / "outreach"
@@ -108,10 +127,27 @@ def main() -> int:
                 "--dry-run",
             ],
         ),
+        (
+            "client brief dry-run",
+            [
+                python,
+                "scripts/build_client_brief.py",
+                "--opportunities",
+                "examples/starter_audit_bundle/opportunities.json",
+                "--client-profile",
+                "examples/client_profile.json",
+                "--output",
+                "-",
+                "--max-items",
+                "3",
+            ],
+        ),
     ]
     failed = [name for name, args in steps if not run_step(name, args)]
     if not check_example_bundle():
         failed.append("example starter audit bundle")
+    if not check_client_brief_example():
+        failed.append("client brief example")
     if not check_outreach_templates():
         failed.append("outreach templates")
     if failed:

@@ -28,6 +28,8 @@ Date: 2026-07-06
 - `examples/live_quick.json`: small live-query config
 - `examples/sample_issues.json`: offline validation data
 - `examples/sample_opportunities.md`: sample usage note
+- `examples/client_profile.json`: sample Starter Audit client profile
+- `examples/sample_client_brief.md`: client-ready Starter Audit brief example
 - `examples/delivery_bundle.md`: recommended Markdown/CSV/JSON Starter Audit delivery bundle
 - `.github/ISSUE_TEMPLATE/starter-audit.yml`: GitHub issue form for Starter Audit requests
 - `.github/ISSUE_TEMPLATE/custom-automation.yml`: GitHub issue form for scoped automation requests
@@ -44,6 +46,7 @@ Date: 2026-07-06
 - `site/README.md`: GitHub Pages setup notes
 - `scripts/check_site.py`: static site smoke test
 - `scripts/build_audit_bundle.py`: one-command Starter Audit bundle builder for Markdown, CSV, JSON, and summary
+- `scripts/build_client_brief.py`: converts opportunity JSON plus a client profile into a client-ready Starter Audit brief
 - `scripts/check_all.py`: one-command local validation suite
 - `examples/starter_audit_bundle/summary.md`: static sample bundle summary
 - `examples/starter_audit_bundle/audit_report.md`: static sample client report
@@ -61,6 +64,7 @@ Date: 2026-07-06
 - `reports/opportunity_list.md`: initial money opportunity list
 - `reports/bitbox_pr_precheck.md`: Bitbox contribution precheck
 - `reports/bitbox_external_action_pack.md`: Bitbox issue claim, implementation, test, commit, and PR drafts
+- `reports/client_brief.md`: generated Starter Audit client brief sample for first paid delivery
 - `reports/live_snapshot_2026-07-05.md`: real GitHub query output captured from the tool
 - `reports/live_snapshot_2026-07-06.md`: fresh public GitHub issue-search snapshot with Waggle-mcp docs candidates and Optiland bug candidate
 - `reports/github_profile_readme_draft.md`: GitHub profile README draft
@@ -90,6 +94,7 @@ Date: 2026-07-06
 - Static site smoke test passes with `python scripts/check_site.py`.
 - GitHub Pages workflow file exists and publishes the `site/` folder through GitHub Actions.
 - Starter Audit bundle dry-run passes and is included in the weekly workflow.
+- Client brief dry-run passes and is checked by the full validation suite.
 - Full validation suite passes with `python scripts/check_all.py`.
 - Release bundle helper exists; bundle output is ignored through `dist/`.
 - Static sample Starter Audit bundle is checked by `check_all.py`.
