@@ -64,6 +64,8 @@ Date: 2026-07-06
 - `reports/opportunity_list.md`: initial money opportunity list
 - `reports/bitbox_pr_precheck.md`: Bitbox contribution precheck
 - `reports/bitbox_external_action_pack.md`: Bitbox issue claim, implementation, test, commit, and PR drafts
+- `reports/orrery_pr15_precheck.md`: Orrery headless quickstart PR precheck and risk notes
+- `reports/orrery_pr15_pr_pack.md`: Orrery PR title, body, verification notes, and push checklist
 - `reports/client_brief.md`: generated Starter Audit client brief sample for first paid delivery
 - `reports/live_snapshot_2026-07-05.md`: real GitHub query output captured from the tool
 - `reports/live_snapshot_2026-07-06.md`: fresh public GitHub issue-search snapshot with Waggle-mcp docs candidates and Optiland bug candidate
@@ -108,6 +110,10 @@ Date: 2026-07-06
 - Live quick query also validates with JSON export.
 - Latest live quick query attempt timed out with WinError 10060; previous live runs succeeded, so this is currently treated as network instability rather than a script failure.
 - 2026-07-06 live public GitHub search succeeded and surfaced new candidates: Waggle-mcp docs issues #442 and #444, Optiland issue #659, and one deferred vllm-omni issue that is already assigned.
+- Waggle-mcp #442 was downgraded after deeper review: it depends on PR #419, but #419 is closed as invalid and current `main` does not contain the requested community tools/toggle.
+- Orrery #15 was selected as a safer replacement docs PR candidate: open, unassigned, no comments, no open related PRs found, docs-only.
+- Orrery local branch prepared at `D:/乔治/Github/orrery-pr15` on branch `docs/headless-quickstart`.
+- Orrery local commit prepared: `2ed3391 docs: add headless engine quickstart`.
 - Local Git initialization is blocked by the current environment's `.git` write restriction, so publishing remains a user-confirmed next step.
 - GitHub CLI is not installed in this environment, so the logged-in GitHub username could not be read from `gh`; Bitbox PR author header still needs confirmation before external PR work.
 - GitHub connector attempted to comment on `abduznik/bitbox#99` but GitHub returned 403 `Resource not accessible by integration`; external comment/PR still needs browser, `gh`, or a connector with broader write access.
@@ -119,6 +125,7 @@ Date: 2026-07-06
 
 - No external comments, PRs, bounty claims, or account-bound actions have been made.
 - Next external candidate: `abduznik/bitbox#99`; contribution guide and open PR state have been checked, and the external action pack plus `prepare_bitbox_pr.ps1` helper are ready.
+- Additional local PR candidate prepared: `NDilanka/orrery#15`, with a local branch and PR pack ready but not pushed.
 
 ## Local Git Status
 

@@ -29,3 +29,13 @@ This snapshot uses public GitHub issue search results. It is a screening pass, n
 For a fast public credibility contribution, `Abhigyan-Shekhar/Waggle-mcp#442` is the best current candidate. It is docs-only, has clear acceptance criteria, and avoids security, credentials, scraping, payment, and platform-rule risks.
 
 For direct income, publishing GitHub Income Scout and offering the Starter Audit remains the stronger path because these issues do not show verified payouts.
+
+## Follow-Up Recheck
+
+After deeper review, `Waggle-mcp#442` should not be executed as-is. It depends on PR #419, but #419 is closed, marked invalid, and not merged. Current `main` does not contain the requested `recompute_communities` / `get_communities` tools or Graph Studio community toggle, so a PR based on that issue would risk documenting non-existent behavior.
+
+Replacement candidate selected:
+
+| Project | Link | Task type | Difficulty | Est. value | Est. time | Worth doing |
+| --- | --- | --- | --- | --- | --- | --- |
+| NDilanka/orrery | https://github.com/NDilanka/orrery/issues/15 | Documentation | Low | Portfolio credibility; no verified bounty | 1-2 hours | Yes, local PR branch prepared |
