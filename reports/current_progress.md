@@ -62,6 +62,7 @@ Date: 2026-07-06
 - `reports/bitbox_pr_precheck.md`: Bitbox contribution precheck
 - `reports/bitbox_external_action_pack.md`: Bitbox issue claim, implementation, test, commit, and PR drafts
 - `reports/live_snapshot_2026-07-05.md`: real GitHub query output captured from the tool
+- `reports/live_snapshot_2026-07-06.md`: fresh public GitHub issue-search snapshot with Waggle-mcp docs candidates and Optiland bug candidate
 - `reports/github_profile_readme_draft.md`: GitHub profile README draft
 - `templates/client_intake.md`: client intake form for paid Starter Audit
 - `templates/delivery_checklist.md`: delivery checklist and quality bar
@@ -101,6 +102,7 @@ Date: 2026-07-06
 - Live quick query still runs after adding safety-filter flags; latest run returned PyFenn, Bitbox, and OpenOperator.
 - Live quick query also validates with JSON export.
 - Latest live quick query attempt timed out with WinError 10060; previous live runs succeeded, so this is currently treated as network instability rather than a script failure.
+- 2026-07-06 live public GitHub search succeeded and surfaced new candidates: Waggle-mcp docs issues #442 and #444, Optiland issue #659, and one deferred vllm-omni issue that is already assigned.
 - Local Git initialization is blocked by the current environment's `.git` write restriction, so publishing remains a user-confirmed next step.
 - GitHub CLI is not installed in this environment, so the logged-in GitHub username could not be read from `gh`; Bitbox PR author header still needs confirmation before external PR work.
 - GitHub connector attempted to comment on `abduznik/bitbox#99` but GitHub returned 403 `Resource not accessible by integration`; external comment/PR still needs browser, `gh`, or a connector with broader write access.
