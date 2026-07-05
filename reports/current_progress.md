@@ -16,6 +16,7 @@ Date: 2026-07-06
 - Bitbox `seconds_to_hms`: small Python tool contribution. Low effort, no verified payout, useful as a clean PR candidate.
 - PyFenn SingleLayerPerceptron: larger Python ML API enhancement. Good portfolio value, too large for first monetization step.
 - OpenOperator Action Memory Summarizer: live query candidate, likely broader LLM integration scope, not first.
+- Optiland #659: curvature solve bug for planar surfaces. Selected after live follow-up scan because it was open, unassigned, had no comments, had a self-contained reproduction, and no obvious duplicate open PR.
 - Rejected current bounty-search results involving security exploitation or fake-engagement/onboarding tasks.
 
 ## Files Completed
@@ -68,6 +69,8 @@ Date: 2026-07-06
 - `reports/bitbox_external_action_pack.md`: Bitbox issue claim, implementation, test, commit, and PR drafts
 - `reports/orrery_pr15_precheck.md`: Orrery headless quickstart PR precheck and risk notes
 - `reports/orrery_pr15_pr_pack.md`: Orrery PR title, body, verification notes, and push checklist
+- `reports/live_snapshot_2026-07-06_followup.md`: follow-up live GitHub issue snapshot after prioritizing public launch assets
+- `reports/optiland_issue659_pr_pack.md`: Optiland #659 local fix, test result, and PR body draft
 - `reports/client_brief.md`: generated Starter Audit client brief sample for first paid delivery
 - `reports/live_snapshot_2026-07-05.md`: real GitHub query output captured from the tool
 - `reports/live_snapshot_2026-07-06.md`: fresh public GitHub issue-search snapshot with Waggle-mcp docs candidates and Optiland bug candidate
@@ -125,6 +128,12 @@ Date: 2026-07-06
 - GitHub connector attempted to comment on `abduznik/bitbox#99` but GitHub returned 403 `Resource not accessible by integration`; external comment/PR still needs browser, `gh`, or a connector with broader write access.
 - GitHub connector currently returns no installed repositories for publishing targets.
 - GitHub App is installed for account `George4177`, but repository access currently returns an empty list and the connector does not expose repository creation, so connector-backed publishing cannot proceed until `George4177/George4177` exists and is granted to the app or another GitHub write path is available.
+- Follow-up live scan generated `reports/live_snapshot_2026-07-06_followup.md` with ROS2 docs #4209, Optiland #659, and Waggle-mcp #444.
+- Waggle-mcp #444 was rejected after deeper review because it also depends on closed invalid PR #419 and already has multiple assignment-request comments.
+- ROS2 #4209 remains a possible documentation contribution but is broad, old, and has a related open broken-link PR (#6176), so it is lower priority for a fast credible contribution.
+- Optiland #659 was selected and fixed locally. Local branch prepared at `D:/乔治/Github/optiland-issue659` on branch `fix-curvature-solve-planar-surface`.
+- Optiland local commit prepared: `0e7354d fix: convert planar surfaces in curvature solves`.
+- Optiland targeted verification passed: `17 passed in 1.37s` for `tests/test_solves.py -q -o addopts=`.
 - The 5-hour heartbeat automation was refreshed on 2026-07-06 with the current next steps: publish the repository if a write path becomes available, otherwise prepare a low-risk Waggle-mcp documentation PR or continue improving service assets.
 
 ## PR Status
@@ -132,6 +141,7 @@ Date: 2026-07-06
 - No external comments, PRs, bounty claims, or account-bound actions have been made.
 - Next external candidate: `abduznik/bitbox#99`; contribution guide and open PR state have been checked, and the external action pack plus `prepare_bitbox_pr.ps1` helper are ready.
 - Additional local PR candidate prepared: `NDilanka/orrery#15`, with a local branch and PR pack ready but not pushed.
+- Additional local PR candidate prepared: `optiland/optiland#659`, with a local branch, focused bug fix, regression test, and PR pack ready but not pushed.
 
 ## Local Git Status
 
