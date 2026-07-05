@@ -1,6 +1,6 @@
 # Current Progress Report
 
-Date: 2026-07-05
+Date: 2026-07-06
 
 ## Routes Chosen
 
@@ -21,6 +21,8 @@ Date: 2026-07-05
 ## Files Completed
 
 - `README.md`: installation, validation, free/paid positioning
+- `RELEASE_NOTES.md`: v0.1.0 release notes and launch copy
+- `LAUNCH_CHECKLIST.md`: first-week launch and revenue checklist
 - `scripts/issue_scout.py`: configurable GitHub issue scanner with scoring, safety filtering, optional repository health enrichment, `--min-score`, `--include-rejected`, and Markdown/JSON/CSV export
 - `examples/queries.json`: default query pack
 - `examples/live_quick.json`: small live-query config
@@ -32,6 +34,7 @@ Date: 2026-07-05
 - `profile/README.md`: GitHub profile README package
 - `profile/SERVICES.md`: profile services page
 - `scripts/publish_repo.ps1`: helper to publish the repo when `git` and `gh` are available
+- `scripts/create_release_bundle.ps1`: helper to create a local v0.1.0 release ZIP
 - `scripts/prepare_bitbox_pr.ps1`: helper to fork Bitbox, add the tool, test, push, and open PR when `git` and `gh` are available
 - `codex-skills/github-income-scout/SKILL.md`: reusable Codex skill draft for GitHub opportunity scouting
 - `codex-skills/github-income-scout/agents/openai.yaml`: UI metadata for the skill draft
@@ -69,6 +72,7 @@ Date: 2026-07-05
 - `templates/outreach/community_post.md`: community post drafts
 - `templates/outreach/direct_message.md`: low-pressure direct-message drafts
 - `templates/outreach/service_reply.md`: Starter Audit inquiry reply template
+- `templates/outreach/launch_sequence.md`: first-launch profile, community, reply, and follow-up drafts
 - `reports/current_progress.md`: this progress report
 
 ## Validation Status
@@ -86,6 +90,7 @@ Date: 2026-07-05
 - GitHub Pages workflow file exists and publishes the `site/` folder through GitHub Actions.
 - Starter Audit bundle dry-run passes and is included in the weekly workflow.
 - Full validation suite passes with `python scripts/check_all.py`.
+- Release bundle helper exists; bundle output is ignored through `dist/`.
 - Static sample Starter Audit bundle is checked by `check_all.py`.
 - Outreach templates are checked by `check_all.py` for non-hype, low-risk boundary language.
 - Local file generation through normal shell/Python is blocked by the current desktop sandbox, but the script code includes normal file output for user environments.
@@ -111,6 +116,7 @@ Date: 2026-07-05
 - Local repository initialized.
 - Default branch: `main`
 - Initial commit: `d8c17c2 Initial GitHub Income Scout MVP`
+- Follow-up status commit: `707b166 Record local repository status`
 - Remote publishing is still pending because the current environment has no usable GitHub repository creation/write path.
 
 ## Most Likely Income Action

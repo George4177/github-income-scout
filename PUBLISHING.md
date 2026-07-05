@@ -8,6 +8,12 @@ Use this checklist before publishing the repository or making external GitHub mo
 C:\Users\77\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe scripts\check_all.py
 ```
 
+Optional release bundle:
+
+```powershell
+.\scripts\create_release_bundle.ps1 -Version v0.1.0
+```
+
 ## Repository Setup
 
 - Create a public GitHub repository named `github-income-scout`
@@ -27,7 +33,9 @@ Automated helper when `git` and `gh` are available:
 ## First Public Release
 
 - Tag: `v0.1.0`
-- Include: README, sample audit, pricing notes, service offer, tests
+- Include: README, release notes, launch checklist, sample audit, pricing notes, service offer, static site, tests
+- Use [RELEASE_NOTES.md](RELEASE_NOTES.md) as the release body.
+- Use [LAUNCH_CHECKLIST.md](LAUNCH_CHECKLIST.md) for first-week execution.
 - Avoid: income guarantees, bounty guarantees, fake urgency, mass outreach
 
 ## GitHub Pages

@@ -21,7 +21,7 @@ This tool does not automate pull requests, comments, account creation, bounty cl
 ## Quick Start
 
 ```powershell
-cd D:\乔治\Github\github-income-scout
+cd path\to\github-income-scout
 C:\Users\77\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe scripts\issue_scout.py --config examples\queries.json --output reports\opportunities.md
 ```
 
@@ -119,6 +119,16 @@ C:\Users\77\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\pyth
 
 The repository includes a sample client-facing audit in [examples/sample_audit.md](examples/sample_audit.md). It shows how the free tool can support a paid Starter Audit without promising income or submitting low-quality pull requests.
 
+## Launch Assets
+
+The repository includes public-launch assets so the MVP can be published quickly:
+
+- [RELEASE_NOTES.md](RELEASE_NOTES.md): v0.1.0 release body and launch copy
+- [LAUNCH_CHECKLIST.md](LAUNCH_CHECKLIST.md): first-week publishing and revenue checklist
+- [PUBLISHING.md](PUBLISHING.md): repository setup steps
+- [templates/outreach/launch_sequence.md](templates/outreach/launch_sequence.md): cautious first-launch outreach drafts
+- [scripts/create_release_bundle.ps1](scripts/create_release_bundle.ps1): local ZIP bundle helper for `v0.1.0`
+
 ## Lead Capture
 
 The repository includes GitHub issue forms for:
@@ -129,6 +139,16 @@ The repository includes GitHub issue forms for:
 These forms are intentionally scoped to avoid secrets, credentials, fake engagement, exploit work, and platform bypasses.
 
 The `templates/outreach/` folder includes low-pressure publishing and reply drafts for GitHub profile placement, community posts, direct messages, and Starter Audit inquiries.
+
+## Release Bundle
+
+Create a local release ZIP:
+
+```powershell
+.\scripts\create_release_bundle.ps1 -Version v0.1.0
+```
+
+The generated `dist/` folder is intentionally ignored by Git.
 
 ## Static Site
 

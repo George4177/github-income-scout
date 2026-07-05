@@ -1,6 +1,6 @@
 __pycache__/
 *.pyc
 .env
+dist/
 reports/offline_check.md
 reports/opportunities.md
-
