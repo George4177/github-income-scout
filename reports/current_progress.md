@@ -30,10 +30,12 @@ Date: 2026-07-06
 - `examples/sample_opportunities.md`: sample usage note
 - `examples/client_profile.json`: sample Starter Audit client profile
 - `examples/sample_client_brief.md`: client-ready Starter Audit brief example
+- `examples/starter_audit_case_study.md`: public Starter Audit case study for sales positioning
 - `examples/delivery_bundle.md`: recommended Markdown/CSV/JSON Starter Audit delivery bundle
 - `.github/ISSUE_TEMPLATE/starter-audit.yml`: GitHub issue form for Starter Audit requests
 - `.github/ISSUE_TEMPLATE/custom-automation.yml`: GitHub issue form for scoped automation requests
 - `profile/README.md`: GitHub profile README package
+- `profile/PUBLISH_PROFILE.md`: GitHub profile repository publishing checklist and first public post copy
 - `profile/SERVICES.md`: profile services page
 - `scripts/publish_repo.ps1`: helper to publish the repo when `git` and `gh` are available
 - `scripts/create_release_bundle.ps1`: helper to create a local v0.1.0 release ZIP
@@ -101,6 +103,7 @@ Date: 2026-07-06
 - Release bundle helper exists; bundle output is ignored through `dist/`.
 - Static sample Starter Audit bundle is checked by `check_all.py`.
 - Outreach templates are checked by `check_all.py` for non-hype, low-risk boundary language.
+- Profile publishing assets and Starter Audit case study are checked by `check_all.py`.
 - Local file generation through normal shell/Python is blocked by the current desktop sandbox, but the script code includes normal file output for user environments.
 - Live GitHub API calls were intermittently available; initial issue data was retrieved, later calls timed out.
 - A 5-hour heartbeat automation was created to continue this same thread once the current work window ends.
@@ -114,11 +117,14 @@ Date: 2026-07-06
 - Orrery #15 was selected as a safer replacement docs PR candidate: open, unassigned, no comments, no open related PRs found, docs-only.
 - Orrery local branch prepared at `D:/乔治/Github/orrery-pr15` on branch `docs/headless-quickstart`.
 - Orrery local commit prepared: `2ed3391 docs: add headless engine quickstart`.
-- Local Git initialization is blocked by the current environment's `.git` write restriction, so publishing remains a user-confirmed next step.
+- Local Git commits now work in the MVP repository and the local Profile repository.
+- Profile README publishing was prioritized after user instruction to "throw the service out first".
+- Local Profile repository prepared at `D:/乔治/Github/George4177` with commit `16effd2 Add profile service README`.
+- Push to `https://github.com/George4177/George4177.git` returned `Repository not found`, confirming that the remote Profile repository is not currently available to push to.
 - GitHub CLI is not installed in this environment, so the logged-in GitHub username could not be read from `gh`; Bitbox PR author header still needs confirmation before external PR work.
 - GitHub connector attempted to comment on `abduznik/bitbox#99` but GitHub returned 403 `Resource not accessible by integration`; external comment/PR still needs browser, `gh`, or a connector with broader write access.
 - GitHub connector currently returns no installed repositories for publishing targets.
-- GitHub App is installed for account `George4177`, but repository access currently returns an empty list, so connector-backed publishing cannot proceed until a repository is granted to the app or another GitHub write path is available.
+- GitHub App is installed for account `George4177`, but repository access currently returns an empty list and the connector does not expose repository creation, so connector-backed publishing cannot proceed until `George4177/George4177` exists and is granted to the app or another GitHub write path is available.
 - The 5-hour heartbeat automation was refreshed on 2026-07-06 with the current next steps: publish the repository if a write path becomes available, otherwise prepare a low-risk Waggle-mcp documentation PR or continue improving service assets.
 
 ## PR Status
@@ -136,19 +142,22 @@ Date: 2026-07-06
 - Launch asset commit: `dab374b Add launch release assets`
 - Latest opportunity snapshot commit: `d77cd2f Record latest GitHub opportunity snapshot`
 - Starter Audit client brief generator commit: `3d7e584 Add Starter Audit client brief generator`
-- Remote publishing is still pending because the current environment has no usable GitHub repository creation/write path.
+- Orrery candidate prep commit: `a54aaa2 Record Orrery PR candidate preparation`
+- Profile repository local commit: `16effd2 Add profile service README` in `D:/乔治/Github/George4177`
+- Remote publishing is still pending because the current environment has no usable GitHub repository creation path and the target Profile repository does not yet exist remotely.
 
 ## Most Likely Income Action
 
 The fastest income path is to publish/polish GitHub Income Scout as a portfolio repo and offer a small "Starter Audit" service at USD 29-49. This is more controllable than waiting for bounty approval and can directly target developers who want contribution opportunities.
 
-## Next Confirmation Needed
+## Authorized External Moves Pending Tool Access
 
-Authorized next external moves when tool access allows:
+User has authorized GitHub publishing and account operations for this project, while the standing safety boundary remains: no payment data, private tokens, passwords, or platform-rule abuse.
 
 1. Publish `github-income-scout` as a new GitHub repository.
-2. Comment on `abduznik/bitbox#99` to claim the `seconds_to_hms` issue.
-3. Open a draft PR for Bitbox after creating the tool file with the correct GitHub username in the header.
+2. Create and publish the `George4177/George4177` Profile repository using the prepared local `README.md`.
+3. Comment on `abduznik/bitbox#99` to claim the `seconds_to_hms` issue.
+4. Open a draft PR for Bitbox after creating the tool file with the correct GitHub username in the header.
 
 ## Gap to Covering Membership Cost
 

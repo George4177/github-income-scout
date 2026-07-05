@@ -24,8 +24,9 @@ def main() -> int:
         require_file(SITE / "README.md")
         require_file(ROOT / "README.md")
         require_file(ROOT / "examples" / "sample_audit.md")
+        require_file(ROOT / "examples" / "starter_audit_case_study.md")
 
-        for text in ["GitHub Income Scout", "Starter Audit", "No spam PRs", "scripts/issue_scout.py", "./styles.css"]:
+        for text in ["GitHub Income Scout", "Starter Audit", "No spam PRs", "scripts/issue_scout.py", "./styles.css", "Read case study"]:
             if text not in html:
                 raise AssertionError(f"Missing expected HTML text: {text}")
 
@@ -42,4 +43,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -50,6 +50,23 @@ def check_client_brief_example() -> bool:
     return True
 
 
+def check_profile_publish_assets() -> bool:
+    print("\n== profile publish assets ==")
+    required = {
+        ROOT / "profile" / "README.md": "Available for Fixed-Scope Work",
+        ROOT / "profile" / "PUBLISH_PROFILE.md": "George4177/George4177/README.md",
+        ROOT / "examples" / "starter_audit_case_study.md": "Starter Audit Case Study",
+    }
+    for path, marker in required.items():
+        if not path.exists():
+            print(f"Missing profile asset: {path}", file=sys.stderr)
+            return False
+        if marker not in path.read_text(encoding="utf-8"):
+            print(f"Missing marker {marker!r} in {path}", file=sys.stderr)
+            return False
+    return True
+
+
 def check_outreach_templates() -> bool:
     print("\n== outreach templates ==")
     template_dir = ROOT / "templates" / "outreach"
@@ -148,6 +165,8 @@ def main() -> int:
         failed.append("example starter audit bundle")
     if not check_client_brief_example():
         failed.append("client brief example")
+    if not check_profile_publish_assets():
+        failed.append("profile publish assets")
     if not check_outreach_templates():
         failed.append("outreach templates")
     if failed:

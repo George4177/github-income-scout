@@ -2,6 +2,14 @@
 
 GitHub Income Scout helps independent developers find low-risk GitHub opportunities they can act on without spamming maintainers or chasing vague "make money online" ideas.
 
+## Hire This as a Starter Audit
+
+If you want this workflow applied to your own GitHub profile, the fixed-scope Starter Audit is the fastest entry point.
+
+You provide your GitHub profile, preferred languages/tools, weekly time budget, and work boundaries. The deliverable is a short report with screened opportunities, top 3 recommended actions, risk notes, and one positioning suggestion.
+
+Suggested first package: USD 29-49. See [service_offer.md](service_offer.md), [pricing.md](pricing.md), and [examples/starter_audit_case_study.md](examples/starter_audit_case_study.md).
+
 It searches public GitHub issues, scores them with conservative heuristics, and produces a Markdown report with:
 
 - task type
@@ -126,6 +134,8 @@ C:\Users\77\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\pyth
 The repository includes a sample client-facing audit in [examples/sample_audit.md](examples/sample_audit.md). It shows how the free tool can support a paid Starter Audit without promising income or submitting low-quality pull requests.
 
 It also includes [examples/sample_client_brief.md](examples/sample_client_brief.md), a short client-ready brief generated from opportunity JSON and a client profile.
+
+For a clearer sales example, see [examples/starter_audit_case_study.md](examples/starter_audit_case_study.md). It explains the client input, screening process, rejected-match logic, deliverables, and follow-up offer.
 
 ## Launch Assets
 

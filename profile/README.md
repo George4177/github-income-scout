@@ -1,59 +1,60 @@
-# Practical Automation for GitHub, Reports, and Developer Workflows
+# George4177
 
-I build small, maintainable tools that remove repeated manual work.
+I build small Python and GitHub workflow tools for developers who want practical automation, cleaner project presentation, and better open-source contribution plans.
 
-Focus areas:
+## Available for Fixed-Scope Work
+
+### GitHub Starter Audit
+
+A focused report for developers who want to find realistic GitHub issues they can work on without spamming maintainers or chasing vague bounty leads.
+
+Typical deliverables:
+
+- 10 screened GitHub issue opportunities
+- top 3 recommended first actions
+- acceptance criteria and failure-risk notes
+- rejected high-risk or poor-fit matches
+- one GitHub profile or README positioning suggestion
+
+Suggested first package: USD 29-49.
+
+### Automation and Documentation
+
+I can also help with:
 
 - Python automation scripts
 - GitHub Actions and CI cleanup
 - README and documentation improvements
-- GitHub issue research and contribution planning
 - Markdown, CSV, JSON, PDF, and report workflows
+- lightweight dashboards or export scripts
 - Codex-assisted workflow templates
 
 ## Featured Project
 
 ### GitHub Income Scout
 
-Find and score low-risk GitHub issue opportunities for practical open-source contribution.
+GitHub Income Scout is a local Python tool for finding and scoring low-risk GitHub issue opportunities.
 
-What it does:
+It helps turn public GitHub issue searches into a practical action plan with:
 
-- searches public GitHub issues
-- scores opportunities by fit and risk
-- rejects exploit work, fake engagement, credential-sensitive tasks, and platform-bypass requests
-- exports Markdown, CSV, and JSON reports
-- includes templates for a fixed-scope Starter Audit service
+- task type and difficulty estimates
+- likely time cost
+- acceptance signals
+- safety filtering
+- Markdown, CSV, and JSON exports
+- Starter Audit templates and sample delivery files
 
-## Services
+Start here:
 
-### Starter Audit
-
-A small GitHub opportunity audit for developers who want a focused contribution plan.
-
-Deliverables:
-
-- screened GitHub issue list
-- top 3 recommended actions
-- acceptance criteria and risk notes
-- rejected high-risk/fake-engagement matches when relevant
-- one profile or README positioning suggestion
-
-### Custom Automation
-
-Fixed-scope tools for repeated workflows:
-
-- issue research reports
-- GitHub Actions cleanup
-- data/report generation
-- README and docs automation
-- lightweight dashboards or export scripts
+- README: `github-income-scout/README.md`
+- sample audit: `github-income-scout/examples/sample_audit.md`
+- case study: `github-income-scout/examples/starter_audit_case_study.md`
+- pricing notes: `github-income-scout/pricing.md`
 
 ## Working Boundaries
 
-I do not work on spam PRs, fake stars/reviews, exploit abuse, credential handling, scraping behind logins, payment bypasses, or platform rule evasion.
+I do not work on spam PRs, fake stars or reviews, exploit abuse, credential handling, scraping behind logins, payment bypasses, or platform rule evasion.
 
 ## Contact
 
-Use the pinned repository issue forms for Starter Audit or Custom Automation requests.
-
+Open a Starter Audit or Custom Automation request in the pinned repository issue forms.
