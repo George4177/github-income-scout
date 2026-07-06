@@ -135,6 +135,8 @@ Date: 2026-07-06
 - Public MVP repository created and pushed: `https://github.com/George4177/github-income-scout`.
 - MVP repository topics set: `automation`, `developer-tools`, `github-actions`, `open-source`, `python`.
 - Profile README updated to link directly to the public MVP repository, sample audit, case study, and pricing notes.
+- Profile Contact section updated with direct Starter Audit and Custom Automation request links.
+- Public MVP repository labels created for inbound requests: `starter-audit` and `custom-automation`.
 - GitHub GraphQL schema exposed through the current account does not include a profile repository pin mutation; pinning `github-income-scout` remains a manual GitHub profile UI step.
 - Bitbox #99 was rechecked live on 2026-07-06: open, unassigned, no comments, and no duplicate `seconds_to_hms` PR.
 - External claim comment posted on Bitbox #99: `https://github.com/abduznik/bitbox/issues/99#issuecomment-4892570171`.
@@ -173,6 +175,7 @@ Date: 2026-07-06
 - Orrery candidate prep commit: `a54aaa2 Record Orrery PR candidate preparation`
 - Profile repository local commit: `16effd2 Add profile service README` in `D:/乔治/Github/George4177`
 - Profile repository follow-up commit: `fb3f0a7 Link featured project to public repo`
+- Profile repository follow-up commit: `273340f Add direct request links`
 - MVP repository latest published commit: `f3efd30 Record profile repository launch`
 - Bitbox fork branch: `tool/seconds-to-hms`
 - Bitbox PR commit: `131d27c Add seconds_to_hms tool`

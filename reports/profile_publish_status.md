@@ -13,6 +13,7 @@ The GitHub profile repository has been created and published.
 - Published commits:
   - `16effd2 Add profile service README`
   - `fb3f0a7 Link featured project to public repo`
+  - `273340f Add direct request links`
 
 ## Verification
 
@@ -21,6 +22,8 @@ The GitHub profile repository has been created and published.
 - Local `main` was pushed to `origin/main`.
 - `README.md` was read back from GitHub through the GitHub connector.
 - The Featured Project links now point to the public `github-income-scout` repository.
+- The Contact section now links directly to the Starter Audit and Custom Automation issue forms.
+- The `starter-audit` and `custom-automation` labels exist in `George4177/github-income-scout`.
 
 ## Current Public Offer
 
