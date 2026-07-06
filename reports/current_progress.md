@@ -38,7 +38,8 @@ Date: 2026-07-06
 - `profile/README.md`: GitHub profile README package
 - `profile/PUBLISH_PROFILE.md`: GitHub profile repository publishing checklist and first public post copy
 - `profile/SERVICES.md`: profile services page
-- `scripts/publish_repo.ps1`: helper to publish the repo when `git` and `gh` are available
+- `scripts/publish_repo.ps1`: helper to publish a repo when `git` plus either `gh` or `GITHUB_TOKEN` is available
+- `scripts/publish_profile_repo.ps1`: helper to publish the prepared `George4177/George4177` Profile README repository
 - `scripts/create_release_bundle.ps1`: helper to create a local v0.1.0 release ZIP
 - `scripts/prepare_bitbox_pr.ps1`: helper to fork Bitbox, add the tool, test, push, and open PR when `git` and `gh` are available
 - `codex-skills/github-income-scout/SKILL.md`: reusable Codex skill draft for GitHub opportunity scouting
@@ -107,6 +108,7 @@ Date: 2026-07-06
 - Static sample Starter Audit bundle is checked by `check_all.py`.
 - Outreach templates are checked by `check_all.py` for non-hype, low-risk boundary language.
 - Profile publishing assets and Starter Audit case study are checked by `check_all.py`.
+- Publish scripts are checked by `check_all.py` for the `gh` and `GITHUB_TOKEN` repository creation paths.
 - Local file generation through normal shell/Python is blocked by the current desktop sandbox, but the script code includes normal file output for user environments.
 - Live GitHub API calls were intermittently available; initial issue data was retrieved, later calls timed out.
 - A 5-hour heartbeat automation was created to continue this same thread once the current work window ends.

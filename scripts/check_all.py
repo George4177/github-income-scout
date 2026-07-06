@@ -67,6 +67,35 @@ def check_profile_publish_assets() -> bool:
     return True
 
 
+def check_publish_scripts() -> bool:
+    print("\n== publish scripts ==")
+    required = {
+        "publish_repo.ps1": [
+            "GITHUB_TOKEN",
+            "Ensure-GitHubRepository",
+            "gh repo create",
+            "Published repository:",
+        ],
+        "publish_profile_repo.ps1": [
+            "profile/README.md",
+            "publish_repo.ps1",
+            "Update profile service README",
+        ],
+    }
+    script_dir = ROOT / "scripts"
+    for filename, markers in required.items():
+        path = script_dir / filename
+        if not path.exists():
+            print(f"Missing publish script: {path}", file=sys.stderr)
+            return False
+        content = path.read_text(encoding="utf-8")
+        for marker in markers:
+            if marker not in content:
+                print(f"Missing marker {marker!r} in {path}", file=sys.stderr)
+                return False
+    return True
+
+
 def check_outreach_templates() -> bool:
     print("\n== outreach templates ==")
     template_dir = ROOT / "templates" / "outreach"
@@ -167,6 +196,8 @@ def main() -> int:
         failed.append("client brief example")
     if not check_profile_publish_assets():
         failed.append("profile publish assets")
+    if not check_publish_scripts():
+        failed.append("publish scripts")
     if not check_outreach_templates():
         failed.append("outreach templates")
     if failed:

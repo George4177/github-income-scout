@@ -146,6 +146,8 @@ The repository includes public-launch assets so the MVP can be published quickly
 - [PUBLISHING.md](PUBLISHING.md): repository setup steps
 - [templates/outreach/launch_sequence.md](templates/outreach/launch_sequence.md): cautious first-launch outreach drafts
 - [scripts/create_release_bundle.ps1](scripts/create_release_bundle.ps1): local ZIP bundle helper for `v0.1.0`
+- [scripts/publish_repo.ps1](scripts/publish_repo.ps1): publish helper for `gh` or `GITHUB_TOKEN` environments
+- [scripts/publish_profile_repo.ps1](scripts/publish_profile_repo.ps1): publishes the prepared GitHub Profile README repository
 
 ## Lead Capture
 

@@ -30,6 +30,14 @@ Automated helper when `git` and `gh` are available:
 .\scripts\publish_repo.ps1
 ```
 
+If `gh` is not installed but `GITHUB_TOKEN` is available with repository creation permissions, the same script can create the repository through the GitHub API and push with a temporary Git authorization header. It does not write the token into the remote URL.
+
+To publish the prepared GitHub Profile README repository:
+
+```powershell
+.\scripts\publish_profile_repo.ps1 -Username George4177
+```
+
 ## First Public Release
 
 - Tag: `v0.1.0`
