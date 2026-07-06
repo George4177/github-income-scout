@@ -76,6 +76,7 @@ Date: 2026-07-06
 - `reports/orrery_pr23_status.md`: Orrery PR #23 status, links, and verification results
 - `reports/tg_spam_filter_issue2_body.md`: final PR body used for tg-spam-filter #3
 - `reports/tg_spam_filter_pr3_status.md`: tg-spam-filter PR #3 status, links, and verification results
+- `reports/public_launch_status.md`: GitHub Pages, homepage, release, release asset, and conversion-link verification
 - `reports/live_snapshot_2026-07-06_followup.md`: follow-up live GitHub issue snapshot after prioritizing public launch assets
 - `reports/live_snapshot_2026-07-06_evening.md`: expanded live GitHub issue-search snapshot with 24 screened opportunities and rejected safety-filter matches
 - `reports/live_snapshot_2026-07-06_late.md`: late quick scan showing Waggle docs issues and Bitbox
@@ -161,6 +162,13 @@ Date: 2026-07-06
 - Fork created: `https://github.com/George4177/tg-spam-filter`.
 - tg-spam-filter PR opened: `https://github.com/profit-coders/tg-spam-filter/pull/3`.
 - tg-spam-filter PR #3 is open and mergeable; no status checks are currently reported.
+- Landing page CTA links were updated to point directly to the Starter Audit issue form, Custom Automation issue form, pricing notes, sample audit, case study, and free repository.
+- GitHub Pages was enabled for `George4177/github-income-scout` using workflow deployment.
+- Pages workflow run `28791578995` completed successfully and the landing page returned HTTP `200 OK`.
+- Repository homepage now points to `https://george4177.github.io/github-income-scout/`.
+- Release helper `scripts/create_release_bundle.ps1` was fixed to fail if the staging directory is empty or the ZIP is not created.
+- Release ZIP generated successfully: `dist/github-income-scout-v0.1.0.zip` at 60,860 bytes.
+- GitHub release published: `https://github.com/George4177/github-income-scout/releases/tag/v0.1.0`.
 - GitHub connector attempted to comment on `abduznik/bitbox#99` but GitHub returned 403 `Resource not accessible by integration`; external comment/PR still needs browser, `gh`, or a connector with broader write access.
 - GitHub connector can read the published Profile repository README, but repository creation was completed through GitHub CLI because the connector does not expose a repository-creation API.
 - Follow-up live scan generated `reports/live_snapshot_2026-07-06_followup.md` with ROS2 docs #4209, Optiland #659, and Waggle-mcp #444.
@@ -202,12 +210,15 @@ Date: 2026-07-06
 - Orrery PR commit: `2ed3391 docs: add headless engine quickstart`
 - tg-spam-filter fork branch: `docs/contribution-polish`
 - tg-spam-filter PR commit: `29df9a0 docs: update contribution guidance`
+- MVP repository latest published commit: `aba177e Fix release bundle creation`
+- MVP release: `v0.1.0 - Starter Audit MVP`
+- MVP landing page: `https://george4177.github.io/github-income-scout/`
 - Profile remote publishing is complete: `https://github.com/George4177/George4177`.
 - Main MVP repository publishing is complete: `https://github.com/George4177/github-income-scout`.
 
 ## Most Likely Income Action
 
-The fastest income path is now active: the public GitHub profile advertises a small "Starter Audit" service at USD 29-49, and the public GitHub Income Scout repository backs the offer with a working tool. The next strongest action is to pin the repository from the GitHub profile UI and use the prepared low-pressure outreach copy.
+The fastest income path is now active: the public GitHub profile advertises a small "Starter Audit" service at USD 29-49, the public GitHub Income Scout repository backs the offer with a working tool, and the GitHub Pages landing page plus v0.1.0 release make the offer easier to inspect. The next strongest action is to pin the repository from the GitHub profile UI and use the prepared low-pressure outreach copy.
 
 ## Authorized External Moves Pending Tool Access
 

@@ -8,7 +8,7 @@ If you want this workflow applied to your own GitHub profile, the fixed-scope St
 
 You provide your GitHub profile, preferred languages/tools, weekly time budget, and work boundaries. The deliverable is a short report with screened opportunities, top 3 recommended actions, risk notes, and one positioning suggestion.
 
-Suggested first package: USD 29-49. See [service_offer.md](service_offer.md), [pricing.md](pricing.md), and [examples/starter_audit_case_study.md](examples/starter_audit_case_study.md).
+Suggested first package: USD 29-49. Start from the [landing page](https://george4177.github.io/github-income-scout/), or see [service_offer.md](service_offer.md), [pricing.md](pricing.md), and [examples/starter_audit_case_study.md](examples/starter_audit_case_study.md).
 
 It searches public GitHub issues, scores them with conservative heuristics, and produces a Markdown report with:
 
@@ -156,6 +156,11 @@ The repository includes GitHub issue forms for:
 - Starter Audit requests
 - Custom Automation requests
 
+Direct request links:
+
+- [Starter Audit request](https://github.com/George4177/github-income-scout/issues/new?template=starter-audit.yml)
+- [Custom Automation request](https://github.com/George4177/github-income-scout/issues/new?template=custom-automation.yml)
+
 These forms are intentionally scoped to avoid secrets, credentials, fake engagement, exploit work, and platform bypasses.
 
 The `templates/outreach/` folder includes low-pressure publishing and reply drafts for GitHub profile placement, community posts, direct messages, and Starter Audit inquiries.
@@ -172,6 +177,13 @@ The generated `dist/` folder is intentionally ignored by Git.
 
 ## Static Site
 
-The `site/` folder contains a no-build landing page suitable for GitHub Pages. It presents the tool, Starter Audit service, boundaries, and example commands.
+The published landing page is available at <https://george4177.github.io/github-income-scout/>.
+
+The `site/` folder contains the no-build landing page for GitHub Pages. It presents the tool, Starter Audit service, boundaries, direct request links, and example commands.
 
 The included `Deploy GitHub Pages` workflow publishes the `site/` folder when GitHub Pages is configured to use GitHub Actions.
+
+## Current Release
+
+- [v0.1.0 - Starter Audit MVP](https://github.com/George4177/github-income-scout/releases/tag/v0.1.0)
+- [Release ZIP](https://github.com/George4177/github-income-scout/releases/download/v0.1.0/github-income-scout-v0.1.0.zip)
