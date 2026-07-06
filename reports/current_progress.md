@@ -68,6 +68,8 @@ Date: 2026-07-06
 - `reports/opportunity_list.md`: initial money opportunity list
 - `reports/bitbox_pr_precheck.md`: Bitbox contribution precheck
 - `reports/bitbox_external_action_pack.md`: Bitbox issue claim, implementation, test, commit, and PR drafts
+- `reports/bitbox_pr125_body.md`: final PR body used to fix GitHub PR formatting
+- `reports/bitbox_pr125_status.md`: Bitbox PR #125 status, links, and verification results
 - `reports/orrery_pr15_precheck.md`: Orrery headless quickstart PR precheck and risk notes
 - `reports/orrery_pr15_pr_pack.md`: Orrery PR title, body, verification notes, and push checklist
 - `reports/live_snapshot_2026-07-06_followup.md`: follow-up live GitHub issue snapshot after prioritizing public launch assets
@@ -134,6 +136,11 @@ Date: 2026-07-06
 - MVP repository topics set: `automation`, `developer-tools`, `github-actions`, `open-source`, `python`.
 - Profile README updated to link directly to the public MVP repository, sample audit, case study, and pricing notes.
 - GitHub GraphQL schema exposed through the current account does not include a profile repository pin mutation; pinning `github-income-scout` remains a manual GitHub profile UI step.
+- Bitbox #99 was rechecked live on 2026-07-06: open, unassigned, no comments, and no duplicate `seconds_to_hms` PR.
+- External claim comment posted on Bitbox #99: `https://github.com/abduznik/bitbox/issues/99#issuecomment-4892570171`.
+- Fork created: `https://github.com/George4177/bitbox`.
+- Bitbox PR opened: `https://github.com/abduznik/bitbox/pull/125`.
+- Bitbox PR #125 is open, mergeable, and awaiting review; no status checks are currently reported.
 - GitHub connector attempted to comment on `abduznik/bitbox#99` but GitHub returned 403 `Resource not accessible by integration`; external comment/PR still needs browser, `gh`, or a connector with broader write access.
 - GitHub connector can read the published Profile repository README, but repository creation was completed through GitHub CLI because the connector does not expose a repository-creation API.
 - Follow-up live scan generated `reports/live_snapshot_2026-07-06_followup.md` with ROS2 docs #4209, Optiland #659, and Waggle-mcp #444.
@@ -148,8 +155,9 @@ Date: 2026-07-06
 
 - External account-bound action completed: public Profile repository `George4177/George4177` was created and populated with the fixed-scope service README.
 - External account-bound action completed: public MVP repository `George4177/github-income-scout` was created, populated, and tagged for discovery.
-- No external comments, PRs, or bounty claims have been made.
-- Next external candidate: `abduznik/bitbox#99`; contribution guide and open PR state have been checked, and the external action pack plus `prepare_bitbox_pr.ps1` helper are ready.
+- External account-bound action completed: Bitbox #99 was claimed with a short scoped comment and PR #125 was opened.
+- No bounty claims have been made.
+- Current external PR: `abduznik/bitbox#125`, open and mergeable, awaiting maintainer review.
 - Additional local PR candidate prepared: `NDilanka/orrery#15`, with a local branch and PR pack ready but not pushed.
 - Additional local PR candidate prepared: `optiland/optiland#659`, with a local branch, focused bug fix, regression test, and PR pack ready but not pushed.
 
@@ -166,6 +174,8 @@ Date: 2026-07-06
 - Profile repository local commit: `16effd2 Add profile service README` in `D:/乔治/Github/George4177`
 - Profile repository follow-up commit: `fb3f0a7 Link featured project to public repo`
 - MVP repository latest published commit: `f3efd30 Record profile repository launch`
+- Bitbox fork branch: `tool/seconds-to-hms`
+- Bitbox PR commit: `131d27c Add seconds_to_hms tool`
 - Profile remote publishing is complete: `https://github.com/George4177/George4177`.
 - Main MVP repository publishing is complete: `https://github.com/George4177/github-income-scout`.
 
@@ -178,8 +188,8 @@ The fastest income path is now active: the public GitHub profile advertises a sm
 User has authorized GitHub publishing and account operations for this project, while the standing safety boundary remains: no payment data, private tokens, passwords, or platform-rule abuse.
 
 1. Pin `github-income-scout` from the GitHub profile UI.
-2. Comment on `abduznik/bitbox#99` to claim the `seconds_to_hms` issue, if still open and unassigned.
-3. Open a draft PR for Bitbox after creating the tool file with the correct GitHub username in the header.
+2. Monitor and respond to review on `abduznik/bitbox#125`.
+3. Choose the next low-risk PR candidate from Optiland #659, Orrery #15, or a newly screened issue.
 
 ## Gap to Covering Membership Cost
 
