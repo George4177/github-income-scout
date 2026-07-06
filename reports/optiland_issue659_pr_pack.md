@@ -75,8 +75,8 @@ Fixes #659
 
 ## Push Checklist
 
-1. Ensure the user's GitHub write path can fork/push to `George4177/optiland`.
-2. Push branch `fix-curvature-solve-planar-surface`.
-3. Open a PR against `optiland/optiland:master`.
-4. Use the PR title and body above.
-5. Do not claim bounty/payment; this is a portfolio credibility PR unless maintainers explicitly offer compensation.
+Status update on 2026-07-06: do not open this PR now. A duplicate upstream PR appeared after the local fix was prepared:
+
+- https://github.com/optiland/optiland/pull/660
+
+Keep the local branch as a reference implementation and portfolio-quality exercise, but avoid submitting a duplicate PR unless the existing PR is closed without resolution and the issue remains open.

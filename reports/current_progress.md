@@ -72,6 +72,8 @@ Date: 2026-07-06
 - `reports/bitbox_pr125_status.md`: Bitbox PR #125 status, links, and verification results
 - `reports/orrery_pr15_precheck.md`: Orrery headless quickstart PR precheck and risk notes
 - `reports/orrery_pr15_pr_pack.md`: Orrery PR title, body, verification notes, and push checklist
+- `reports/orrery_pr15_body.md`: final PR body used for Orrery #23
+- `reports/orrery_pr23_status.md`: Orrery PR #23 status, links, and verification results
 - `reports/live_snapshot_2026-07-06_followup.md`: follow-up live GitHub issue snapshot after prioritizing public launch assets
 - `reports/live_snapshot_2026-07-06_evening.md`: expanded live GitHub issue-search snapshot with 24 screened opportunities and rejected safety-filter matches
 - `reports/profile_publish_status.md`: public GitHub profile repository publishing result and verification notes
@@ -143,6 +145,11 @@ Date: 2026-07-06
 - Fork created: `https://github.com/George4177/bitbox`.
 - Bitbox PR opened: `https://github.com/abduznik/bitbox/pull/125`.
 - Bitbox PR #125 is open, mergeable, and awaiting review; no status checks are currently reported.
+- Optiland #659 was rechecked before opening a PR; upstream PR #660 now covers the same issue, so the local Optiland branch should not be submitted unless #660 is closed without fixing #659.
+- Orrery #15 was rechecked live on 2026-07-06: open, unassigned, no comments, and no duplicate headless quickstart PR.
+- Fork created: `https://github.com/George4177/orrery`.
+- Orrery PR opened: `https://github.com/NDilanka/orrery/pull/23`.
+- Orrery PR #23 is open and mergeable; no status checks are currently reported.
 - GitHub connector attempted to comment on `abduznik/bitbox#99` but GitHub returned 403 `Resource not accessible by integration`; external comment/PR still needs browser, `gh`, or a connector with broader write access.
 - GitHub connector can read the published Profile repository README, but repository creation was completed through GitHub CLI because the connector does not expose a repository-creation API.
 - Follow-up live scan generated `reports/live_snapshot_2026-07-06_followup.md` with ROS2 docs #4209, Optiland #659, and Waggle-mcp #444.
@@ -160,8 +167,8 @@ Date: 2026-07-06
 - External account-bound action completed: Bitbox #99 was claimed with a short scoped comment and PR #125 was opened.
 - No bounty claims have been made.
 - Current external PR: `abduznik/bitbox#125`, open and mergeable, awaiting maintainer review.
-- Additional local PR candidate prepared: `NDilanka/orrery#15`, with a local branch and PR pack ready but not pushed.
-- Additional local PR candidate prepared: `optiland/optiland#659`, with a local branch, focused bug fix, regression test, and PR pack ready but not pushed.
+- Current external PR: `NDilanka/orrery#23`, open and mergeable, awaiting maintainer review.
+- Additional local PR candidate prepared but deferred: `optiland/optiland#659`, because upstream PR #660 now covers the same issue.
 
 ## Local Git Status
 
@@ -179,6 +186,8 @@ Date: 2026-07-06
 - MVP repository latest published commit: `f3efd30 Record profile repository launch`
 - Bitbox fork branch: `tool/seconds-to-hms`
 - Bitbox PR commit: `131d27c Add seconds_to_hms tool`
+- Orrery fork branch: `docs/headless-quickstart`
+- Orrery PR commit: `2ed3391 docs: add headless engine quickstart`
 - Profile remote publishing is complete: `https://github.com/George4177/George4177`.
 - Main MVP repository publishing is complete: `https://github.com/George4177/github-income-scout`.
 
@@ -192,7 +201,8 @@ User has authorized GitHub publishing and account operations for this project, w
 
 1. Pin `github-income-scout` from the GitHub profile UI.
 2. Monitor and respond to review on `abduznik/bitbox#125`.
-3. Choose the next low-risk PR candidate from Optiland #659, Orrery #15, or a newly screened issue.
+3. Monitor and respond to review on `NDilanka/orrery#23`.
+4. Choose the next low-risk PR candidate from a newly screened issue; skip Optiland #659 while upstream PR #660 remains open.
 
 ## Gap to Covering Membership Cost
 
