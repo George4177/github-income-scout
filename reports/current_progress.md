@@ -130,6 +130,10 @@ Date: 2026-07-06
 - GitHub CLI authorization completed as `George4177`.
 - Public Profile repository created: `https://github.com/George4177/George4177`.
 - Profile README pushed to `origin/main` and verified by reading `README.md` back from GitHub.
+- Public MVP repository created and pushed: `https://github.com/George4177/github-income-scout`.
+- MVP repository topics set: `automation`, `developer-tools`, `github-actions`, `open-source`, `python`.
+- Profile README updated to link directly to the public MVP repository, sample audit, case study, and pricing notes.
+- GitHub GraphQL schema exposed through the current account does not include a profile repository pin mutation; pinning `github-income-scout` remains a manual GitHub profile UI step.
 - GitHub connector attempted to comment on `abduznik/bitbox#99` but GitHub returned 403 `Resource not accessible by integration`; external comment/PR still needs browser, `gh`, or a connector with broader write access.
 - GitHub connector can read the published Profile repository README, but repository creation was completed through GitHub CLI because the connector does not expose a repository-creation API.
 - Follow-up live scan generated `reports/live_snapshot_2026-07-06_followup.md` with ROS2 docs #4209, Optiland #659, and Waggle-mcp #444.
@@ -143,6 +147,7 @@ Date: 2026-07-06
 ## PR Status
 
 - External account-bound action completed: public Profile repository `George4177/George4177` was created and populated with the fixed-scope service README.
+- External account-bound action completed: public MVP repository `George4177/github-income-scout` was created, populated, and tagged for discovery.
 - No external comments, PRs, or bounty claims have been made.
 - Next external candidate: `abduznik/bitbox#99`; contribution guide and open PR state have been checked, and the external action pack plus `prepare_bitbox_pr.ps1` helper are ready.
 - Additional local PR candidate prepared: `NDilanka/orrery#15`, with a local branch and PR pack ready but not pushed.
@@ -159,18 +164,20 @@ Date: 2026-07-06
 - Starter Audit client brief generator commit: `3d7e584 Add Starter Audit client brief generator`
 - Orrery candidate prep commit: `a54aaa2 Record Orrery PR candidate preparation`
 - Profile repository local commit: `16effd2 Add profile service README` in `D:/乔治/Github/George4177`
+- Profile repository follow-up commit: `fb3f0a7 Link featured project to public repo`
+- MVP repository latest published commit: `f3efd30 Record profile repository launch`
 - Profile remote publishing is complete: `https://github.com/George4177/George4177`.
-- Main MVP repository publishing is still pending.
+- Main MVP repository publishing is complete: `https://github.com/George4177/github-income-scout`.
 
 ## Most Likely Income Action
 
-The fastest income path is now active: the public GitHub profile advertises a small "Starter Audit" service at USD 29-49. The next strongest action is to publish and pin GitHub Income Scout as proof that the audit process is backed by a working tool, then use the prepared low-pressure outreach copy.
+The fastest income path is now active: the public GitHub profile advertises a small "Starter Audit" service at USD 29-49, and the public GitHub Income Scout repository backs the offer with a working tool. The next strongest action is to pin the repository from the GitHub profile UI and use the prepared low-pressure outreach copy.
 
 ## Authorized External Moves Pending Tool Access
 
 User has authorized GitHub publishing and account operations for this project, while the standing safety boundary remains: no payment data, private tokens, passwords, or platform-rule abuse.
 
-1. Publish `github-income-scout` as a new GitHub repository and pin it.
+1. Pin `github-income-scout` from the GitHub profile UI.
 2. Comment on `abduznik/bitbox#99` to claim the `seconds_to_hms` issue, if still open and unassigned.
 3. Open a draft PR for Bitbox after creating the tool file with the correct GitHub username in the header.
 
@@ -178,7 +185,7 @@ User has authorized GitHub publishing and account operations for this project, w
 
 The project still needs:
 
-- a public pinned MVP repository showing the tool behind the offer
+- a pinned MVP repository on the GitHub profile
 - outreach channel or marketplace listing
 - optionally one small accepted PR to increase credibility
 - one first buyer or trial user for the USD 29-49 Starter Audit offer

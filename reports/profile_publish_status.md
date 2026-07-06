@@ -10,7 +10,9 @@ The GitHub profile repository has been created and published.
 - Visibility: Public
 - Default branch: `main`
 - Local source: `D:/乔治/Github/George4177`
-- Published commit: `16effd2 Add profile service README`
+- Published commits:
+  - `16effd2 Add profile service README`
+  - `fb3f0a7 Link featured project to public repo`
 
 ## Verification
 
@@ -18,6 +20,7 @@ The GitHub profile repository has been created and published.
 - `George4177/George4177` was created as a public repository.
 - Local `main` was pushed to `origin/main`.
 - `README.md` was read back from GitHub through the GitHub connector.
+- The Featured Project links now point to the public `github-income-scout` repository.
 
 ## Current Public Offer
 
@@ -33,6 +36,6 @@ The profile README now presents a fixed-scope service offer:
 
 ## Next Best Actions
 
-1. Publish `github-income-scout` as a public pinned portfolio repository.
+1. Pin the already-published `github-income-scout` repository manually from the GitHub profile page; the current GitHub API schema exposed here does not include a profile repository pin mutation.
 2. Add a short public post using `templates/outreach/community_post.md`.
 3. Open or prepare one credible low-risk PR to improve trust.
