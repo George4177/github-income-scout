@@ -74,8 +74,12 @@ Date: 2026-07-06
 - `reports/orrery_pr15_pr_pack.md`: Orrery PR title, body, verification notes, and push checklist
 - `reports/orrery_pr15_body.md`: final PR body used for Orrery #23
 - `reports/orrery_pr23_status.md`: Orrery PR #23 status, links, and verification results
+- `reports/tg_spam_filter_issue2_body.md`: final PR body used for tg-spam-filter #3
+- `reports/tg_spam_filter_pr3_status.md`: tg-spam-filter PR #3 status, links, and verification results
 - `reports/live_snapshot_2026-07-06_followup.md`: follow-up live GitHub issue snapshot after prioritizing public launch assets
 - `reports/live_snapshot_2026-07-06_evening.md`: expanded live GitHub issue-search snapshot with 24 screened opportunities and rejected safety-filter matches
+- `reports/live_snapshot_2026-07-06_late.md`: late quick scan showing Waggle docs issues and Bitbox
+- `reports/live_snapshot_2026-07-06_late_full.md`: late full scan with 28 screened opportunities
 - `reports/profile_publish_status.md`: public GitHub profile repository publishing result and verification notes
 - `reports/optiland_issue659_pr_pack.md`: Optiland #659 local fix, test result, and PR body draft
 - `reports/client_brief.md`: generated Starter Audit client brief sample for first paid delivery
@@ -150,6 +154,13 @@ Date: 2026-07-06
 - Fork created: `https://github.com/George4177/orrery`.
 - Orrery PR opened: `https://github.com/NDilanka/orrery/pull/23`.
 - Orrery PR #23 is open and mergeable; no status checks are currently reported.
+- Late quick scan generated `reports/live_snapshot_2026-07-06_late.md` with Waggle docs candidates and Bitbox.
+- Waggle #442 and #444 were skipped after live review because both have multiple assignment-request comments; #442 also has nearby graph work in open PR #502.
+- Late full scan generated `reports/live_snapshot_2026-07-06_late_full.md` with 28 opportunities.
+- `profit-coders/tg-spam-filter#2` was selected as a low-risk docs cleanup candidate after live review: open, unassigned, no comments, no duplicate PRs.
+- Fork created: `https://github.com/George4177/tg-spam-filter`.
+- tg-spam-filter PR opened: `https://github.com/profit-coders/tg-spam-filter/pull/3`.
+- tg-spam-filter PR #3 is open and mergeable; no status checks are currently reported.
 - GitHub connector attempted to comment on `abduznik/bitbox#99` but GitHub returned 403 `Resource not accessible by integration`; external comment/PR still needs browser, `gh`, or a connector with broader write access.
 - GitHub connector can read the published Profile repository README, but repository creation was completed through GitHub CLI because the connector does not expose a repository-creation API.
 - Follow-up live scan generated `reports/live_snapshot_2026-07-06_followup.md` with ROS2 docs #4209, Optiland #659, and Waggle-mcp #444.
@@ -168,6 +179,7 @@ Date: 2026-07-06
 - No bounty claims have been made.
 - Current external PR: `abduznik/bitbox#125`, open and mergeable, awaiting maintainer review.
 - Current external PR: `NDilanka/orrery#23`, open and mergeable, awaiting maintainer review.
+- Current external PR: `profit-coders/tg-spam-filter#3`, open and mergeable, awaiting maintainer review.
 - Additional local PR candidate prepared but deferred: `optiland/optiland#659`, because upstream PR #660 now covers the same issue.
 
 ## Local Git Status
@@ -188,6 +200,8 @@ Date: 2026-07-06
 - Bitbox PR commit: `131d27c Add seconds_to_hms tool`
 - Orrery fork branch: `docs/headless-quickstart`
 - Orrery PR commit: `2ed3391 docs: add headless engine quickstart`
+- tg-spam-filter fork branch: `docs/contribution-polish`
+- tg-spam-filter PR commit: `29df9a0 docs: update contribution guidance`
 - Profile remote publishing is complete: `https://github.com/George4177/George4177`.
 - Main MVP repository publishing is complete: `https://github.com/George4177/github-income-scout`.
 
@@ -202,7 +216,8 @@ User has authorized GitHub publishing and account operations for this project, w
 1. Pin `github-income-scout` from the GitHub profile UI.
 2. Monitor and respond to review on `abduznik/bitbox#125`.
 3. Monitor and respond to review on `NDilanka/orrery#23`.
-4. Choose the next low-risk PR candidate from a newly screened issue; skip Optiland #659 while upstream PR #660 remains open.
+4. Monitor and respond to review on `profit-coders/tg-spam-filter#3`.
+5. Choose the next low-risk PR candidate from a newly screened issue; skip Optiland #659 while upstream PR #660 remains open.
 
 ## Gap to Covering Membership Cost
 
