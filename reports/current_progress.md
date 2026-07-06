@@ -71,6 +71,8 @@ Date: 2026-07-06
 - `reports/orrery_pr15_precheck.md`: Orrery headless quickstart PR precheck and risk notes
 - `reports/orrery_pr15_pr_pack.md`: Orrery PR title, body, verification notes, and push checklist
 - `reports/live_snapshot_2026-07-06_followup.md`: follow-up live GitHub issue snapshot after prioritizing public launch assets
+- `reports/live_snapshot_2026-07-06_evening.md`: expanded live GitHub issue-search snapshot with 24 screened opportunities and rejected safety-filter matches
+- `reports/profile_publish_status.md`: public GitHub profile repository publishing result and verification notes
 - `reports/optiland_issue659_pr_pack.md`: Optiland #659 local fix, test result, and PR body draft
 - `reports/client_brief.md`: generated Starter Audit client brief sample for first paid delivery
 - `reports/live_snapshot_2026-07-05.md`: real GitHub query output captured from the tool
@@ -125,11 +127,11 @@ Date: 2026-07-06
 - Local Git commits now work in the MVP repository and the local Profile repository.
 - Profile README publishing was prioritized after user instruction to "throw the service out first".
 - Local Profile repository prepared at `D:/乔治/Github/George4177` with commit `16effd2 Add profile service README`.
-- Push to `https://github.com/George4177/George4177.git` returned `Repository not found`, confirming that the remote Profile repository is not currently available to push to.
-- GitHub CLI is not installed in this environment, so the logged-in GitHub username could not be read from `gh`; Bitbox PR author header still needs confirmation before external PR work.
+- GitHub CLI authorization completed as `George4177`.
+- Public Profile repository created: `https://github.com/George4177/George4177`.
+- Profile README pushed to `origin/main` and verified by reading `README.md` back from GitHub.
 - GitHub connector attempted to comment on `abduznik/bitbox#99` but GitHub returned 403 `Resource not accessible by integration`; external comment/PR still needs browser, `gh`, or a connector with broader write access.
-- GitHub connector currently returns no installed repositories for publishing targets.
-- GitHub App is installed for account `George4177`, but repository access currently returns an empty list and the connector does not expose repository creation, so connector-backed publishing cannot proceed until `George4177/George4177` exists and is granted to the app or another GitHub write path is available.
+- GitHub connector can read the published Profile repository README, but repository creation was completed through GitHub CLI because the connector does not expose a repository-creation API.
 - Follow-up live scan generated `reports/live_snapshot_2026-07-06_followup.md` with ROS2 docs #4209, Optiland #659, and Waggle-mcp #444.
 - Waggle-mcp #444 was rejected after deeper review because it also depends on closed invalid PR #419 and already has multiple assignment-request comments.
 - ROS2 #4209 remains a possible documentation contribution but is broad, old, and has a related open broken-link PR (#6176), so it is lower priority for a fast credible contribution.
@@ -140,7 +142,8 @@ Date: 2026-07-06
 
 ## PR Status
 
-- No external comments, PRs, bounty claims, or account-bound actions have been made.
+- External account-bound action completed: public Profile repository `George4177/George4177` was created and populated with the fixed-scope service README.
+- No external comments, PRs, or bounty claims have been made.
 - Next external candidate: `abduznik/bitbox#99`; contribution guide and open PR state have been checked, and the external action pack plus `prepare_bitbox_pr.ps1` helper are ready.
 - Additional local PR candidate prepared: `NDilanka/orrery#15`, with a local branch and PR pack ready but not pushed.
 - Additional local PR candidate prepared: `optiland/optiland#659`, with a local branch, focused bug fix, regression test, and PR pack ready but not pushed.
@@ -156,26 +159,26 @@ Date: 2026-07-06
 - Starter Audit client brief generator commit: `3d7e584 Add Starter Audit client brief generator`
 - Orrery candidate prep commit: `a54aaa2 Record Orrery PR candidate preparation`
 - Profile repository local commit: `16effd2 Add profile service README` in `D:/乔治/Github/George4177`
-- Remote publishing is still pending because the current environment has no usable GitHub repository creation path and the target Profile repository does not yet exist remotely.
+- Profile remote publishing is complete: `https://github.com/George4177/George4177`.
+- Main MVP repository publishing is still pending.
 
 ## Most Likely Income Action
 
-The fastest income path is to publish/polish GitHub Income Scout as a portfolio repo and offer a small "Starter Audit" service at USD 29-49. This is more controllable than waiting for bounty approval and can directly target developers who want contribution opportunities.
+The fastest income path is now active: the public GitHub profile advertises a small "Starter Audit" service at USD 29-49. The next strongest action is to publish and pin GitHub Income Scout as proof that the audit process is backed by a working tool, then use the prepared low-pressure outreach copy.
 
 ## Authorized External Moves Pending Tool Access
 
 User has authorized GitHub publishing and account operations for this project, while the standing safety boundary remains: no payment data, private tokens, passwords, or platform-rule abuse.
 
-1. Publish `github-income-scout` as a new GitHub repository.
-2. Create and publish the `George4177/George4177` Profile repository using the prepared local `README.md`.
-3. Comment on `abduznik/bitbox#99` to claim the `seconds_to_hms` issue.
-4. Open a draft PR for Bitbox after creating the tool file with the correct GitHub username in the header.
+1. Publish `github-income-scout` as a new GitHub repository and pin it.
+2. Comment on `abduznik/bitbox#99` to claim the `seconds_to_hms` issue, if still open and unassigned.
+3. Open a draft PR for Bitbox after creating the tool file with the correct GitHub username in the header.
 
 ## Gap to Covering Membership Cost
 
 The project still needs:
 
-- a public GitHub repository or profile placement
+- a public pinned MVP repository showing the tool behind the offer
 - outreach channel or marketplace listing
 - optionally one small accepted PR to increase credibility
-- tool access that can create repositories or write to external GitHub issues/PRs, such as local `gh` login or broader GitHub connector installation
+- one first buyer or trial user for the USD 29-49 Starter Audit offer
