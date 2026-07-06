@@ -68,7 +68,16 @@ foreach ($dir in $excludeDirs) {
         ForEach-Object { Remove-Item -LiteralPath $_.FullName -Recurse -Force }
 }
 
-Compress-Archive -LiteralPath (Join-Path $stagingPath "*") -DestinationPath $bundlePath -Force
+$stagedItems = Get-ChildItem -LiteralPath $stagingPath -Force
+if (-not $stagedItems) {
+    throw "Release staging directory is empty: $stagingPath"
+}
+
+Compress-Archive -Path (Join-Path $stagingPath "*") -DestinationPath $bundlePath -Force
+if (-not (Test-Path $bundlePath)) {
+    throw "Release bundle was not created: $bundlePath"
+}
+
 Remove-Item -LiteralPath $stagingPath -Recurse -Force
 
 Write-Host "Created release bundle: $bundlePath"
