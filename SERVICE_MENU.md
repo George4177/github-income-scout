@@ -46,6 +46,8 @@ Deliverables:
 
 Start here: [Profile + Opportunity Pack request](https://github.com/George4177/github-income-scout/issues/new?template=profile-opportunity-pack.yml)
 
+Example delivery: [Profile + Opportunity Pack example](examples/profile_opportunity_pack_example.md)
+
 Good fit:
 
 - Python automation developers
@@ -87,5 +89,6 @@ I do not work on:
 - Latest manual triage: [2026-07-07 live triage](reports/live_triage_2026-07-07.md)
 - Sample audit: [examples/sample_audit.md](examples/sample_audit.md)
 - Case study: [examples/starter_audit_case_study.md](examples/starter_audit_case_study.md)
+- Profile + Opportunity Pack example: [examples/profile_opportunity_pack_example.md](examples/profile_opportunity_pack_example.md)
 - Merged PR example: [NDilanka/orrery#23](https://github.com/NDilanka/orrery/pull/23)
 - Open focused PR example: [abduznik/bitbox#125](https://github.com/abduznik/bitbox/pull/125)

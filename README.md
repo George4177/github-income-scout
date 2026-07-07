@@ -139,6 +139,8 @@ It also includes [examples/sample_client_brief.md](examples/sample_client_brief.
 
 For a clearer sales example, see [examples/starter_audit_case_study.md](examples/starter_audit_case_study.md). It explains the client input, screening process, rejected-match logic, deliverables, and follow-up offer.
 
+For the mid-tier service format, see [examples/profile_opportunity_pack_example.md](examples/profile_opportunity_pack_example.md) and [templates/profile_opportunity_pack_template.md](templates/profile_opportunity_pack_template.md).
+
 ## Launch Assets
 
 The repository includes public-launch assets so the MVP can be published quickly:

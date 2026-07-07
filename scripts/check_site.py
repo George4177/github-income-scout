@@ -26,12 +26,15 @@ def main() -> int:
         require_file(ROOT / "SERVICE_MENU.md")
         require_file(ROOT / "examples" / "sample_audit.md")
         require_file(ROOT / "examples" / "starter_audit_case_study.md")
+        require_file(ROOT / "examples" / "profile_opportunity_pack_example.md")
+        require_file(ROOT / "templates" / "profile_opportunity_pack_template.md")
 
         for text in [
             "GitHub Income Scout",
             "Starter Audit",
             "SERVICE_MENU.md",
             "profile-opportunity-pack.yml",
+            "profile_opportunity_pack_example.md",
             "Recent proof",
             "live_triage_2026-07-07.md",
             "No spam PRs",
