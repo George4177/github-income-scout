@@ -153,6 +153,9 @@ Date: 2026-07-06
 - Bitbox #99 assignment comment received from repository automation: `https://github.com/abduznik/bitbox/issues/99#issuecomment-4892571993`.
 - Bitbox #99 follow-up status comment posted with PR #125 link: `https://github.com/abduznik/bitbox/issues/99#issuecomment-4905223184`.
 - Opportunity scanner updated to surface assignees and downgrade already-assigned or high-comment issues, reducing duplicate work and low-signal PR risk.
+- Profile README top section updated so fixed-scope service request links are visible in the first screen.
+- Profile update commit: `071a838 Make service request links prominent` in `D:/乔治/Github/George4177`.
+- GitHub profile status was attempted but skipped because the current token lacks the `user` scope required by GitHub's `changeUserStatus` GraphQL mutation.
 - Optiland #659 was rechecked before opening a PR; upstream PR #660 now covers the same issue, so the local Optiland branch should not be submitted unless #660 is closed without fixing #659.
 - Orrery #15 was rechecked live on 2026-07-06: open, unassigned, no comments, and no duplicate headless quickstart PR.
 - Fork created: `https://github.com/George4177/orrery`.
@@ -206,6 +209,7 @@ Date: 2026-07-06
 - Profile repository local commit: `16effd2 Add profile service README` in `D:/乔治/Github/George4177`
 - Profile repository follow-up commit: `fb3f0a7 Link featured project to public repo`
 - Profile repository follow-up commit: `273340f Add direct request links`
+- Profile repository follow-up commit: `071a838 Make service request links prominent`
 - MVP repository latest published commit: `f3efd30 Record profile repository launch`
 - Bitbox fork branch: `tool/seconds-to-hms`
 - Bitbox PR commit: `131d27c Add seconds_to_hms tool`
