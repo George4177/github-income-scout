@@ -44,6 +44,8 @@ Deliverables:
 - contribution positioning notes
 - direct request-link copy for a small service offer
 
+Start here: [Profile + Opportunity Pack request](https://github.com/George4177/github-income-scout/issues/new?template=profile-opportunity-pack.yml)
+
 Good fit:
 
 - Python automation developers

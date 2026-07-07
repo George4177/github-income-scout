@@ -31,6 +31,7 @@ def main() -> int:
             "GitHub Income Scout",
             "Starter Audit",
             "SERVICE_MENU.md",
+            "profile-opportunity-pack.yml",
             "Recent proof",
             "live_triage_2026-07-07.md",
             "No spam PRs",

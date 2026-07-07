@@ -156,11 +156,13 @@ The repository includes public-launch assets so the MVP can be published quickly
 The repository includes GitHub issue forms for:
 
 - Starter Audit requests
+- Profile + Opportunity Pack requests
 - Custom Automation requests
 
 Direct request links:
 
 - [Starter Audit request](https://github.com/George4177/github-income-scout/issues/new?template=starter-audit.yml)
+- [Profile + Opportunity Pack request](https://github.com/George4177/github-income-scout/issues/new?template=profile-opportunity-pack.yml)
 - [Custom Automation request](https://github.com/George4177/github-income-scout/issues/new?template=custom-automation.yml)
 
 These forms are intentionally scoped to avoid secrets, credentials, fake engagement, exploit work, and platform bypasses.

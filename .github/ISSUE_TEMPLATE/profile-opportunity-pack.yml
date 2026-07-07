@@ -1,0 +1,70 @@
+name: Profile + Opportunity Pack Request
+description: Request a GitHub profile and opportunity positioning package.
+title: "[profile-pack] "
+labels:
+  - profile-pack
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for a fixed-scope GitHub profile, README, and opportunity positioning package. Do not include passwords, private tokens, payment details, or private repository secrets.
+  - type: input
+    id: github_profile
+    attributes:
+      label: GitHub profile
+      description: Link to the public GitHub profile to review.
+      placeholder: https://github.com/username
+    validations:
+      required: true
+  - type: input
+    id: target_repository
+    attributes:
+      label: Repository to improve
+      description: Link to one public repository README you want reviewed or repositioned.
+      placeholder: https://github.com/username/repository
+    validations:
+      required: true
+  - type: textarea
+    id: target_work
+    attributes:
+      label: Target work
+      description: What kind of freelance, open-source, or portfolio work do you want this profile to attract?
+      placeholder: Python automation, GitHub Actions cleanup, README/documentation work, data scripts, small tools
+    validations:
+      required: true
+  - type: textarea
+    id: current_offer
+    attributes:
+      label: Current offer or positioning
+      description: Paste your current short service description if you already have one.
+      placeholder: I help maintainers with...
+    validations:
+      required: false
+  - type: dropdown
+    id: weekly_time
+    attributes:
+      label: Weekly contribution time available
+      options:
+        - 1-2 hours
+        - 3-5 hours
+        - 6-10 hours
+        - 10+ hours
+    validations:
+      required: true
+  - type: textarea
+    id: avoid
+    attributes:
+      label: Work to avoid
+      description: List anything that should be excluded from the opportunity scan or positioning.
+      placeholder: Security exploit work, fake engagement, spammy PRs, scraping behind logins, trading, unclear bounty terms
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Boundaries
+      options:
+        - label: I understand this pack does not guarantee income, bounty awards, merged PRs, sponsorship, or leads.
+          required: true
+        - label: I will not ask for spam PRs, fake engagement, exploit work, credential handling, or platform bypasses.
+          required: true
