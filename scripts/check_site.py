@@ -23,12 +23,14 @@ def main() -> int:
         css = require_file(SITE / "styles.css")
         require_file(SITE / "README.md")
         require_file(ROOT / "README.md")
+        require_file(ROOT / "SERVICE_MENU.md")
         require_file(ROOT / "examples" / "sample_audit.md")
         require_file(ROOT / "examples" / "starter_audit_case_study.md")
 
         for text in [
             "GitHub Income Scout",
             "Starter Audit",
+            "SERVICE_MENU.md",
             "Recent proof",
             "live_triage_2026-07-07.md",
             "No spam PRs",

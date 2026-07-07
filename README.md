@@ -8,7 +8,7 @@ If you want this workflow applied to your own GitHub profile, the fixed-scope St
 
 You provide your GitHub profile, preferred languages/tools, weekly time budget, and work boundaries. The deliverable is a short report with screened opportunities, top 3 recommended actions, risk notes, and one positioning suggestion.
 
-Suggested first package: USD 29-49. Start from the [landing page](https://george4177.github.io/github-income-scout/), or see [service_offer.md](service_offer.md), [pricing.md](pricing.md), and [examples/starter_audit_case_study.md](examples/starter_audit_case_study.md).
+Suggested first package: USD 29-49. Start from the [landing page](https://george4177.github.io/github-income-scout/), or see [SERVICE_MENU.md](SERVICE_MENU.md), [service_offer.md](service_offer.md), [pricing.md](pricing.md), and [examples/starter_audit_case_study.md](examples/starter_audit_case_study.md).
 
 It searches public GitHub issues, scores them with conservative heuristics, and produces a Markdown report with:
 
@@ -100,6 +100,8 @@ These are service ideas, not guaranteed earnings:
 - private deployment with saved filters and local history
 
 See [pricing.md](pricing.md) for professional, non-hype packaging.
+
+See [SERVICE_MENU.md](SERVICE_MENU.md) for a public service menu that can be shared directly with potential clients.
 
 ## Validation
 
