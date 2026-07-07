@@ -158,6 +158,7 @@ Date: 2026-07-06
 - GitHub profile status was attempted but skipped because the current token lacks the `user` scope required by GitHub's `changeUserStatus` GraphQL mutation.
 - New live scan generated `reports/live_snapshot_2026-07-07.md` with 20 opportunities.
 - Manual triage recorded in `reports/live_triage_2026-07-07.md`; top candidates were rejected or deferred because they were Wikipedia/notability work, already accepted by another contributor, or in a repository where we already have an open PR awaiting review.
+- Landing page updated with a "Recent proof" section linking the latest manual triage, merged Orrery PR, open Bitbox PR, and open tg-spam-filter PR.
 - Optiland #659 was rechecked before opening a PR; upstream PR #660 now covers the same issue, so the local Optiland branch should not be submitted unless #660 is closed without fixing #659.
 - Orrery #15 was rechecked live on 2026-07-06: open, unassigned, no comments, and no duplicate headless quickstart PR.
 - Fork created: `https://github.com/George4177/orrery`.

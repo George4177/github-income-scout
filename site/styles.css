@@ -179,6 +179,12 @@ pre {
   gap: 16px;
 }
 
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
 article,
 .price-box {
   border: 1px solid var(--line);
@@ -191,6 +197,10 @@ article p,
 .service p {
   margin: 0;
   color: var(--muted);
+}
+
+article p + p {
+  margin-top: 14px;
 }
 
 .service {
@@ -247,7 +257,8 @@ ul {
 
   .hero,
   .service,
-  .feature-grid {
+  .feature-grid,
+  .proof-grid {
     grid-template-columns: 1fr;
   }
 
@@ -263,4 +274,3 @@ ul {
     font-size: 38px;
   }
 }
-

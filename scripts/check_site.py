@@ -26,11 +26,20 @@ def main() -> int:
         require_file(ROOT / "examples" / "sample_audit.md")
         require_file(ROOT / "examples" / "starter_audit_case_study.md")
 
-        for text in ["GitHub Income Scout", "Starter Audit", "No spam PRs", "scripts/issue_scout.py", "./styles.css", "Read case study"]:
+        for text in [
+            "GitHub Income Scout",
+            "Starter Audit",
+            "Recent proof",
+            "live_triage_2026-07-07.md",
+            "No spam PRs",
+            "scripts/issue_scout.py",
+            "./styles.css",
+            "Read case study",
+        ]:
             if text not in html:
                 raise AssertionError(f"Missing expected HTML text: {text}")
 
-        for text in ["@media", ".hero", ".feature-grid", ".button.primary"]:
+        for text in ["@media", ".hero", ".feature-grid", ".proof-grid", ".button.primary"]:
             if text not in css:
                 raise AssertionError(f"Missing expected CSS text: {text}")
     except AssertionError as exc:
