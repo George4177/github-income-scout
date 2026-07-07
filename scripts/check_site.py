@@ -28,6 +28,7 @@ def main() -> int:
         require_file(ROOT / "examples" / "starter_audit_case_study.md")
         require_file(ROOT / "examples" / "profile_opportunity_pack_example.md")
         require_file(ROOT / "templates" / "profile_opportunity_pack_template.md")
+        require_file(ROOT / "templates" / "profile_pack_delivery_checklist.md")
 
         for text in [
             "GitHub Income Scout",

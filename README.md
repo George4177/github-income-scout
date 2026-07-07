@@ -139,7 +139,7 @@ It also includes [examples/sample_client_brief.md](examples/sample_client_brief.
 
 For a clearer sales example, see [examples/starter_audit_case_study.md](examples/starter_audit_case_study.md). It explains the client input, screening process, rejected-match logic, deliverables, and follow-up offer.
 
-For the mid-tier service format, see [examples/profile_opportunity_pack_example.md](examples/profile_opportunity_pack_example.md) and [templates/profile_opportunity_pack_template.md](templates/profile_opportunity_pack_template.md).
+For the mid-tier service format, see [examples/profile_opportunity_pack_example.md](examples/profile_opportunity_pack_example.md), [templates/profile_opportunity_pack_template.md](templates/profile_opportunity_pack_template.md), and [templates/profile_pack_delivery_checklist.md](templates/profile_pack_delivery_checklist.md).
 
 ## Launch Assets
 

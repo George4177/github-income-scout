@@ -48,6 +48,8 @@ Start here: [Profile + Opportunity Pack request](https://github.com/George4177/g
 
 Example delivery: [Profile + Opportunity Pack example](examples/profile_opportunity_pack_example.md)
 
+Delivery checklist: [templates/profile_pack_delivery_checklist.md](templates/profile_pack_delivery_checklist.md)
+
 Good fit:
 
 - Python automation developers
