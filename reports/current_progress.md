@@ -151,6 +151,8 @@ Date: 2026-07-06
 - Bitbox PR opened: `https://github.com/abduznik/bitbox/pull/125`.
 - Bitbox PR #125 is open, mergeable, and awaiting review; no status checks are currently reported.
 - Bitbox #99 assignment comment received from repository automation: `https://github.com/abduznik/bitbox/issues/99#issuecomment-4892571993`.
+- Bitbox #99 follow-up status comment posted with PR #125 link: `https://github.com/abduznik/bitbox/issues/99#issuecomment-4905223184`.
+- Opportunity scanner updated to surface assignees and downgrade already-assigned or high-comment issues, reducing duplicate work and low-signal PR risk.
 - Optiland #659 was rechecked before opening a PR; upstream PR #660 now covers the same issue, so the local Optiland branch should not be submitted unless #660 is closed without fixing #659.
 - Orrery #15 was rechecked live on 2026-07-06: open, unassigned, no comments, and no duplicate headless quickstart PR.
 - Fork created: `https://github.com/George4177/orrery`.

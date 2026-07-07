@@ -80,6 +80,7 @@ class Opportunity:
     labels: list[str]
     body: str
     comments: int
+    assignees: list[str]
     created_at: str
     updated_at: str
     score: int
@@ -193,10 +194,12 @@ def classify(text: str, labels: list[str]) -> str:
 
 def score_issue(item: dict[str, Any], repo: dict[str, Any] | None = None) -> Opportunity:
     labels = [label.get("name", "") for label in item.get("labels", [])]
+    assignees = [assignee.get("login", "") for assignee in item.get("assignees", []) if assignee.get("login")]
     title = item.get("title", "")
     body = item.get("body") or ""
     haystack = f"{title} {body} {' '.join(labels)}".lower()
     reject_reason = rejection_reason(haystack)
+    comments = int(item.get("comments", 0))
 
     score = 50
     for word, delta in LOW_RISK_KEYWORDS.items():
@@ -205,8 +208,12 @@ def score_issue(item: dict[str, Any], repo: dict[str, Any] | None = None) -> Opp
     for word, delta in HIGH_RISK_KEYWORDS.items():
         if word in haystack:
             score += delta
-    if item.get("comments", 0) > 20:
-        score -= 8
+    if assignees:
+        score -= 20
+    if comments > 20:
+        score -= 28
+    elif comments >= 4:
+        score -= 20
     health = repo_health(repo)
     if health == "active-looking":
         score += 4
@@ -246,7 +253,16 @@ def score_issue(item: dict[str, Any], repo: dict[str, Any] | None = None) -> Opp
 
     estimated_value = "Direct bounty only if the issue explicitly links a bounty; otherwise portfolio/lead value"
     acceptance = "Issue scope is clear, tests/docs can prove the change, maintainer accepts PR"
-    risk = reject_reason or "Maintainer inactivity, hidden complexity, duplicate PRs, unclear bounty terms"
+    risk_notes = []
+    if assignees:
+        risk_notes.append(f"already assigned to {', '.join(assignees)}")
+    if comments >= 4:
+        risk_notes.append("multiple comments; may already be claimed or noisy")
+    if reject_reason:
+        risk_notes.append(reject_reason)
+    if not risk_notes:
+        risk_notes.append("Maintainer inactivity, hidden complexity, duplicate PRs, unclear bounty terms")
+    risk = "; ".join(risk_notes)
 
     return Opportunity(
         title=title,
@@ -254,7 +270,8 @@ def score_issue(item: dict[str, Any], repo: dict[str, Any] | None = None) -> Opp
         repository=repo_name(item),
         labels=labels,
         body=body,
-        comments=int(item.get("comments", 0)),
+        comments=comments,
+        assignees=assignees,
         created_at=item.get("created_at", ""),
         updated_at=item.get("updated_at", ""),
         score=score,
@@ -333,6 +350,7 @@ def opportunity_to_row(item: Opportunity) -> dict[str, Any]:
         "title": item.title,
         "url": item.url,
         "labels": ", ".join(item.labels),
+        "assignees": ", ".join(item.assignees),
         "task_type": item.task_type,
         "difficulty": item.difficulty,
         "estimated_value": item.estimated_value,
@@ -377,6 +395,7 @@ def render_csv(results: ScoutResult, include_rejected: bool) -> str:
         "rejection_reason",
         "risk",
         "comments",
+        "assignees",
         "repo_health",
         "repo_stars",
         "repo_pushed_at",

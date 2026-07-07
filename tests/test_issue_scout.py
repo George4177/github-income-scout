@@ -207,6 +207,42 @@ class IssueScoutTests(unittest.TestCase):
         self.assertEqual(opportunity.repo_health, "avoid: archived or disabled")
         self.assertLess(opportunity.score, 60)
 
+    def test_assigned_issue_is_downgraded(self):
+        item = {
+            "title": "[tool] slugify",
+            "html_url": "https://github.com/example/repo/issues/4",
+            "repository_url": "https://api.github.com/repos/example/repo",
+            "labels": [{"name": "help wanted"}, {"name": "good first issue"}],
+            "comments": 0,
+            "assignees": [{"login": "octocat"}],
+            "created_at": "2026-01-01T00:00:00Z",
+            "updated_at": "2026-01-01T00:00:00Z",
+            "body": "Small Python automation tool.",
+        }
+
+        opportunity = issue_scout.score_issue(item)
+
+        self.assertEqual(opportunity.assignees, ["octocat"])
+        self.assertIn("already assigned to octocat", opportunity.risk)
+        self.assertLess(opportunity.score, 62)
+
+    def test_noisy_issue_is_downgraded_and_explained(self):
+        item = {
+            "title": "Improve README docs",
+            "html_url": "https://github.com/example/repo/issues/6",
+            "repository_url": "https://api.github.com/repos/example/repo",
+            "labels": [{"name": "documentation"}, {"name": "help wanted"}, {"name": "good first issue"}],
+            "comments": 5,
+            "created_at": "2026-01-01T00:00:00Z",
+            "updated_at": "2026-01-01T00:00:00Z",
+            "body": "Add clearer setup instructions.",
+        }
+
+        opportunity = issue_scout.score_issue(item)
+
+        self.assertIn("multiple comments", opportunity.risk)
+        self.assertLess(opportunity.score, 75)
+
 
 if __name__ == "__main__":
     unittest.main()
