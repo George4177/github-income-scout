@@ -19,6 +19,8 @@ Opened a focused pull request for the low-risk `seconds_to_hms` tool request.
 - Review status: review required
 - Status checks: none reported
 - Local Bitbox commit: `131d27c Add seconds_to_hms tool`
+- Issue assignment: `George4177` was assigned by the repository automation after the claim comment.
+- Assignment comment: https://github.com/abduznik/bitbox/issues/99#issuecomment-4892571993
 
 ## Files Changed
 

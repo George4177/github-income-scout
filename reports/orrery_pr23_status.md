@@ -10,12 +10,15 @@ Date: 2026-07-06
 
 ## Result
 
-Opened a focused docs-only pull request for the headless engine quickstart request.
+Opened a focused docs-only pull request for the headless engine quickstart request. The PR has since been merged.
 
 - PR title: `docs: add headless engine quickstart`
-- PR state: open
-- Mergeability: mergeable
-- Status checks: none reported
+- PR state: merged
+- Merged at: 2026-07-07T10:34:39Z
+- Status checks: passed
+  - `engine (py3.11 / ubuntu-latest)`
+  - `engine (py3.11 / windows-latest)`
+  - `orrery (ubuntu)`
 - Local Orrery commit: `2ed3391 docs: add headless engine quickstart`
 
 ## Files Changed
@@ -33,4 +36,4 @@ Local documentation checks passed:
 
 ## Follow-Up
 
-Watch for maintainer review. This is a portfolio credibility PR, not a bounty or paid claim.
+No further action is needed unless the maintainer opens follow-up feedback. This is a portfolio credibility PR, not a bounty or paid claim.

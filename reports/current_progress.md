@@ -150,11 +150,12 @@ Date: 2026-07-06
 - Fork created: `https://github.com/George4177/bitbox`.
 - Bitbox PR opened: `https://github.com/abduznik/bitbox/pull/125`.
 - Bitbox PR #125 is open, mergeable, and awaiting review; no status checks are currently reported.
+- Bitbox #99 assignment comment received from repository automation: `https://github.com/abduznik/bitbox/issues/99#issuecomment-4892571993`.
 - Optiland #659 was rechecked before opening a PR; upstream PR #660 now covers the same issue, so the local Optiland branch should not be submitted unless #660 is closed without fixing #659.
 - Orrery #15 was rechecked live on 2026-07-06: open, unassigned, no comments, and no duplicate headless quickstart PR.
 - Fork created: `https://github.com/George4177/orrery`.
 - Orrery PR opened: `https://github.com/NDilanka/orrery/pull/23`.
-- Orrery PR #23 is open and mergeable; no status checks are currently reported.
+- Orrery PR #23 was merged on 2026-07-07T10:34:39Z and all reported CI checks passed.
 - Late quick scan generated `reports/live_snapshot_2026-07-06_late.md` with Waggle docs candidates and Bitbox.
 - Waggle #442 and #444 were skipped after live review because both have multiple assignment-request comments; #442 also has nearby graph work in open PR #502.
 - Late full scan generated `reports/live_snapshot_2026-07-06_late_full.md` with 28 opportunities.
@@ -186,7 +187,7 @@ Date: 2026-07-06
 - External account-bound action completed: Bitbox #99 was claimed with a short scoped comment and PR #125 was opened.
 - No bounty claims have been made.
 - Current external PR: `abduznik/bitbox#125`, open and mergeable, awaiting maintainer review.
-- Current external PR: `NDilanka/orrery#23`, open and mergeable, awaiting maintainer review.
+- Merged external PR: `NDilanka/orrery#23`, docs-only headless engine quickstart.
 - Current external PR: `profit-coders/tg-spam-filter#3`, open and mergeable, awaiting maintainer review.
 - Additional local PR candidate prepared but deferred: `optiland/optiland#659`, because upstream PR #660 now covers the same issue.
 
@@ -226,9 +227,8 @@ User has authorized GitHub publishing and account operations for this project, w
 
 1. Pin `github-income-scout` from the GitHub profile UI.
 2. Monitor and respond to review on `abduznik/bitbox#125`.
-3. Monitor and respond to review on `NDilanka/orrery#23`.
-4. Monitor and respond to review on `profit-coders/tg-spam-filter#3`.
-5. Choose the next low-risk PR candidate from a newly screened issue; skip Optiland #659 while upstream PR #660 remains open.
+3. Monitor and respond to review on `profit-coders/tg-spam-filter#3`.
+4. Choose the next low-risk PR candidate from a newly screened issue; skip Optiland #659 while upstream PR #660 remains open.
 
 ## Gap to Covering Membership Cost
 
