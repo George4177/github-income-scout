@@ -156,6 +156,8 @@ Date: 2026-07-06
 - Profile README top section updated so fixed-scope service request links are visible in the first screen.
 - Profile update commit: `071a838 Make service request links prominent` in `D:/乔治/Github/George4177`.
 - GitHub profile status was attempted but skipped because the current token lacks the `user` scope required by GitHub's `changeUserStatus` GraphQL mutation.
+- New live scan generated `reports/live_snapshot_2026-07-07.md` with 20 opportunities.
+- Manual triage recorded in `reports/live_triage_2026-07-07.md`; top candidates were rejected or deferred because they were Wikipedia/notability work, already accepted by another contributor, or in a repository where we already have an open PR awaiting review.
 - Optiland #659 was rechecked before opening a PR; upstream PR #660 now covers the same issue, so the local Optiland branch should not be submitted unless #660 is closed without fixing #659.
 - Orrery #15 was rechecked live on 2026-07-06: open, unassigned, no comments, and no duplicate headless quickstart PR.
 - Fork created: `https://github.com/George4177/orrery`.
@@ -226,6 +228,8 @@ Date: 2026-07-06
 ## Most Likely Income Action
 
 The fastest income path is now active: the public GitHub profile advertises a small "Starter Audit" service at USD 29-49, the public GitHub Income Scout repository backs the offer with a working tool, and the GitHub Pages landing page plus v0.1.0 release make the offer easier to inspect. The next strongest action is to pin the repository from the GitHub profile UI and use the prepared low-pressure outreach copy.
+
+The profile README now places request links near the top of the profile. Repository pinning still requires UI access because the available GitHub API token can read pinned repositories but does not expose a repository-pinning mutation.
 
 ## Authorized External Moves Pending Tool Access
 
