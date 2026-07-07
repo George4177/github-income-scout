@@ -67,6 +67,7 @@ Price: quoted after scope
 Examples:
 
 - GitHub issue scout dashboard or query pack
+- recurring weekly scout reports
 - README/report generator
 - GitHub Actions cleanup
 - Markdown/CSV/JSON/PDF report workflow
@@ -92,5 +93,6 @@ I do not work on:
 - Sample audit: [examples/sample_audit.md](examples/sample_audit.md)
 - Case study: [examples/starter_audit_case_study.md](examples/starter_audit_case_study.md)
 - Profile + Opportunity Pack example: [examples/profile_opportunity_pack_example.md](examples/profile_opportunity_pack_example.md)
+- Weekly Scout workflow: [docs/weekly_scout_workflow.md](docs/weekly_scout_workflow.md)
 - Merged PR example: [NDilanka/orrery#23](https://github.com/NDilanka/orrery/pull/23)
 - Open focused PR example: [abduznik/bitbox#125](https://github.com/abduznik/bitbox/pull/125)

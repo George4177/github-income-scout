@@ -72,6 +72,12 @@ $env:GITHUB_TOKEN = "ghp_your_token_here"
 
 Do not commit tokens or paste private credentials into issue reports.
 
+## Weekly Scout Workflow
+
+The repository includes a scheduled GitHub Actions workflow that generates Markdown, JSON, CSV, and Starter Audit bundle artifacts.
+
+See [docs/weekly_scout_workflow.md](docs/weekly_scout_workflow.md) for how to run it and download the reports.
+
 ## Example Output
 
 See [examples/sample_opportunities.md](examples/sample_opportunities.md).
@@ -149,6 +155,7 @@ The repository includes public-launch assets so the MVP can be published quickly
 - [LAUNCH_CHECKLIST.md](LAUNCH_CHECKLIST.md): first-week publishing and revenue checklist
 - [PUBLISHING.md](PUBLISHING.md): repository setup steps
 - [templates/outreach/launch_sequence.md](templates/outreach/launch_sequence.md): cautious first-launch outreach drafts
+- [docs/weekly_scout_workflow.md](docs/weekly_scout_workflow.md): scheduled report workflow guide
 - [scripts/create_release_bundle.ps1](scripts/create_release_bundle.ps1): local ZIP bundle helper for `v0.1.0`
 - [scripts/publish_repo.ps1](scripts/publish_repo.ps1): publish helper for `gh` or `GITHUB_TOKEN` environments
 - [scripts/publish_profile_repo.ps1](scripts/publish_profile_repo.ps1): publishes the prepared GitHub Profile README repository

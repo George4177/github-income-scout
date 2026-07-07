@@ -24,6 +24,8 @@ def main() -> int:
         require_file(SITE / "README.md")
         require_file(ROOT / "README.md")
         require_file(ROOT / "SERVICE_MENU.md")
+        weekly_workflow = require_file(ROOT / ".github" / "workflows" / "weekly-scout.yml")
+        require_file(ROOT / "docs" / "weekly_scout_workflow.md")
         require_file(ROOT / "examples" / "sample_audit.md")
         require_file(ROOT / "examples" / "starter_audit_case_study.md")
         require_file(ROOT / "examples" / "profile_opportunity_pack_example.md")
@@ -49,6 +51,10 @@ def main() -> int:
         for text in ["@media", ".hero", ".feature-grid", ".proof-grid", ".button.primary"]:
             if text not in css:
                 raise AssertionError(f"Missing expected CSS text: {text}")
+
+        for text in ["actions/upload-artifact@v4", "weekly-scout-reports", "opportunities.csv"]:
+            if text not in weekly_workflow:
+                raise AssertionError(f"Missing expected weekly workflow text: {text}")
     except AssertionError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1

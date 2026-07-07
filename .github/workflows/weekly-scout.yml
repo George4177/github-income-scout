@@ -16,18 +16,31 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Prepare output directory
+        run: mkdir -p reports/weekly-scout
       - name: Generate Markdown opportunity report
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python scripts/issue_scout.py --config examples/queries.json --min-score 60 --include-rejected --output -
+          python scripts/issue_scout.py --config examples/queries.json --min-score 60 --include-rejected --enrich-repos --output reports/weekly-scout/opportunity-report.md
       - name: Generate JSON opportunity report
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python scripts/issue_scout.py --config examples/queries.json --min-score 60 --include-rejected --format json --output -
+          python scripts/issue_scout.py --config examples/queries.json --min-score 60 --include-rejected --enrich-repos --format json --output reports/weekly-scout/opportunities.json
+      - name: Generate CSV opportunity report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/issue_scout.py --config examples/queries.json --min-score 60 --include-rejected --enrich-repos --format csv --output reports/weekly-scout/opportunities.csv
       - name: Generate Starter Audit bundle summary
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python scripts/build_audit_bundle.py --config examples/queries.json --min-score 60 --enrich-repos --dry-run
+          python scripts/build_audit_bundle.py --config examples/queries.json --output-dir reports/weekly-scout/starter-audit-bundle --min-score 60 --enrich-repos
+      - name: Upload weekly scout reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-scout-reports
+          path: reports/weekly-scout
+          if-no-files-found: error
