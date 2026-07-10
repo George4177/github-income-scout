@@ -149,16 +149,17 @@ Date: 2026-07-06
 - External claim comment posted on Bitbox #99: `https://github.com/abduznik/bitbox/issues/99#issuecomment-4892570171`.
 - Fork created: `https://github.com/George4177/bitbox`.
 - Bitbox PR opened: `https://github.com/abduznik/bitbox/pull/125`.
-- Bitbox PR #125 is open, mergeable, and awaiting review; no status checks are currently reported.
+- Bitbox PR #125 was approved and merged on 2026-07-10; issue #99 is now closed.
 - Bitbox #99 assignment comment received from repository automation: `https://github.com/abduznik/bitbox/issues/99#issuecomment-4892571993`.
 - Bitbox #99 follow-up status comment posted with PR #125 link: `https://github.com/abduznik/bitbox/issues/99#issuecomment-4905223184`.
+- Bitbox maintainer feedback on PR #125: clean implementation with good error handling.
 - Opportunity scanner updated to surface assignees and downgrade already-assigned or high-comment issues, reducing duplicate work and low-signal PR risk.
 - Profile README top section updated so fixed-scope service request links are visible in the first screen.
 - Profile update commit: `071a838 Make service request links prominent` in `D:/乔治/Github/George4177`.
 - GitHub profile status was attempted but skipped because the current token lacks the `user` scope required by GitHub's `changeUserStatus` GraphQL mutation.
 - New live scan generated `reports/live_snapshot_2026-07-07.md` with 20 opportunities.
 - Manual triage recorded in `reports/live_triage_2026-07-07.md`; top candidates were rejected or deferred because they were Wikipedia/notability work, already accepted by another contributor, or in a repository where we already have an open PR awaiting review.
-- Landing page updated with a "Recent proof" section linking the latest manual triage, merged Orrery PR, open Bitbox PR, and open tg-spam-filter PR.
+- Landing page updated with a "Recent proof" section linking the latest manual triage, merged Orrery PR, merged Bitbox PR, and open tg-spam-filter PR.
 - Added `SERVICE_MENU.md` as a shareable public service menu for Starter Audit, Profile + Opportunity Pack, and Custom Automation requests; linked it from README, landing page, and profile README.
 - Added `.github/ISSUE_TEMPLATE/profile-opportunity-pack.yml` and linked it from the service menu, README, landing page, and profile README so the mid-tier USD 99-199 service has a direct request path.
 - Added `templates/profile_opportunity_pack_template.md` and `examples/profile_opportunity_pack_example.md` so the mid-tier service has a reusable delivery format and public example.
@@ -200,7 +201,7 @@ Date: 2026-07-06
 - External account-bound action completed: public MVP repository `George4177/github-income-scout` was created, populated, and tagged for discovery.
 - External account-bound action completed: Bitbox #99 was claimed with a short scoped comment and PR #125 was opened.
 - No bounty claims have been made.
-- Current external PR: `abduznik/bitbox#125`, open and mergeable, awaiting maintainer review.
+- Merged external PR: `abduznik/bitbox#125`, assigned `seconds_to_hms` tool request.
 - Merged external PR: `NDilanka/orrery#23`, docs-only headless engine quickstart.
 - Current external PR: `profit-coders/tg-spam-filter#3`, open and mergeable, awaiting maintainer review.
 - Additional local PR candidate prepared but deferred: `optiland/optiland#659`, because upstream PR #660 now covers the same issue.
@@ -243,9 +244,9 @@ The profile README now places request links near the top of the profile. Reposit
 User has authorized GitHub publishing and account operations for this project, while the standing safety boundary remains: no payment data, private tokens, passwords, or platform-rule abuse.
 
 1. Pin `github-income-scout` from the GitHub profile UI.
-2. Monitor and respond to review on `abduznik/bitbox#125`.
-3. Monitor and respond to review on `profit-coders/tg-spam-filter#3`.
-4. Choose the next low-risk PR candidate from a newly screened issue; skip Optiland #659 while upstream PR #660 remains open.
+2. Monitor and respond to review on `profit-coders/tg-spam-filter#3`.
+3. Choose the next low-risk PR candidate from a newly screened issue; skip Optiland #659 while upstream PR #660 remains open.
+4. Consider another Bitbox tool only after rechecking assignment, comments, and duplicate PRs, because #125 is now merged.
 
 ## Gap to Covering Membership Cost
 
