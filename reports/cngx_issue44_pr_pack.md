@@ -64,4 +64,10 @@ Closes #44.
 
 ## External Action Status
 
-Not submitted. Recheck the issue, comments, assignee, and open PRs immediately before any fork push or PR creation.
+Submitted as [aadi-joshi/cngx#45](https://github.com/aadi-joshi/cngx/pull/45) on 2026-07-11.
+
+- Fork: `George4177/cngx`
+- Head branch: `docs/coding-agent-recipes`
+- Initial state: open, ready for review, mergeable
+- Initial reviews/comments/checks: none reported
+- No bounty or payment claim was made

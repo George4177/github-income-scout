@@ -77,7 +77,8 @@ Date: 2026-07-11
 - `reports/orrery_pr23_status.md`: Orrery PR #23 status, links, and verification results
 - `reports/tg_spam_filter_issue2_body.md`: final PR body used for tg-spam-filter #3
 - `reports/tg_spam_filter_pr3_status.md`: tg-spam-filter PR #3 status, links, and verification results
-- `reports/cngx_issue44_pr_pack.md`: locally completed Codex/agent documentation contribution, verification evidence, and proposed PR description
+- `reports/cngx_issue44_pr_pack.md`: submitted Codex/agent documentation contribution, verification evidence, and PR description
+- `reports/traffic_baseline_2026-07-11.md`: repository traffic, clone, inbound-request, and referrer baseline with conversion caveats
 - `reports/public_launch_status.md`: GitHub Pages, homepage, release, release asset, and conversion-link verification
 - `reports/live_snapshot_2026-07-06_followup.md`: follow-up live GitHub issue snapshot after prioritizing public launch assets
 - `reports/live_snapshot_2026-07-06_evening.md`: expanded live GitHub issue-search snapshot with 24 screened opportunities and rejected safety-filter matches
@@ -165,7 +166,9 @@ Date: 2026-07-11
 - New live scan generated `reports/live_snapshot_2026-07-07.md` with 20 opportunities.
 - Manual triage recorded in `reports/live_triage_2026-07-07.md`; top candidates were rejected or deferred because they were Wikipedia/notability work, already accepted by another contributor, or in a repository where we already have an open PR awaiting review.
 - Current manual triage recorded in `reports/live_triage_2026-07-11.md`; it separates verified payout from portfolio value and records the Dockerfile dependency blocking `mcp-observatory#230`.
-- `aadi-joshi/cngx#44` was prepared locally on branch `docs/coding-agent-recipes`; commit `f4b2975` adds five verified agent recipes, guide links, and docs navigation. Strict MkDocs build and 6 targeted CLI/Action tests pass. It has not been pushed or submitted upstream.
+- `aadi-joshi/cngx#44` was implemented on branch `docs/coding-agent-recipes`; commit `f4b2975` adds five verified agent recipes, guide links, and docs navigation. Strict MkDocs build and 6 targeted CLI/Action tests pass. PR #45 is now open and mergeable.
+- GitHub traffic baseline on 2026-07-11 showed 0 repository views and 0 inbound service issues, despite 134 clones from 62 unique sources. Clone traffic is treated as automation/indexing rather than buyer evidence until a page view or request appears.
+- Repository description and topics were expanded for accurate search discovery across Python CLI, GitHub API, reporting, issue tracking, Codex, data export, and developer productivity.
 - Landing page updated with a "Recent proof" section linking the latest manual triage, merged Orrery PR, merged Bitbox PR, and open tg-spam-filter PR.
 - Added `SERVICE_MENU.md` as a shareable public service menu for Starter Audit, Profile + Opportunity Pack, and Custom Automation requests; linked it from README, landing page, and profile README.
 - Added `.github/ISSUE_TEMPLATE/profile-opportunity-pack.yml` and linked it from the service menu, README, landing page, and profile README so the mid-tier USD 99-199 service has a direct request path.
@@ -211,8 +214,9 @@ Date: 2026-07-11
 - Merged external PR: `abduznik/bitbox#125`, assigned `seconds_to_hms` tool request.
 - Merged external PR: `NDilanka/orrery#23`, docs-only headless engine quickstart.
 - Current external PR: `profit-coders/tg-spam-filter#3`, open and mergeable, awaiting maintainer review.
+- Current external PR: `aadi-joshi/cngx#45`, open and mergeable, awaiting maintainer review.
 - Additional local PR candidate prepared but deferred: `optiland/optiland#659`, because upstream PR #660 now covers the same issue.
-- Local PR candidate ready for final live recheck: `aadi-joshi/cngx#44`, commit `f4b2975`, not pushed or submitted.
+- Submitted PR candidate: `aadi-joshi/cngx#45`, commit `f4b2975`; no bounty or payment claim was made.
 
 ## Local Git Status
 
@@ -261,6 +265,6 @@ User has authorized GitHub publishing and account operations for this project, w
 The project still needs:
 
 - a pinned MVP repository on the GitHub profile
-- outreach channel or marketplace listing
+- a qualified outreach channel, community listing, or direct referral source
 - one credible distribution channel or direct referral source beyond GitHub search traffic
 - one first buyer or trial user for the USD 29-49 Starter Audit offer
