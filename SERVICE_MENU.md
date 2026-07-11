@@ -89,7 +89,7 @@ I do not work on:
 
 ## Sample Proof
 
-- Latest manual triage: [2026-07-07 live triage](reports/live_triage_2026-07-07.md)
+- Latest manual triage: [2026-07-11 live triage](reports/live_triage_2026-07-11.md)
 - Sample audit: [examples/sample_audit.md](examples/sample_audit.md)
 - Case study: [examples/starter_audit_case_study.md](examples/starter_audit_case_study.md)
 - Open-source delivery case study: [examples/open_source_delivery_case_study.md](examples/open_source_delivery_case_study.md)

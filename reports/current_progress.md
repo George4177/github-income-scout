@@ -77,6 +77,7 @@ Date: 2026-07-11
 - `reports/orrery_pr23_status.md`: Orrery PR #23 status, links, and verification results
 - `reports/tg_spam_filter_issue2_body.md`: final PR body used for tg-spam-filter #3
 - `reports/tg_spam_filter_pr3_status.md`: tg-spam-filter PR #3 status, links, and verification results
+- `reports/cngx_issue44_pr_pack.md`: locally completed Codex/agent documentation contribution, verification evidence, and proposed PR description
 - `reports/public_launch_status.md`: GitHub Pages, homepage, release, release asset, and conversion-link verification
 - `reports/live_snapshot_2026-07-06_followup.md`: follow-up live GitHub issue snapshot after prioritizing public launch assets
 - `reports/live_snapshot_2026-07-06_evening.md`: expanded live GitHub issue-search snapshot with 24 screened opportunities and rejected safety-filter matches
@@ -155,7 +156,7 @@ Date: 2026-07-11
 - Bitbox #99 follow-up status comment posted with PR #125 link: `https://github.com/abduznik/bitbox/issues/99#issuecomment-4905223184`.
 - Bitbox maintainer feedback on PR #125: clean implementation with good error handling.
 - Fresh 2026-07-11 search screened recent Python, GitHub Actions, documentation, and bounty issues. Most bounty results were rejected because they were security-related, crypto-dependent, highly contested, or showed weak payout credibility.
-- Lower-risk candidates retained for deeper review include `aadi-joshi/cngx#44` (documentation) and `KryptosAI/mcp-observatory#230` (GitHub Actions). The latter needs repository-quality and duplicate-work checks because several issues were created together.
+- Lower-risk candidates retained for deeper review include `aadi-joshi/cngx#44` (documentation) and `KryptosAI/mcp-observatory#230` (GitHub Actions). No duplicate open PR was found for #230, but it depends on the separate, currently absent Dockerfile requested by #227, so #230 is deferred until that dependency lands.
 - Added a public open-source delivery case study that separates merged proof from the still-open `tg-spam-filter#3` PR.
 - Opportunity scanner updated to surface assignees and downgrade already-assigned or high-comment issues, reducing duplicate work and low-signal PR risk.
 - Profile README top section updated so fixed-scope service request links are visible in the first screen.
@@ -163,6 +164,8 @@ Date: 2026-07-11
 - GitHub profile status was attempted but skipped because the current token lacks the `user` scope required by GitHub's `changeUserStatus` GraphQL mutation.
 - New live scan generated `reports/live_snapshot_2026-07-07.md` with 20 opportunities.
 - Manual triage recorded in `reports/live_triage_2026-07-07.md`; top candidates were rejected or deferred because they were Wikipedia/notability work, already accepted by another contributor, or in a repository where we already have an open PR awaiting review.
+- Current manual triage recorded in `reports/live_triage_2026-07-11.md`; it separates verified payout from portfolio value and records the Dockerfile dependency blocking `mcp-observatory#230`.
+- `aadi-joshi/cngx#44` was prepared locally on branch `docs/coding-agent-recipes`; commit `f4b2975` adds five verified agent recipes, guide links, and docs navigation. Strict MkDocs build and 6 targeted CLI/Action tests pass. It has not been pushed or submitted upstream.
 - Landing page updated with a "Recent proof" section linking the latest manual triage, merged Orrery PR, merged Bitbox PR, and open tg-spam-filter PR.
 - Added `SERVICE_MENU.md` as a shareable public service menu for Starter Audit, Profile + Opportunity Pack, and Custom Automation requests; linked it from README, landing page, and profile README.
 - Added `.github/ISSUE_TEMPLATE/profile-opportunity-pack.yml` and linked it from the service menu, README, landing page, and profile README so the mid-tier USD 99-199 service has a direct request path.
@@ -209,6 +212,7 @@ Date: 2026-07-11
 - Merged external PR: `NDilanka/orrery#23`, docs-only headless engine quickstart.
 - Current external PR: `profit-coders/tg-spam-filter#3`, open and mergeable, awaiting maintainer review.
 - Additional local PR candidate prepared but deferred: `optiland/optiland#659`, because upstream PR #660 now covers the same issue.
+- Local PR candidate ready for final live recheck: `aadi-joshi/cngx#44`, commit `f4b2975`, not pushed or submitted.
 
 ## Local Git Status
 
