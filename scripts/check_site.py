@@ -43,7 +43,7 @@ def main() -> int:
             "No spam PRs",
             "scripts/issue_scout.py",
             "./styles.css",
-            "Read case study",
+            "See delivery proof",
         ]:
             if text not in html:
                 raise AssertionError(f"Missing expected HTML text: {text}")

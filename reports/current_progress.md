@@ -1,6 +1,6 @@
 # Current Progress Report
 
-Date: 2026-07-06
+Date: 2026-07-11
 
 ## Routes Chosen
 
@@ -32,6 +32,7 @@ Date: 2026-07-06
 - `examples/client_profile.json`: sample Starter Audit client profile
 - `examples/sample_client_brief.md`: client-ready Starter Audit brief example
 - `examples/starter_audit_case_study.md`: public Starter Audit case study for sales positioning
+- `examples/open_source_delivery_case_study.md`: public proof page for two merged, independently reviewed contributions
 - `examples/delivery_bundle.md`: recommended Markdown/CSV/JSON Starter Audit delivery bundle
 - `.github/ISSUE_TEMPLATE/starter-audit.yml`: GitHub issue form for Starter Audit requests
 - `.github/ISSUE_TEMPLATE/custom-automation.yml`: GitHub issue form for scoped automation requests
@@ -153,6 +154,9 @@ Date: 2026-07-06
 - Bitbox #99 assignment comment received from repository automation: `https://github.com/abduznik/bitbox/issues/99#issuecomment-4892571993`.
 - Bitbox #99 follow-up status comment posted with PR #125 link: `https://github.com/abduznik/bitbox/issues/99#issuecomment-4905223184`.
 - Bitbox maintainer feedback on PR #125: clean implementation with good error handling.
+- Fresh 2026-07-11 search screened recent Python, GitHub Actions, documentation, and bounty issues. Most bounty results were rejected because they were security-related, crypto-dependent, highly contested, or showed weak payout credibility.
+- Lower-risk candidates retained for deeper review include `aadi-joshi/cngx#44` (documentation) and `KryptosAI/mcp-observatory#230` (GitHub Actions). The latter needs repository-quality and duplicate-work checks because several issues were created together.
+- Added a public open-source delivery case study that separates merged proof from the still-open `tg-spam-filter#3` PR.
 - Opportunity scanner updated to surface assignees and downgrade already-assigned or high-comment issues, reducing duplicate work and low-signal PR risk.
 - Profile README top section updated so fixed-scope service request links are visible in the first screen.
 - Profile update commit: `071a838 Make service request links prominent` in `D:/乔治/Github/George4177`.
@@ -254,5 +258,5 @@ The project still needs:
 
 - a pinned MVP repository on the GitHub profile
 - outreach channel or marketplace listing
-- optionally one small accepted PR to increase credibility
+- one credible distribution channel or direct referral source beyond GitHub search traffic
 - one first buyer or trial user for the USD 29-49 Starter Audit offer
