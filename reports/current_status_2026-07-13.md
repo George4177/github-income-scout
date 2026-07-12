@@ -5,7 +5,7 @@ Date: 2026-07-13
 ## Revenue Status
 
 - Verified revenue: USD 0
-- Open service requests: 0
+- Qualified inbound service requests: 0 (the self-authored pinned offer issue is excluded)
 - Current entry offer: USD 29-49 Starter Audit
 - Minimum path to cover a USD 20 monthly membership: one Starter Audit sale
 - Minimum path to cover a USD 200 monthly membership: five USD 49 audits, seven USD 29 audits, or one larger fixed-scope automation engagement
@@ -17,6 +17,7 @@ No income, lead, or conversion is inferred from repository traffic alone.
 - GitHub Profile displays the USD 29 starting price, three merged contribution examples, and direct request links above the fold.
 - GitHub Income Scout v0.3.0 is available as a public repository, GitHub Pages site, release ZIP, installable Codex skill, and reusable Composite Action.
 - Three issue forms accept scoped Starter Audit, Profile + Opportunity Pack, and Custom Automation requests.
+- A USD 29-49 Starter Audit offer is published and pinned as [issue #1](https://github.com/George4177/github-income-scout/issues/1).
 - The current release and public documentation use portable commands and contain no contributor workstation paths.
 - The Composite Action passed a real GitHub-hosted Ubuntu smoke run and emits artifact-ready report outputs.
 - A second consumer smoke run downloaded `George4177/github-income-scout@v0.3.0`, generated valid JSON, and uploaded it as an artifact.
