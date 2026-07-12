@@ -30,6 +30,7 @@ No income, lead, or conversion is inferred from repository traffic alone.
 | [ComposioHQ/awesome-codex-skills#172](https://github.com/ComposioHQ/awesome-codex-skills/pull/172) | Skill directory submission | Open and mergeable; security checks passed; no maintainer request | Discovery potential; no direct payout | Wait for maintainer review |
 | [kubeflow/website#4431](https://github.com/kubeflow/website/pull/4431) | MCP documentation | Open and mergeable; DCO and Netlify checks passed | Portfolio proof; no direct payout | Wait for member `/ok-to-test` and review |
 | [profit-coders/tg-spam-filter#3](https://github.com/profit-coders/tg-spam-filter/pull/3) | Contribution documentation | Open and mergeable; no review activity | Low portfolio value; no direct payout | Do not ping without new information |
+| [othmarodev/awesome-ai-automations#1](https://github.com/othmarodev/awesome-ai-automations/pull/1) | Curated directory entry | Open, mergeable, one-line README change | Qualified discovery potential; no direct payout | Wait for checks and maintainer review |
 
 ## Traffic Baseline
 
@@ -42,6 +43,8 @@ GitHub's 14-day repository traffic endpoint reported 164 clones from 75 unique c
 3. Distribute one factual case-study link in a relevant, low-noise channel only when it answers an existing request; do not mass-post or cold-spam maintainers.
 
 Latest direct-cash scan: [`cash_bounty_triage_2026-07-13.md`](cash_bounty_triage_2026-07-13.md). No candidate passed the funding, duplication, scope, and claim checks.
+
+Latest low-noise distribution action: [`distribution_awesome_ai_automations_pr1.md`](distribution_awesome_ai_automations_pr1.md).
 
 ## Account-Owner UI Steps
 
