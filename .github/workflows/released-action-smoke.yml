@@ -1,0 +1,35 @@
+name: Released Action Consumer Smoke
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  consume-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - id: scout
+        uses: George4177/github-income-scout@v0.3.0
+        with:
+          offline-input: examples/sample_issues.json
+          min-score: "60"
+          output: reports/released-action-smoke.json
+          format: json
+      - name: Verify released Action outputs
+        shell: bash
+        run: |
+          test "${{ steps.scout.outputs.report-path }}" = "reports/released-action-smoke.json"
+          test "${{ steps.scout.outputs.report-format }}" = "json"
+          python -m json.tool reports/released-action-smoke.json >/dev/null
+          grep -q '"accepted"' reports/released-action-smoke.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: released-action-smoke-report
+          path: reports/released-action-smoke.json
+          if-no-files-found: error
