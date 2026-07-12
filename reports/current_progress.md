@@ -174,6 +174,8 @@ Date: 2026-07-11
 - Kubeflow PR #4431 Netlify deploy preview, Header rules, Redirect rules, and DCO checks passed; it remains mergeable and is only waiting for the normal member `/ok-to-test` gate and review.
 - A fresh explicit-bounty scan rejected MergeOS platform-credit listings, an unfunded Opire reward with three attempts, and a funded USD 8 Frantic task with three competing claims.
 - The installable Codex skill now includes standalone GitHub CLI search and precheck commands, public installation instructions, a trigger example, and validator instructions.
+- Release `v0.2.0 - Installable Codex Skill` was published with a verified 74,723-byte ZIP and SHA-256 `87b372b9bed9537b11409facc9cc05f2db4ea90d946b7f365d12f7639f2199d9`.
+- Traffic on 2026-07-12 reached 164 clones from 75 unique sources, up 30 clones and 13 unique cloners from the prior baseline, while repository views and service requests remained at 0.
 - `aadi-joshi/cngx#44` was implemented on branch `docs/coding-agent-recipes`; commit `f4b2975` adds five verified agent recipes, guide links, and docs navigation. PR #45 was merged on 2026-07-12 after all reported CI checks passed. The maintainer confirmed the recipes, links, navigation, and strict docs build.
 - GitHub traffic baseline on 2026-07-11 showed 0 repository views and 0 inbound service issues, despite 134 clones from 62 unique sources. Clone traffic is treated as automation/indexing rather than buyer evidence until a page view or request appears.
 - Repository description and topics were expanded for accurate search discovery across Python CLI, GitHub API, reporting, issue tracking, Codex, data export, and developer productivity.
