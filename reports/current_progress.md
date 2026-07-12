@@ -176,6 +176,8 @@ Date: 2026-07-11
 - The installable Codex skill now includes standalone GitHub CLI search and precheck commands, public installation instructions, a trigger example, and validator instructions.
 - Release `v0.2.0 - Installable Codex Skill` was published with a verified 74,723-byte ZIP and SHA-256 `87b372b9bed9537b11409facc9cc05f2db4ea90d946b7f365d12f7639f2199d9`.
 - Traffic on 2026-07-12 reached 164 clones from 75 unique sources, up 30 clones and 13 unique cloners from the prior baseline, while repository views and service requests remained at 0.
+- Qualified distribution PR `ComposioHQ/awesome-codex-skills#172` was submitted as a one-line external skill listing to a roughly 14.9k-star Codex skills directory. It is open, mergeable, and both initial Socket Security checks passed.
+- `reports/awesome_codex_skills_pr172.md` records the directory rules, duplicate check, reach, acceptance standard, risk, commit, and verification evidence.
 - `aadi-joshi/cngx#44` was implemented on branch `docs/coding-agent-recipes`; commit `f4b2975` adds five verified agent recipes, guide links, and docs navigation. PR #45 was merged on 2026-07-12 after all reported CI checks passed. The maintainer confirmed the recipes, links, navigation, and strict docs build.
 - GitHub traffic baseline on 2026-07-11 showed 0 repository views and 0 inbound service issues, despite 134 clones from 62 unique sources. Clone traffic is treated as automation/indexing rather than buyer evidence until a page view or request appears.
 - Repository description and topics were expanded for accurate search discovery across Python CLI, GitHub API, reporting, issue tracking, Codex, data export, and developer productivity.
@@ -225,6 +227,7 @@ Date: 2026-07-11
 - Merged external PR: `NDilanka/orrery#23`, docs-only headless engine quickstart.
 - Current external PR: `profit-coders/tg-spam-filter#3`, open and mergeable, awaiting maintainer review.
 - Current external PR: `kubeflow/website#4431`, open and mergeable, DCO passed, awaiting Kubeflow review and `/ok-to-test`.
+- Current distribution PR: `ComposioHQ/awesome-codex-skills#172`, open and mergeable with initial security checks passed.
 - Merged external PR: `aadi-joshi/cngx#45`, coding-agent verification recipes; all reported CI checks passed.
 - Additional local PR candidate prepared but deferred: `optiland/optiland#659`, because upstream PR #660 now covers the same issue.
 - Submitted PR candidate: `aadi-joshi/cngx#45`, commit `f4b2975`; no bounty or payment claim was made.
