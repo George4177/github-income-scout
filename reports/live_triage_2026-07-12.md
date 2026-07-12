@@ -13,6 +13,8 @@ bounty terms.
 | pyfenn/fenn | [fenn#220](https://github.com/pyfenn/fenn/issues/220) | Python ML feature | Medium-High | Portfolio value | 8-16 hours | Scikit-learn-style perceptron API delegates training to existing trainers | Assigned to another contributor; new API requires maintainer collaboration | **No - assigned** |
 | Kubeflow MCP Server | [mcp-server#53](https://github.com/kubeflow/mcp-server/issues/53) | README badges/video | Low | Minor portfolio value | 1-2 hours | Requested assets and badges render and point to valid targets | Existing comments and externally hosted video dependency | Defer |
 | mcp-observatory | [mcp-observatory#230](https://github.com/KryptosAI/mcp-observatory/issues/230) | GHCR workflow | Medium | Portfolio value | 3-6 hours after dependency lands | Image builds, publishes, and uses requested tags | Root Dockerfile from #227 is still a prerequisite | **No - dependency blocked** |
+| Frantic | [frantic-board#301](https://github.com/auscaster/frantic-board/issues/301) | `llms.txt` publishing bounty | Low | USD 8 stated and funded | 1-2 hours | Complete the external Sourcey workflow and publish evidence | Three contributors already posted claim/attempt comments; external account and payout workflow required | **No - contested and low value** |
+| Opire mirror | [client_golang#1](https://github.com/WillisWilliam8/client_golang/issues/1) | Go metrics TTL bounty | High | No valid reward | 12-24 hours | Thread-safe TTL eviction, race tests, benchmarks | Owner's USD 10 reward command was rejected; three contributors then attempted the task; repository has no detected license | **No - unfunded and contested** |
 
 ## Rejected Search Noise
 
@@ -22,6 +24,8 @@ bounty terms.
   Python automation, CI/CD, or documentation services.
 - Security, credential, exploit, crypto, and fake-engagement work remains outside
   scope regardless of stated payout.
+- MergeOS MRG listings were excluded because MRG is platform credit rather than
+  verified cash income and the search was dominated by near-identical repositories.
 
 ## Selected Action
 

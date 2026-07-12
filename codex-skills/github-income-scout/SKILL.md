@@ -14,6 +14,8 @@ Use this skill to turn GitHub issue research into concrete, low-risk income-orie
    - Markdown report for human review
    - CSV export for spreadsheet triage
    - JSON export for dashboards or follow-up automation
+   If the project script is unavailable, use the GitHub CLI queries in
+   `references/commands.md` and perform the same manual checks.
 3. Reject unsafe matches:
    - exploit or vulnerability abuse
    - fake stars, fake reviews, or spam engagement
@@ -36,3 +38,6 @@ Do not submit low-quality PRs, spam maintainers, bypass platform rules, work on 
 ## References
 
 Read `references/workflow.md` when preparing a paid audit, GitHub profile package, or PR action pack.
+
+Read `references/commands.md` when scanning with GitHub CLI, checking assignments,
+or excluding duplicate pull requests without the main project scripts.

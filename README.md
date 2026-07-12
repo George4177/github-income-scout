@@ -78,6 +78,34 @@ The repository includes a scheduled GitHub Actions workflow that generates Markd
 
 See [docs/weekly_scout_workflow.md](docs/weekly_scout_workflow.md) for how to run it and download the reports.
 
+## Codex Skill
+
+The repository includes an installable `github-income-scout` Codex skill in
+[`codex-skills/github-income-scout`](codex-skills/github-income-scout). It can
+screen GitHub issues, reject unsafe or already-claimed work, and package a
+Starter Audit or pull-request action pack.
+
+Install it from this public repository:
+
+```powershell
+python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" `
+  --repo George4177/github-income-scout `
+  --path codex-skills/github-income-scout
+```
+
+Restart Codex after installation, then invoke it with:
+
+```text
+Use $github-income-scout to screen current Python and GitHub Actions issues for a 3-hour weekly budget.
+```
+
+Validate a local checkout with the Skill Creator validator:
+
+```powershell
+python "$HOME/.codex/skills/.system/skill-creator/scripts/quick_validate.py" `
+  codex-skills/github-income-scout
+```
+
 ## Example Output
 
 See [examples/sample_opportunities.md](examples/sample_opportunities.md).
