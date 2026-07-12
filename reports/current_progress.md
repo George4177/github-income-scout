@@ -1,5 +1,7 @@
 # Current Progress Report
 
+Latest dated status: [`current_status_2026-07-13.md`](current_status_2026-07-13.md)
+
 Date: 2026-07-11
 
 ## Routes Chosen
