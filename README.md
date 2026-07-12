@@ -110,6 +110,8 @@ jobs:
 
 Use `config` for a repository-specific query file, `format` for `markdown`, `json`, or `csv`, and `enrich-repos: "true"` when repository health metadata is worth the additional API calls. The optional `offline-input` supports deterministic tests without network access.
 
+See [MARKETPLACE.md](MARKETPLACE.md) for the verified release status and the account-owner step required for a Marketplace listing.
+
 ## Weekly Scout Workflow
 
 The repository includes a scheduled GitHub Actions workflow that generates Markdown, JSON, CSV, and Starter Audit bundle artifacts.

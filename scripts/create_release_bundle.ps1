@@ -32,6 +32,7 @@ $includePaths = @(
     "SERVICE_MENU.md",
     "LAUNCH_CHECKLIST.md",
     "PUBLISHING.md",
+    "MARKETPLACE.md",
     "LICENSE",
     "pyproject.toml",
     "pricing.md",
