@@ -1,0 +1,47 @@
+name: Composite Action Smoke Test
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - action.yml
+      - scripts/action_entrypoint.py
+      - scripts/issue_scout.py
+      - examples/sample_issues.json
+      - .github/workflows/action-smoke.yml
+  pull_request:
+    paths:
+      - action.yml
+      - scripts/action_entrypoint.py
+      - scripts/issue_scout.py
+      - examples/sample_issues.json
+      - .github/workflows/action-smoke.yml
+
+permissions:
+  contents: read
+
+jobs:
+  offline-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - id: scout
+        uses: ./
+        with:
+          offline-input: examples/sample_issues.json
+          min-score: "60"
+          output: reports/action-smoke.md
+      - name: Verify Action outputs
+        shell: bash
+        run: |
+          test "${{ steps.scout.outputs.report-path }}" = "reports/action-smoke.md"
+          test "${{ steps.scout.outputs.report-format }}" = "markdown"
+          grep -q "GitHub Opportunity Report" reports/action-smoke.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: action-smoke-report
+          path: reports/action-smoke.md
+          if-no-files-found: error

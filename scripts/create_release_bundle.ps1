@@ -27,6 +27,7 @@ New-Item -ItemType Directory -Path $stagingPath | Out-Null
 
 $includePaths = @(
     "README.md",
+    "action.yml",
     "RELEASE_NOTES.md",
     "SERVICE_MENU.md",
     "LAUNCH_CHECKLIST.md",

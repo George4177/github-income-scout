@@ -72,6 +72,44 @@ $env:GITHUB_TOKEN = "ghp_your_token_here"
 
 Do not commit tokens or paste private credentials into issue reports.
 
+## Use as a GitHub Action
+
+The repository includes a zero-dependency Composite Action for generating a report inside another repository. It reads public issue data and does not create comments, claims, or pull requests.
+
+```yaml
+name: Weekly opportunity report
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 1 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - id: scout
+        uses: George4177/github-income-scout@v0.3.0
+        with:
+          token: ${{ github.token }}
+          min-score: "60"
+          include-rejected: "true"
+          output: reports/github-opportunities.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: github-opportunity-report
+          path: ${{ steps.scout.outputs.report-path }}
+```
+
+Use `config` for a repository-specific query file, `format` for `markdown`, `json`, or `csv`, and `enrich-repos: "true"` when repository health metadata is worth the additional API calls. The optional `offline-input` supports deterministic tests without network access.
+
 ## Weekly Scout Workflow
 
 The repository includes a scheduled GitHub Actions workflow that generates Markdown, JSON, CSV, and Starter Audit bundle artifacts.
@@ -122,6 +160,7 @@ The free version includes:
 - optional repository health signals
 - no external services
 - no account writes
+- reusable Composite Action with a deterministic offline smoke test
 
 ## Paid Customization Ideas
 

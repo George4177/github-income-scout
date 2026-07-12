@@ -1,5 +1,32 @@
 # Release Notes
 
+## v0.3.0 - Reusable GitHub Action
+
+GitHub Income Scout v0.3.0 adds an installable Composite Action so a repository can generate conservative opportunity reports without copying the scanner scripts.
+
+### Added
+
+- root `action.yml` with Markdown, JSON, and CSV report inputs
+- bundled-query, custom-query, and deterministic offline modes
+- report path and format outputs for artifact upload steps
+- input validation and focused error messages in `scripts/action_entrypoint.py`
+- deterministic GitHub Actions smoke workflow
+
+### Improved
+
+- safety filtering rejects automated bounty feeds, dependency dashboards, generic vulnerability trackers, and engagement-gated bounty claims
+- XP-only contest tasks are downgraded instead of presented as direct-income opportunities
+- the public opportunity list records manual duplicate, assignment, acceptance, and payout checks
+
+### Validation
+
+- 25 zero-dependency unit tests pass
+- the Composite Action entrypoint generates a report and writes valid Action outputs
+- the offline Action smoke workflow verifies the published interface
+- the full local validation suite passes
+
+This release does not guarantee income, bounty payouts, merged pull requests, sponsorships, or client leads. The Action does not post comments, claim work, open pull requests, collect credentials, or perform payment operations.
+
 ## v0.2.0 - Installable Codex Skill
 
 GitHub Income Scout v0.2.0 packages the opportunity-screening workflow as an
