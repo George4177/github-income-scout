@@ -19,6 +19,8 @@ No income, lead, or conversion is inferred from repository traffic alone.
 - Three issue forms accept scoped Starter Audit, Profile + Opportunity Pack, and Custom Automation requests.
 - The current release and public documentation use portable commands and contain no contributor workstation paths.
 - The Composite Action passed a real GitHub-hosted Ubuntu smoke run and emits artifact-ready report outputs.
+- A second consumer smoke run downloaded `George4177/github-income-scout@v0.3.0`, generated valid JSON, and uploaded it as an artifact.
+- Repository topics now include `github-action`, `composite-action`, `codex-skill`, and `opportunity-scanner` for GitHub-native discovery.
 
 ## External Work Status
 
@@ -38,6 +40,11 @@ GitHub's 14-day repository traffic endpoint reported 164 clones from 75 unique c
 1. Monitor and respond promptly to a real service-request issue or actionable PR review.
 2. Get the skill-directory submission merged, because qualified Codex users are closer to the Starter Audit target audience than broad repository traffic.
 3. Distribute one factual case-study link in a relevant, low-noise channel only when it answers an existing request; do not mass-post or cold-spam maintainers.
+
+## Account-Owner UI Steps
+
+- Profile pinning is not exposed by the current GitHub API. The repository is not yet pinned and must be selected through **Customize your pins** in the GitHub Profile UI.
+- Marketplace publication requires the repository owner to accept the Marketplace Developer Agreement when applicable and complete GitHub's 2FA-gated release form. See [`MARKETPLACE.md`](../MARKETPLACE.md).
 
 ## Current Gap
 
