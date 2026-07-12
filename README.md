@@ -226,5 +226,7 @@ The included `Deploy GitHub Pages` workflow publishes the `site/` folder when Gi
 
 ## Current Release
 
+- [v0.2.0 - Installable Codex Skill](https://github.com/George4177/github-income-scout/releases/tag/v0.2.0)
+- [v0.2.0 Release ZIP](https://github.com/George4177/github-income-scout/releases/download/v0.2.0/github-income-scout-v0.2.0.zip)
 - [v0.1.0 - Starter Audit MVP](https://github.com/George4177/github-income-scout/releases/tag/v0.1.0)
 - [Release ZIP](https://github.com/George4177/github-income-scout/releases/download/v0.1.0/github-income-scout-v0.1.0.zip)

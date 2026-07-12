@@ -1,6 +1,6 @@
 [project]
 name = "github-income-scout"
-version = "0.1.0"
+version = "0.2.0"
 description = "Score low-risk GitHub issue opportunities for practical open-source contribution and service packaging."
 readme = "README.md"
 requires-python = ">=3.10"

@@ -1,5 +1,40 @@
 # Release Notes
 
+## v0.2.0 - Installable Codex Skill
+
+GitHub Income Scout v0.2.0 packages the opportunity-screening workflow as an
+installable Codex skill and strengthens the public evidence behind the fixed-scope
+Starter Audit service.
+
+### Added
+
+- installable `github-income-scout` Codex skill with UI metadata
+- standalone GitHub CLI commands for issue search, assignment checks, repository
+  health review, and duplicate pull-request checks
+- Profile + Opportunity Pack request form, delivery template, example, and checklist
+- weekly GitHub Action artifacts in Markdown, JSON, CSV, and Starter Audit formats
+- three accepted open-source contribution case studies plus an active Kubeflow MCP
+  Server documentation contribution
+
+### Improved
+
+- opportunity scoring records assignees and downgrades contested issues
+- public service menu now covers Starter Audit, Profile + Opportunity Pack, and
+  Custom Automation requests
+- landing page presents current verification evidence and direct request links
+- release bundle includes service and workflow documentation
+
+### Validation
+
+- 16 unit tests pass
+- static site checks pass
+- offline Markdown, JSON, CSV, bundle, and client-brief dry runs pass
+- the bundled Codex skill passes Skill Creator `quick_validate.py`
+
+This release does not guarantee income, bounty payouts, merged pull requests,
+sponsorships, or client leads. It does not automate payment, bounty claims,
+maintainer messages, exploit work, credentials, fake engagement, or platform bypasses.
+
 ## v0.1.0 - Starter Audit MVP
 
 GitHub Income Scout v0.1.0 is the first public-ready MVP for finding low-risk GitHub contribution opportunities and packaging them into a small paid audit service.

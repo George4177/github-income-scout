@@ -28,6 +28,7 @@ New-Item -ItemType Directory -Path $stagingPath | Out-Null
 $includePaths = @(
     "README.md",
     "RELEASE_NOTES.md",
+    "SERVICE_MENU.md",
     "LAUNCH_CHECKLIST.md",
     "PUBLISHING.md",
     "LICENSE",
@@ -37,6 +38,7 @@ $includePaths = @(
     "service_offer.md",
     ".github",
     "codex-skills",
+    "docs",
     "examples",
     "profile",
     "scripts",

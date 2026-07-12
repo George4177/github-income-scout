@@ -11,7 +11,7 @@ C:\Users\77\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\pyth
 Optional release bundle:
 
 ```powershell
-.\scripts\create_release_bundle.ps1 -Version v0.1.0
+.\scripts\create_release_bundle.ps1 -Version v0.2.0
 ```
 
 ## Repository Setup
