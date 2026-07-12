@@ -69,6 +69,20 @@ REJECT_KEYWORDS = {
     "review an open pr": "fake-engagement risk",
     "casino": "restricted/high-risk vertical",
     "adult": "restricted/high-risk vertical",
+    "bounty alert:": "automated bounty aggregation, not a scoped task",
+    "dependency dashboard": "automated maintenance dashboard, not a scoped contributor task",
+    "security vulnerabilities found": "security vulnerability work outside the low-risk scope",
+    "zero day": "security vulnerability work outside the low-risk scope",
+}
+
+REJECT_PATTERNS = {
+    r"\bstar\s+https?://": "fake-engagement requirement",
+    r"\bstar\s+(?:the\s+)?(?:repository|repo)\b": "fake-engagement requirement",
+}
+
+LOW_VALUE_KEYWORDS = {
+    "ecsoc26": -30,
+    "bonus xp": -20,
 }
 
 
@@ -109,6 +123,9 @@ def rejection_reason(text: str) -> str:
     reasons = []
     for keyword, reason in REJECT_KEYWORDS.items():
         if keyword in text and reason not in reasons:
+            reasons.append(reason)
+    for pattern, reason in REJECT_PATTERNS.items():
+        if re.search(pattern, text) and reason not in reasons:
             reasons.append(reason)
     return "; ".join(reasons)
 
@@ -206,6 +223,9 @@ def score_issue(item: dict[str, Any], repo: dict[str, Any] | None = None) -> Opp
         if word in haystack:
             score += delta
     for word, delta in HIGH_RISK_KEYWORDS.items():
+        if word in haystack:
+            score += delta
+    for word, delta in LOW_VALUE_KEYWORDS.items():
         if word in haystack:
             score += delta
     if assignees:

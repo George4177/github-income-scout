@@ -66,6 +66,71 @@ class IssueScoutTests(unittest.TestCase):
         self.assertIn("security exploitation work", opportunity.rejection_reason)
         self.assertEqual(opportunity.worth_doing, "No, rejected by safety filter")
 
+    def test_star_gated_bounty_is_rejected(self):
+        item = {
+            "title": "[25 MRG] Add Windows quickstart docs",
+            "html_url": "https://github.com/example/repo/issues/7",
+            "repository_url": "https://api.github.com/repos/example/repo",
+            "labels": [{"name": "bounty"}, {"name": "documentation"}],
+            "comments": 0,
+            "body": "To claim: Star https://github.com/example/repo and comment that you claim it.",
+        }
+
+        opportunity = issue_scout.score_issue(item)
+
+        self.assertTrue(opportunity.rejected)
+        self.assertIn("fake-engagement requirement", opportunity.rejection_reason)
+
+    def test_automated_bounty_alert_is_rejected(self):
+        item = {
+            "title": "Bounty Alert: 48 New Opportunities",
+            "html_url": "https://github.com/example/repo/issues/8",
+            "repository_url": "https://api.github.com/repos/example/repo",
+            "labels": [{"name": "bounty"}],
+            "comments": 0,
+            "body": "Automated feed update.",
+        }
+
+        opportunity = issue_scout.score_issue(item)
+
+        self.assertTrue(opportunity.rejected)
+        self.assertIn("automated bounty aggregation", opportunity.rejection_reason)
+
+    def test_dependency_dashboard_is_rejected(self):
+        item = {
+            "title": "Dependency Dashboard",
+            "html_url": "https://github.com/example/repo/issues/9",
+            "repository_url": "https://api.github.com/repos/example/repo",
+            "labels": [{"name": "help wanted"}],
+            "comments": 0,
+            "body": "This issue lists detected dependency updates.",
+        }
+
+        opportunity = issue_scout.score_issue(item)
+
+        self.assertTrue(opportunity.rejected)
+        self.assertIn("automated maintenance dashboard", opportunity.rejection_reason)
+
+    def test_xp_contest_issue_is_downgraded(self):
+        item = {
+            "title": "Fix README badges",
+            "html_url": "https://github.com/example/repo/issues/10",
+            "repository_url": "https://api.github.com/repos/example/repo",
+            "labels": [
+                {"name": "documentation"},
+                {"name": "help wanted"},
+                {"name": "good first issue"},
+                {"name": "ECSoC26"},
+            ],
+            "comments": 0,
+            "body": "Bonus XP may be awarded.",
+        }
+
+        opportunity = issue_scout.score_issue(item)
+
+        self.assertFalse(opportunity.rejected)
+        self.assertLess(opportunity.score, 62)
+
     def test_min_score_split_keeps_rejected_separate(self):
         low_score = {
             "title": "Unclear idea",
