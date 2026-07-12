@@ -169,7 +169,7 @@ Date: 2026-07-11
 - `aadi-joshi/cngx#44` was implemented on branch `docs/coding-agent-recipes`; commit `f4b2975` adds five verified agent recipes, guide links, and docs navigation. PR #45 was merged on 2026-07-12 after all reported CI checks passed. The maintainer confirmed the recipes, links, navigation, and strict docs build.
 - GitHub traffic baseline on 2026-07-11 showed 0 repository views and 0 inbound service issues, despite 134 clones from 62 unique sources. Clone traffic is treated as automation/indexing rather than buyer evidence until a page view or request appears.
 - Repository description and topics were expanded for accurate search discovery across Python CLI, GitHub API, reporting, issue tracking, Codex, data export, and developer productivity.
-- Landing page updated with a "Recent proof" section linking the latest manual triage, merged Orrery PR, merged Bitbox PR, and open tg-spam-filter PR.
+- Landing page proof section now links the current 2026-07-11 triage, the three-contribution delivery case study, and merged cngx PR #45 with its full CI evidence.
 - Added `SERVICE_MENU.md` as a shareable public service menu for Starter Audit, Profile + Opportunity Pack, and Custom Automation requests; linked it from README, landing page, and profile README.
 - Added `.github/ISSUE_TEMPLATE/profile-opportunity-pack.yml` and linked it from the service menu, README, landing page, and profile README so the mid-tier USD 99-199 service has a direct request path.
 - Added `templates/profile_opportunity_pack_template.md` and `examples/profile_opportunity_pack_example.md` so the mid-tier service has a reusable delivery format and public example.
