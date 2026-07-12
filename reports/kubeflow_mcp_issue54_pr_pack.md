@@ -6,7 +6,7 @@ Date: 2026-07-12
 
 - Issue: [kubeflow/mcp-server#54](https://github.com/kubeflow/mcp-server/issues/54)
 - Target repository: [kubeflow/website](https://github.com/kubeflow/website)
-- Local checkout: `D:/乔治/Github/kubeflow-website-54`
+- Local checkout: `$WORKSPACE/kubeflow-website-54`
 - Branch: `docs/add-kubeflow-mcp-server`
 - Commit: `68fee1e docs: add Kubeflow MCP Server subproject`
 - DCO: commit includes `Signed-off-by` using the account's GitHub noreply address

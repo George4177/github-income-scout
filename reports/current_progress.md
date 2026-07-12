@@ -134,11 +134,11 @@ Date: 2026-07-11
 - 2026-07-06 live public GitHub search succeeded and surfaced new candidates: Waggle-mcp docs issues #442 and #444, Optiland issue #659, and one deferred vllm-omni issue that is already assigned.
 - Waggle-mcp #442 was downgraded after deeper review: it depends on PR #419, but #419 is closed as invalid and current `main` does not contain the requested community tools/toggle.
 - Orrery #15 was selected as a safer replacement docs PR candidate: open, unassigned, no comments, no open related PRs found, docs-only.
-- Orrery local branch prepared at `D:/乔治/Github/orrery-pr15` on branch `docs/headless-quickstart`.
+- Orrery local branch prepared at `$WORKSPACE/orrery-pr15` on branch `docs/headless-quickstart`.
 - Orrery local commit prepared: `2ed3391 docs: add headless engine quickstart`.
 - Local Git commits now work in the MVP repository and the local Profile repository.
 - Profile README publishing was prioritized after user instruction to "throw the service out first".
-- Local Profile repository prepared at `D:/乔治/Github/George4177` with commit `16effd2 Add profile service README`.
+- Local Profile repository prepared at `$WORKSPACE/George4177` with commit `16effd2 Add profile service README`.
 - GitHub CLI authorization completed as `George4177`.
 - Public Profile repository created: `https://github.com/George4177/George4177`.
 - Profile README pushed to `origin/main` and verified by reading `README.md` back from GitHub.
@@ -161,13 +161,13 @@ Date: 2026-07-11
 - Added a public open-source delivery case study that separates merged proof from the still-open `tg-spam-filter#3` PR.
 - Opportunity scanner updated to surface assignees and downgrade already-assigned or high-comment issues, reducing duplicate work and low-signal PR risk.
 - Profile README top section updated so fixed-scope service request links are visible in the first screen.
-- Profile update commit: `071a838 Make service request links prominent` in `D:/乔治/Github/George4177`.
+- Profile update commit: `071a838 Make service request links prominent` in `$WORKSPACE/George4177`.
 - GitHub profile status was attempted but skipped because the current token lacks the `user` scope required by GitHub's `changeUserStatus` GraphQL mutation.
 - New live scan generated `reports/live_snapshot_2026-07-07.md` with 20 opportunities.
 - Manual triage recorded in `reports/live_triage_2026-07-07.md`; top candidates were rejected or deferred because they were Wikipedia/notability work, already accepted by another contributor, or in a repository where we already have an open PR awaiting review.
 - Current manual triage recorded in `reports/live_triage_2026-07-11.md`; it separates verified payout from portfolio value and records the Dockerfile dependency blocking `mcp-observatory#230`.
 - Current manual triage recorded in `reports/live_triage_2026-07-12.md`; it rejects claimed Hekmo and fenn tasks, filters contest noise, and selects official Kubeflow MCP Server documentation issue #54.
-- Kubeflow issue #54 is implemented locally in `D:/乔治/Github/kubeflow-website-54` on branch `docs/add-kubeflow-mcp-server`. DCO-signed commit `68fee1e` adds the subproject entry, Overview, Getting Started, and GitHub Repository navigation.
+- Kubeflow issue #54 is implemented locally in `$WORKSPACE/kubeflow-website-54` on branch `docs/add-kubeflow-mcp-server`. DCO-signed commit `68fee1e` adds the subproject entry, Overview, Getting Started, and GitHub Repository navigation.
 - Kubeflow website verification passed with Hugo Extended 0.124.1 and the repository-pinned Docsy commit; the generated navigation contains all three requested child entries.
 - `reports/kubeflow_mcp_issue54_pr_pack.md` records acceptance mapping, verification evidence, and the prepared PR description.
 - Kubeflow website PR #4431 was opened and marked ready for review. The DCO check passed immediately; Netlify preview checks began, and Prow is waiting for the normal member `/ok-to-test` gate.
@@ -212,7 +212,7 @@ Date: 2026-07-11
 - Follow-up live scan generated `reports/live_snapshot_2026-07-06_followup.md` with ROS2 docs #4209, Optiland #659, and Waggle-mcp #444.
 - Waggle-mcp #444 was rejected after deeper review because it also depends on closed invalid PR #419 and already has multiple assignment-request comments.
 - ROS2 #4209 remains a possible documentation contribution but is broad, old, and has a related open broken-link PR (#6176), so it is lower priority for a fast credible contribution.
-- Optiland #659 was selected and fixed locally. Local branch prepared at `D:/乔治/Github/optiland-issue659` on branch `fix-curvature-solve-planar-surface`.
+- Optiland #659 was selected and fixed locally. Local branch prepared at `$WORKSPACE/optiland-issue659` on branch `fix-curvature-solve-planar-surface`.
 - Optiland local commit prepared: `0e7354d fix: convert planar surfaces in curvature solves`.
 - Optiland targeted verification passed: `17 passed in 1.37s` for `tests/test_solves.py -q -o addopts=`.
 - The 5-hour heartbeat automation was refreshed on 2026-07-06 with the current next steps: publish the repository if a write path becomes available, otherwise prepare a low-risk Waggle-mcp documentation PR or continue improving service assets.
@@ -242,7 +242,7 @@ Date: 2026-07-11
 - Latest opportunity snapshot commit: `d77cd2f Record latest GitHub opportunity snapshot`
 - Starter Audit client brief generator commit: `3d7e584 Add Starter Audit client brief generator`
 - Orrery candidate prep commit: `a54aaa2 Record Orrery PR candidate preparation`
-- Profile repository local commit: `16effd2 Add profile service README` in `D:/乔治/Github/George4177`
+- Profile repository local commit: `16effd2 Add profile service README` in `$WORKSPACE/George4177`
 - Profile repository follow-up commit: `fb3f0a7 Link featured project to public repo`
 - Profile repository follow-up commit: `273340f Add direct request links`
 - Profile repository follow-up commit: `071a838 Make service request links prominent`

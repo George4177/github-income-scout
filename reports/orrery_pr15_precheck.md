@@ -53,7 +53,7 @@ Expected direct income: none verified. Expected value is portfolio credibility t
 Local clone:
 
 ```text
-D:/乔治/Github/orrery-pr15
+$WORKSPACE/orrery-pr15
 ```
 
 Branch:

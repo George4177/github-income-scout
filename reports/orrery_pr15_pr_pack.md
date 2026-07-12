@@ -39,7 +39,7 @@ Fixes #15
 ## Push Commands When GitHub Write Access Is Available
 
 ```bash
-cd D:/乔治/Github/orrery-pr15
+cd $WORKSPACE/orrery-pr15
 git remote -v
 git status
 git push -u origin docs/headless-quickstart

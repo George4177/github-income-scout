@@ -32,7 +32,7 @@ Command:
 
 ```powershell
 $env:MPLCONFIGDIR='D:/George/Github/optiland-issue659/.mplconfig'
-C:\Users\77\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe -m pytest tests/test_solves.py -q -o addopts=
+python -m pytest tests/test_solves.py -q -o addopts=
 ```
 
 Result:
@@ -65,7 +65,7 @@ Fix curvature solves for planar surfaces
 
 ```powershell
 $env:MPLCONFIGDIR='D:/George/Github/optiland-issue659/.mplconfig'
-C:\Users\77\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe -m pytest tests/test_solves.py -q -o addopts=
+python -m pytest tests/test_solves.py -q -o addopts=
 ```
 
 Result: `17 passed in 1.37s`

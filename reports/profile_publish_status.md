@@ -9,7 +9,7 @@ The GitHub profile repository has been created and published.
 - Repository: https://github.com/George4177/George4177
 - Visibility: Public
 - Default branch: `main`
-- Local source: `D:/乔治/Github/George4177`
+- Local source: `$WORKSPACE/George4177`
 - Published commits:
   - `16effd2 Add profile service README`
   - `fb3f0a7 Link featured project to public repo`

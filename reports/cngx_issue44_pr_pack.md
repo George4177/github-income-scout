@@ -8,7 +8,7 @@ Date: 2026-07-12
 - Task: add copy-paste verification recipes for Claude Code, Cursor, Codex, aider, and PR/merge bots.
 - Current issue state at review: open, unassigned, no comments.
 - Duplicate check: no related open PR was identified during the initial review.
-- Local checkout: `D:/乔治/Github/cngx-44`
+- Local checkout: `$WORKSPACE/cngx-44`
 - Branch: `docs/coding-agent-recipes`
 - Commit: `f4b2975 docs: add coding agent verification recipes`
 

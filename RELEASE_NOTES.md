@@ -69,7 +69,7 @@ This release does not automate comments, pull requests, bounty applications, pay
 Run:
 
 ```powershell
-C:\Users\77\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe scripts\check_all.py
+python scripts\check_all.py
 ```
 
 Expected result: unit tests pass, the static site check passes, reports render, the Starter Audit bundle dry run succeeds, and outreach templates pass the boundary checks.

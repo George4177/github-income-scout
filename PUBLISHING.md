@@ -5,7 +5,7 @@ Use this checklist before publishing the repository or making external GitHub mo
 ## Local Checks
 
 ```powershell
-C:\Users\77\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe scripts\check_all.py
+python scripts\check_all.py
 ```
 
 Optional release bundle:
