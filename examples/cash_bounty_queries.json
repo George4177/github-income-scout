@@ -1,0 +1,8 @@
+{
+  "per_page": 20,
+  "queries": [
+    "bounty Python is:open is:issue no:assignee",
+    "\"powered by Opire\" is:open is:issue no:assignee",
+    "label:\"💎 Bounty\" is:open is:issue no:assignee"
+  ]
+}

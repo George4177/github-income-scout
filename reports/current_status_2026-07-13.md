@@ -41,6 +41,8 @@ GitHub's 14-day repository traffic endpoint reported 164 clones from 75 unique c
 2. Get the skill-directory submission merged, because qualified Codex users are closer to the Starter Audit target audience than broad repository traffic.
 3. Distribute one factual case-study link in a relevant, low-noise channel only when it answers an existing request; do not mass-post or cold-spam maintainers.
 
+Latest direct-cash scan: [`cash_bounty_triage_2026-07-13.md`](cash_bounty_triage_2026-07-13.md). No candidate passed the funding, duplication, scope, and claim checks.
+
 ## Account-Owner UI Steps
 
 - Profile pinning is not exposed by the current GitHub API. The repository is not yet pinned and must be selected through **Customize your pins** in the GitHub Profile UI.

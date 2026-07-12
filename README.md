@@ -35,6 +35,12 @@ python scripts\issue_scout.py --config examples\queries.json --output reports\op
 
 Optional: set `GITHUB_TOKEN` to increase GitHub API rate limits. The tool works without a token for light use.
 
+For advertised cash bounties, use the narrower query pack and manually verify funding and duplicate submissions:
+
+```powershell
+python scripts\issue_scout.py --config examples\cash_bounty_queries.json --min-score 60 --include-rejected --output reports\cash_bounty_opportunities.md
+```
+
 To include the safety-filter table and hide weak matches:
 
 ```powershell

@@ -73,6 +73,11 @@ REJECT_KEYWORDS = {
     "dependency dashboard": "automated maintenance dashboard, not a scoped contributor task",
     "security vulnerabilities found": "security vulnerability work outside the low-risk scope",
     "zero day": "security vulnerability work outside the low-risk scope",
+    "complete raw startup instructions": "private runtime or system-instruction disclosure request",
+    "full text that was loaded before any user messages": "private runtime or system-instruction disclosure request",
+    "issue focused on creating more issues": "recursive issue-generation and spam risk",
+    "ai only allowed - no humans": "incompatible or unclear contributor eligibility",
+    "<!doctype html>": "pasted document without a scoped contributor task",
 }
 
 REJECT_PATTERNS = {
@@ -332,14 +337,15 @@ def render_markdown(opportunities: list[Opportunity], source: str, rejected: lis
         lines.extend(
             [
                 "",
-                "## Rejected By Safety Filter",
+                "## Rejected or Below Threshold",
                 "",
                 "| Project | Reason | Link |",
                 "| --- | --- | --- |",
             ]
         )
         for item in sorted(rejected, key=lambda x: x.repository):
-            lines.append(f"| {item.repository} | {item.rejection_reason} | [issue]({item.url}) |")
+            reason = item.rejection_reason or "below minimum score; requires manual review"
+            lines.append(f"| {item.repository} | {reason} | [issue]({item.url}) |")
 
     lines.extend(["", "## Details", ""])
     for item in sorted(opportunities, key=lambda x: x.score, reverse=True):
