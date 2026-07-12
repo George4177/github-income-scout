@@ -91,8 +91,8 @@ jobs:
   scout:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - id: scout
@@ -102,7 +102,7 @@ jobs:
           min-score: "60"
           include-rejected: "true"
           output: reports/github-opportunities.md
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: github-opportunity-report
           path: ${{ steps.scout.outputs.report-path }}

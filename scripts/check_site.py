@@ -53,7 +53,7 @@ def main() -> int:
             if text not in css:
                 raise AssertionError(f"Missing expected CSS text: {text}")
 
-        for text in ["actions/upload-artifact@v4", "weekly-scout-reports", "opportunities.csv"]:
+        for text in ["actions/upload-artifact@v7", "weekly-scout-reports", "opportunities.csv"]:
             if text not in weekly_workflow:
                 raise AssertionError(f"Missing expected weekly workflow text: {text}")
     except AssertionError as exc:
