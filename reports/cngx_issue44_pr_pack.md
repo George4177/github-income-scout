@@ -1,6 +1,6 @@
 # cngx Issue #44 PR Pack
 
-Date: 2026-07-11
+Date: 2026-07-12
 
 ## Upstream Scope
 
@@ -68,6 +68,8 @@ Submitted as [aadi-joshi/cngx#45](https://github.com/aadi-joshi/cngx/pull/45) on
 
 - Fork: `George4177/cngx`
 - Head branch: `docs/coding-agent-recipes`
-- Initial state: open, ready for review, mergeable
-- Initial reviews/comments/checks: none reported
+- Result: merged on 2026-07-12
+- CI result: all reported required checks passed, including lint, Python 3.10-3.12 tests, strict docs build, package smoke, policy checks, and the reusable Action smoke test
+- Maintainer feedback: recipes matched the current CLI flags and Action inputs; links, navigation, and strict docs build were confirmed
+- Non-blocking polish suggestions: add concrete sample output, mark the hand-written aider claim as illustrative, and remind readers to substitute their real project test command
 - No bounty or payment claim was made

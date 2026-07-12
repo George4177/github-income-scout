@@ -32,7 +32,7 @@ Date: 2026-07-11
 - `examples/client_profile.json`: sample Starter Audit client profile
 - `examples/sample_client_brief.md`: client-ready Starter Audit brief example
 - `examples/starter_audit_case_study.md`: public Starter Audit case study for sales positioning
-- `examples/open_source_delivery_case_study.md`: public proof page for two merged, independently reviewed contributions
+- `examples/open_source_delivery_case_study.md`: public proof page for three merged, independently reviewed contributions
 - `examples/delivery_bundle.md`: recommended Markdown/CSV/JSON Starter Audit delivery bundle
 - `.github/ISSUE_TEMPLATE/starter-audit.yml`: GitHub issue form for Starter Audit requests
 - `.github/ISSUE_TEMPLATE/custom-automation.yml`: GitHub issue form for scoped automation requests
@@ -166,7 +166,7 @@ Date: 2026-07-11
 - New live scan generated `reports/live_snapshot_2026-07-07.md` with 20 opportunities.
 - Manual triage recorded in `reports/live_triage_2026-07-07.md`; top candidates were rejected or deferred because they were Wikipedia/notability work, already accepted by another contributor, or in a repository where we already have an open PR awaiting review.
 - Current manual triage recorded in `reports/live_triage_2026-07-11.md`; it separates verified payout from portfolio value and records the Dockerfile dependency blocking `mcp-observatory#230`.
-- `aadi-joshi/cngx#44` was implemented on branch `docs/coding-agent-recipes`; commit `f4b2975` adds five verified agent recipes, guide links, and docs navigation. Strict MkDocs build and 6 targeted CLI/Action tests pass. PR #45 is now open and mergeable.
+- `aadi-joshi/cngx#44` was implemented on branch `docs/coding-agent-recipes`; commit `f4b2975` adds five verified agent recipes, guide links, and docs navigation. PR #45 was merged on 2026-07-12 after all reported CI checks passed. The maintainer confirmed the recipes, links, navigation, and strict docs build.
 - GitHub traffic baseline on 2026-07-11 showed 0 repository views and 0 inbound service issues, despite 134 clones from 62 unique sources. Clone traffic is treated as automation/indexing rather than buyer evidence until a page view or request appears.
 - Repository description and topics were expanded for accurate search discovery across Python CLI, GitHub API, reporting, issue tracking, Codex, data export, and developer productivity.
 - Landing page updated with a "Recent proof" section linking the latest manual triage, merged Orrery PR, merged Bitbox PR, and open tg-spam-filter PR.
@@ -214,7 +214,7 @@ Date: 2026-07-11
 - Merged external PR: `abduznik/bitbox#125`, assigned `seconds_to_hms` tool request.
 - Merged external PR: `NDilanka/orrery#23`, docs-only headless engine quickstart.
 - Current external PR: `profit-coders/tg-spam-filter#3`, open and mergeable, awaiting maintainer review.
-- Current external PR: `aadi-joshi/cngx#45`, open and mergeable, awaiting maintainer review.
+- Merged external PR: `aadi-joshi/cngx#45`, coding-agent verification recipes; all reported CI checks passed.
 - Additional local PR candidate prepared but deferred: `optiland/optiland#659`, because upstream PR #660 now covers the same issue.
 - Submitted PR candidate: `aadi-joshi/cngx#45`, commit `f4b2975`; no bounty or payment claim was made.
 
@@ -257,8 +257,8 @@ User has authorized GitHub publishing and account operations for this project, w
 
 1. Pin `github-income-scout` from the GitHub profile UI.
 2. Monitor and respond to review on `profit-coders/tg-spam-filter#3`.
-3. Choose the next low-risk PR candidate from a newly screened issue; skip Optiland #659 while upstream PR #660 remains open.
-4. Consider another Bitbox tool only after rechecking assignment, comments, and duplicate PRs, because #125 is now merged.
+3. Use the three merged contributions as proof in one qualified, low-pressure distribution channel.
+4. Choose the next low-risk PR candidate from a newly screened issue; skip Optiland #659 while upstream PR #660 remains open.
 
 ## Gap to Covering Membership Cost
 
