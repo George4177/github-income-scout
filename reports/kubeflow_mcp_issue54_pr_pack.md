@@ -61,5 +61,13 @@ Closes kubeflow/mcp-server#54.
 
 ## Submission State
 
-The local contribution is complete. Fork creation and push are pending recovery
-of the intermittent GitHub API connection. No bounty or payment claim is involved.
+Submitted as [kubeflow/website#4431](https://github.com/kubeflow/website/pull/4431).
+
+- Fork: `George4177/website`
+- Head branch: `docs/add-kubeflow-mcp-server`
+- State: open and ready for review
+- Initial mergeability: mergeable
+- DCO: passed
+- Netlify deploy preview: pending at the initial status check
+- Prow: waiting for a Kubeflow member to apply `/ok-to-test`, as expected for a new contributor
+- No bounty or payment claim is involved
