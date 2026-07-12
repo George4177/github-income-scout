@@ -1,5 +1,6 @@
 import importlib.util
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -88,6 +89,9 @@ class ActionEntrypointTests(unittest.TestCase):
             "GITHUB_TOKEN: ${{ inputs.token }}",
         ):
             self.assertIn(marker, manifest)
+
+        unsafe_descriptions = re.findall(r'^\s*description:\s+[^"\'].*:\s', manifest, re.MULTILINE)
+        self.assertEqual(unsafe_descriptions, [])
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
-name: Low-Risk GitHub Opportunity Scout
-description: Score public GitHub issues and produce a conservative Markdown, JSON, or CSV opportunity report.
-author: George4177
+name: "Low-Risk GitHub Opportunity Scout"
+description: "Score public GitHub issues and produce a conservative Markdown, JSON, or CSV opportunity report."
+author: "George4177"
 
 branding:
   icon: search
@@ -8,44 +8,44 @@ branding:
 
 inputs:
   config:
-    description: Optional query config path relative to the caller workspace. Uses the bundled config when empty.
+    description: "Optional query config path relative to the caller workspace. Uses the bundled config when empty."
     required: false
     default: ""
   offline-input:
-    description: Optional GitHub issue JSON path for deterministic or offline runs. Overrides config when set.
+    description: "Optional GitHub issue JSON path for deterministic or offline runs. Overrides config when set."
     required: false
     default: ""
   min-score:
-    description: Minimum score for accepted opportunities.
+    description: "Minimum score for accepted opportunities."
     required: false
     default: "60"
   format:
-    description: Report format: markdown, json, or csv.
+    description: "Report format: markdown, json, or csv."
     required: false
     default: markdown
   output:
-    description: Report path relative to the caller workspace.
+    description: "Report path relative to the caller workspace."
     required: false
     default: github-income-scout-report.md
   include-rejected:
-    description: Include rejected and below-threshold opportunities in the report.
+    description: "Include rejected and below-threshold opportunities in the report."
     required: false
     default: "true"
   enrich-repos:
-    description: Fetch repository health metadata. This uses additional GitHub API requests.
+    description: "Fetch repository health metadata. This uses additional GitHub API requests."
     required: false
     default: "false"
   token:
-    description: Optional GitHub token used only for API rate limits. Pass github.token from the workflow.
+    description: "Optional GitHub token used only for API rate limits. Pass github.token from the workflow."
     required: false
     default: ""
 
 outputs:
   report-path:
-    description: Path of the generated report in the caller workspace.
+    description: "Path of the generated report in the caller workspace."
     value: ${{ steps.scout.outputs.report-path }}
   report-format:
-    description: Generated report format.
+    description: "Generated report format."
     value: ${{ steps.scout.outputs.report-format }}
 
 runs:
