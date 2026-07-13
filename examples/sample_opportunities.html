@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitHub Opportunity Report</title>
+  <style>
+    :root { color-scheme: light; --ink: #182028; --muted: #5f6b76; --line: #d9e0e6; --soft: #f4f7f8; --accent: #087f5b; --warn: #a33a2b; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fff; color: var(--ink); font: 15px/1.55 Arial, sans-serif; letter-spacing: 0; }
+    header { border-bottom: 4px solid var(--accent); background: var(--soft); }
+    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    header .container { padding: 34px 0 28px; }
+    main { padding: 28px 0 52px; }
+    h1 { margin: 0 0 8px; font-size: 32px; }
+    h2 { margin: 34px 0 4px; font-size: 22px; }
+    h3 { margin: 0 0 14px; font-size: 17px; }
+    p { margin: 8px 0; }
+    .meta, .section-note, td span { color: var(--muted); }
+    .summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 22px; border: 1px solid var(--line); background: var(--line); }
+    .summary div { padding: 14px; background: #fff; }
+    .summary strong { display: block; font-size: 23px; color: var(--accent); }
+    .table-wrap { margin-top: 14px; overflow-x: auto; border: 1px solid var(--line); }
+    table { width: 100%; border-collapse: collapse; min-width: 760px; }
+    th, td { padding: 11px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+    th { background: var(--soft); font-size: 12px; text-transform: uppercase; }
+    tbody tr:last-child td { border-bottom: 0; }
+    .score { font-size: 20px; font-weight: 700; color: var(--accent); }
+    a { color: #0563c1; }
+    .details { display: grid; gap: 12px; margin-top: 14px; }
+    .detail { border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 4px; padding: 18px; break-inside: avoid; }
+    .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0 0 14px; }
+    .facts div { padding: 9px 10px; background: var(--soft); }
+    dt { color: var(--muted); font-size: 12px; text-transform: uppercase; }
+    dd { margin: 2px 0 0; font-weight: 600; }
+    footer { margin-top: 38px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+    @media (max-width: 700px) { .summary, .facts { grid-template-columns: 1fr; } h1 { font-size: 26px; } }
+    @media print { header { background: #fff; } .container { width: 100%; } a { color: inherit; text-decoration: none; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>GitHub Opportunity Report</h1>
+      <p class="meta">Source: offline sample<br>Generated: 2026-07-13 03:52:30</p>
+      <div class="summary">
+        <div><strong>3</strong>accepted opportunities</div>
+        <div><strong>2</strong>rejected or below threshold</div>
+        <div><strong>68</strong>highest score</div>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <section>
+      <h2>Recommended Opportunities</h2>
+      <p class="section-note">Automated scores are a starting point. Recheck assignments, duplicate pull requests, funding, and maintainer activity before acting.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Score</th><th>Project</th><th>Task</th><th>Difficulty</th><th>Time</th><th>Decision</th><th>Link</th></tr></thead>
+          <tbody><tr><td class="score">68</td><td><strong>algora-io/algora</strong><br><span>[UI Bug] Unauthorized Edit and Delete buttons visible on /bounties page</span></td><td>Bug fix</td><td>Medium</td><td>3-8 hours</td><td>Maybe, verify maintainer activity first</td><td><a href="https://github.com/algora-io/algora/issues/238" rel="noreferrer">Open issue</a></td></tr><tr><td class="score">68</td><td><strong>pyfenn/fenn</strong><br><span>Add basic SingleLayerPerceptron Class</span></td><td>Open-source contribution</td><td>Medium</td><td>3-8 hours</td><td>Maybe, verify maintainer activity first</td><td><a href="https://github.com/pyfenn/fenn/issues/220" rel="noreferrer">Open issue</a></td></tr><tr><td class="score">63</td><td><strong>abduznik/bitbox</strong><br><span>[tool] seconds_to_hms</span></td><td>Small tool</td><td>Low-Medium</td><td>1-4 hours</td><td>Maybe, verify maintainer activity first</td><td><a href="https://github.com/abduznik/bitbox/issues/99" rel="noreferrer">Open issue</a></td></tr></tbody>
+        </table>
+      </div>
+    </section>
+    
+    <section>
+      <h2>Rejected or Below Threshold</h2>
+      <p class="section-note">These items require no action until the stated reason is resolved.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Project</th><th>Reason</th><th>Link</th></tr></thead>
+          <tbody><tr><td><strong>example/fake-engagement</strong><br><span>[ONBOARD] Star + Review an Open PR</span></td><td>fake-engagement risk</td><td><a href="https://github.com/example/fake-engagement/issues/1" rel="noreferrer">Open issue</a></td></tr><tr><td><strong>example/high-risk</strong><br><span>[BUG] HTTP Desync Attack (Request Smuggling) -&gt; User Impersonation $100</span></td><td>security exploit work; impersonation risk; security exploitation work</td><td><a href="https://github.com/example/high-risk/issues/1" rel="noreferrer">Open issue</a></td></tr></tbody>
+        </table>
+      </div>
+    </section>
+    <section>
+      <h2>Opportunity Details</h2>
+      <div class="details"><article class="detail"><h3>algora-io/algora: [UI Bug] Unauthorized Edit and Delete buttons visible on /bounties page</h3><dl class="facts"><div><dt>Score</dt><dd>68</dd></div><div><dt>Task</dt><dd>Bug fix</dd></div><div><dt>Difficulty</dt><dd>Medium</dd></div><div><dt>Time</dt><dd>3-8 hours</dd></div><div><dt>Repository health</dt><dd>active-looking</dd></div><div><dt>Labels</dt><dd>none</dd></div></dl><p><strong>Acceptance:</strong> Issue scope is clear, tests/docs can prove the change, maintainer accepts PR</p><p><strong>Failure risk:</strong> Maintainer inactivity, hidden complexity, duplicate PRs, unclear bounty terms</p><p><strong>Decision:</strong> Maybe, verify maintainer activity first</p><p><a href="https://github.com/algora-io/algora/issues/238" rel="noreferrer">Review issue</a></p></article><article class="detail"><h3>pyfenn/fenn: Add basic SingleLayerPerceptron Class</h3><dl class="facts"><div><dt>Score</dt><dd>68</dd></div><div><dt>Task</dt><dd>Open-source contribution</dd></div><div><dt>Difficulty</dt><dd>Medium</dd></div><div><dt>Time</dt><dd>3-8 hours</dd></div><div><dt>Repository health</dt><dd>small/needs manual check</dd></div><div><dt>Labels</dt><dd>enhancement, help wanted, good first issue, new-contributors-only</dd></div></dl><p><strong>Acceptance:</strong> Issue scope is clear, tests/docs can prove the change, maintainer accepts PR</p><p><strong>Failure risk:</strong> Maintainer inactivity, hidden complexity, duplicate PRs, unclear bounty terms</p><p><strong>Decision:</strong> Maybe, verify maintainer activity first</p><p><a href="https://github.com/pyfenn/fenn/issues/220" rel="noreferrer">Review issue</a></p></article><article class="detail"><h3>abduznik/bitbox: [tool] seconds_to_hms</h3><dl class="facts"><div><dt>Score</dt><dd>63</dd></div><div><dt>Task</dt><dd>Small tool</dd></div><div><dt>Difficulty</dt><dd>Low-Medium</dd></div><div><dt>Time</dt><dd>1-4 hours</dd></div><div><dt>Repository health</dt><dd>small/needs manual check</dd></div><div><dt>Labels</dt><dd>help wanted, good first issue, tool request</dd></div></dl><p><strong>Acceptance:</strong> Issue scope is clear, tests/docs can prove the change, maintainer accepts PR</p><p><strong>Failure risk:</strong> Maintainer inactivity, hidden complexity, duplicate PRs, unclear bounty terms</p><p><strong>Decision:</strong> Maybe, verify maintainer activity first</p><p><a href="https://github.com/abduznik/bitbox/issues/99" rel="noreferrer">Review issue</a></p></article></div>
+    </section>
+    <footer>This report does not guarantee income, bounty payment, merged pull requests, sponsorship, leads, or maintainer responses.</footer>
+  </main>
+</body>
+</html>

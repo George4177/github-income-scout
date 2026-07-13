@@ -15,21 +15,21 @@ jobs:
         with:
           python-version: "3.12"
       - id: scout
-        uses: George4177/github-income-scout@v0.3.0
+        uses: George4177/github-income-scout@v0.4.0
         with:
           offline-input: examples/sample_issues.json
           min-score: "60"
-          output: reports/released-action-smoke.json
-          format: json
+          output: reports/released-action-smoke.html
+          format: html
       - name: Verify released Action outputs
         shell: bash
         run: |
-          test "${{ steps.scout.outputs.report-path }}" = "reports/released-action-smoke.json"
-          test "${{ steps.scout.outputs.report-format }}" = "json"
-          python -m json.tool reports/released-action-smoke.json >/dev/null
-          grep -q '"accepted"' reports/released-action-smoke.json
+          test "${{ steps.scout.outputs.report-path }}" = "reports/released-action-smoke.html"
+          test "${{ steps.scout.outputs.report-format }}" = "html"
+          grep -qi '<!doctype html>' reports/released-action-smoke.html
+          grep -q 'GitHub Opportunity Report' reports/released-action-smoke.html
       - uses: actions/upload-artifact@v7
         with:
-          name: released-action-smoke-report
-          path: reports/released-action-smoke.json
+          name: released-action-smoke-html
+          path: reports/released-action-smoke.html
           if-no-files-found: error

@@ -33,6 +33,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/issue_scout.py --config examples/queries.json --min-score 60 --include-rejected --enrich-repos --format csv --output reports/weekly-scout/opportunities.csv
+      - name: Generate HTML opportunity report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/issue_scout.py --config examples/queries.json --min-score 60 --include-rejected --enrich-repos --format html --output reports/weekly-scout/opportunities.html
       - name: Generate Starter Audit bundle summary
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

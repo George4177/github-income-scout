@@ -38,6 +38,20 @@ class ActionEntrypointTests(unittest.TestCase):
         self.assertNotIn("--config", command)
         self.assertNotIn("--enrich-repos", command)
 
+    def test_html_format_is_forwarded(self):
+        command, output, report_format = action_entrypoint.build_command(
+            {
+                "GITHUB_ACTION_PATH": str(ROOT),
+                "INPUT_OFFLINE": "issues.json",
+                "INPUT_FORMAT": "html",
+                "INPUT_OUTPUT": "report.html",
+            }
+        )
+
+        self.assertIn("html", command)
+        self.assertEqual(output, "report.html")
+        self.assertEqual(report_format, "html")
+
     def test_invalid_inputs_fail_before_execution(self):
         with self.assertRaisesRegex(ValueError, "between 0 and 100"):
             action_entrypoint.build_command(

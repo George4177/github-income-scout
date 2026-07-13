@@ -33,15 +33,17 @@ jobs:
         with:
           offline-input: examples/sample_issues.json
           min-score: "60"
-          output: reports/action-smoke.md
+          output: reports/action-smoke.html
+          format: html
       - name: Verify Action outputs
         shell: bash
         run: |
-          test "${{ steps.scout.outputs.report-path }}" = "reports/action-smoke.md"
-          test "${{ steps.scout.outputs.report-format }}" = "markdown"
-          grep -q "GitHub Opportunity Report" reports/action-smoke.md
+          test "${{ steps.scout.outputs.report-path }}" = "reports/action-smoke.html"
+          test "${{ steps.scout.outputs.report-format }}" = "html"
+          grep -q "<!doctype html>" reports/action-smoke.html
+          grep -q "GitHub Opportunity Report" reports/action-smoke.html
       - uses: actions/upload-artifact@v7
         with:
           name: action-smoke-report
-          path: reports/action-smoke.md
+          path: reports/action-smoke.html
           if-no-files-found: error

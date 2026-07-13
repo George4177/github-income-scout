@@ -1,53 +1,58 @@
-# GitHub Opportunity Starter Audit
+# GitHub Opportunity Report
 
-Prepared for: Sample developer
-Date: 2026-07-05
+Source: offline sample
+Generated: 2026-07-13 03:56:09
 
-## Summary
-
-This sample audit screens low-risk GitHub opportunities for a developer focused on Python, automation, GitHub Actions, documentation, and small tools.
-
-## Top Opportunities
-
-| Rank | Project | Link | Task Type | Difficulty | Time | Worth Doing |
+| Score | Project | Task | Difficulty | Time | Worth Doing | Link |
 | ---: | --- | --- | --- | --- | --- | --- |
-| 1 | algora-io/algora | https://github.com/algora-io/algora/issues/238 | Bug fix | Medium | 3-8 hours | Maybe, verify setup first |
-| 2 | pyfenn/fenn | https://github.com/pyfenn/fenn/issues/220 | Open-source contribution | Medium | 3-8 hours | Maybe, ask maintainers first |
-| 3 | abduznik/bitbox | https://github.com/abduznik/bitbox/issues/99 | Small tool | Low-Medium | 1-4 hours | Best low-risk PR candidate |
+| 68 | algora-io/algora | Bug fix | Medium | 3-8 hours | Maybe, verify maintainer activity first | [issue](https://github.com/algora-io/algora/issues/238) |
+| 68 | pyfenn/fenn | Open-source contribution | Medium | 3-8 hours | Maybe, verify maintainer activity first | [issue](https://github.com/pyfenn/fenn/issues/220) |
+| 63 | abduznik/bitbox | Small tool | Low-Medium | 1-4 hours | Maybe, verify maintainer activity first | [issue](https://github.com/abduznik/bitbox/issues/99) |
 
-## Recommended First Action
+## Rejected or Below Threshold
 
-Start with Bitbox `seconds_to_hms` if the goal is a fast, clean portfolio PR. The task is narrow, uses standard library only, and has clear expected behavior.
+| Project | Reason | Link |
+| --- | --- | --- |
+| example/fake-engagement | fake-engagement risk | [issue](https://github.com/example/fake-engagement/issues/1) |
+| example/high-risk | security exploit work; impersonation risk; security exploitation work | [issue](https://github.com/example/high-risk/issues/1) |
 
-Acceptance criteria:
+## Details
 
-- Add `tools/seconds_to_hms.py`
-- Return `1:01:01` for `3661`
-- Return clear errors for invalid or negative input
-- Follow Bitbox header format and PR title format
+### algora-io/algora: [UI Bug] Unauthorized Edit and Delete buttons visible on /bounties page
 
-Failure risks:
+- Link: https://github.com/algora-io/algora/issues/238
+- Labels: none
+- Task type: Bug fix
+- Estimated difficulty: Medium
+- Estimated value: Direct bounty only if the issue explicitly links a bounty; otherwise portfolio/lead value
+- Estimated time: 3-8 hours
+- Repository health: active-looking
+- Acceptance standard: Issue scope is clear, tests/docs can prove the change, maintainer accepts PR
+- Failure risk: Maintainer inactivity, hidden complexity, duplicate PRs, unclear bounty terms
+- Decision: Maybe, verify maintainer activity first
 
-- No direct payout verified
-- Issue may require claiming before work
-- Repository may receive a duplicate PR
+### pyfenn/fenn: Add basic SingleLayerPerceptron Class
 
-## Rejected Matches
+- Link: https://github.com/pyfenn/fenn/issues/220
+- Labels: enhancement, help wanted, good first issue, new-contributors-only
+- Task type: Open-source contribution
+- Estimated difficulty: Medium
+- Estimated value: Direct bounty only if the issue explicitly links a bounty; otherwise portfolio/lead value
+- Estimated time: 3-8 hours
+- Repository health: small/needs manual check
+- Acceptance standard: Issue scope is clear, tests/docs can prove the change, maintainer accepts PR
+- Failure risk: Maintainer inactivity, hidden complexity, duplicate PRs, unclear bounty terms
+- Decision: Maybe, verify maintainer activity first
 
-| Project | Reason |
-| --- | --- |
-| example/fake-engagement | fake-engagement risk |
-| example/high-risk | security exploit work; impersonation risk; security exploitation work |
+### abduznik/bitbox: [tool] seconds_to_hms
 
-## Profile Positioning Note
-
-Position the developer as a practical automation contributor: Python scripts, GitHub Actions, documentation cleanup, small tools, and repeatable reporting.
-
-## Next Steps
-
-1. Verify the chosen issue is still open and unassigned.
-2. Read README, contribution guide, and test instructions.
-3. Prepare one focused change.
-4. Run local validation.
-5. Open a concise PR with verification notes.
-
+- Link: https://github.com/abduznik/bitbox/issues/99
+- Labels: help wanted, good first issue, tool request
+- Task type: Small tool
+- Estimated difficulty: Low-Medium
+- Estimated value: Direct bounty only if the issue explicitly links a bounty; otherwise portfolio/lead value
+- Estimated time: 1-4 hours
+- Repository health: small/needs manual check
+- Acceptance standard: Issue scope is clear, tests/docs can prove the change, maintainer accepts PR
+- Failure risk: Maintainer inactivity, hidden complexity, duplicate PRs, unclear bounty terms
+- Decision: Maybe, verify maintainer activity first

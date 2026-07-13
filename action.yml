@@ -1,5 +1,5 @@
 name: "Low-Risk GitHub Opportunity Scout"
-description: "Score public GitHub issues and produce a conservative Markdown, JSON, or CSV opportunity report."
+description: "Score public GitHub issues and produce a conservative Markdown, JSON, CSV, or HTML opportunity report."
 author: "George4177"
 
 branding:
@@ -20,7 +20,7 @@ inputs:
     required: false
     default: "60"
   format:
-    description: "Report format: markdown, json, or csv."
+    description: "Report format: markdown, json, csv, or html."
     required: false
     default: markdown
   output:

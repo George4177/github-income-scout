@@ -53,11 +53,12 @@ To add repository health signals such as stars, forks, last push date, and activ
 python scripts\issue_scout.py --config examples\queries.json --min-score 60 --include-rejected --enrich-repos --output reports\opportunities.md
 ```
 
-Export JSON or CSV for spreadsheets, dashboards, or client delivery:
+Export JSON, CSV, or a shareable HTML report for spreadsheets, dashboards, or client delivery:
 
 ```powershell
 python scripts\issue_scout.py --config examples\queries.json --min-score 60 --include-rejected --format json --output reports\opportunities.json
 python scripts\issue_scout.py --config examples\queries.json --min-score 60 --include-rejected --format csv --output reports\opportunities.csv
+python scripts\issue_scout.py --config examples\queries.json --min-score 60 --include-rejected --format html --output reports\opportunities.html
 ```
 
 Build a full Starter Audit delivery bundle:
@@ -73,7 +74,7 @@ python scripts\build_client_brief.py --opportunities examples\starter_audit_bund
 ```
 
 ```powershell
-$env:GITHUB_TOKEN = "ghp_your_token_here"
+$env:GITHUB_TOKEN = "YOUR_GITHUB_TOKEN"
 ```
 
 Do not commit tokens or paste private credentials into issue reports.
@@ -102,7 +103,7 @@ jobs:
         with:
           python-version: "3.12"
       - id: scout
-        uses: George4177/github-income-scout@v0.3.0
+        uses: George4177/github-income-scout@v0.4.0
         with:
           token: ${{ github.token }}
           min-score: "60"
@@ -114,13 +115,13 @@ jobs:
           path: ${{ steps.scout.outputs.report-path }}
 ```
 
-Use `config` for a repository-specific query file, `format` for `markdown`, `json`, or `csv`, and `enrich-repos: "true"` when repository health metadata is worth the additional API calls. The optional `offline-input` supports deterministic tests without network access.
+Use `config` for a repository-specific query file, `format` for `markdown`, `json`, `csv`, or `html`, and `enrich-repos: "true"` when repository health metadata is worth the additional API calls. The optional `offline-input` supports deterministic tests without network access.
 
 See [MARKETPLACE.md](MARKETPLACE.md) for the verified release status and the account-owner step required for a Marketplace listing.
 
 ## Weekly Scout Workflow
 
-The repository includes a scheduled GitHub Actions workflow that generates Markdown, JSON, CSV, and Starter Audit bundle artifacts.
+The repository includes a scheduled GitHub Actions workflow that generates Markdown, JSON, CSV, HTML, and Starter Audit bundle artifacts.
 
 See [docs/weekly_scout_workflow.md](docs/weekly_scout_workflow.md) for how to run it and download the reports.
 
@@ -165,6 +166,7 @@ The free version includes:
 - safety filtering for exploit, fake-engagement, credential, bypass, automated bounty-feed, dependency-dashboard, and generic vulnerability work
 - Markdown report output
 - JSON and CSV export
+- standalone HTML report export with print-friendly styling
 - optional repository health signals
 - no external services
 - no account writes

@@ -11,6 +11,7 @@ Each run creates a `weekly-scout-reports` artifact with:
 - `opportunity-report.md`
 - `opportunities.json`
 - `opportunities.csv`
+- `opportunities.html`
 - `starter-audit-bundle/summary.md`
 - `starter-audit-bundle/audit_report.md`
 - `starter-audit-bundle/opportunities.json`

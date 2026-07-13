@@ -7,10 +7,10 @@ Status date: 2026-07-13
 - Public repository with one root `action.yml`
 - Unique Action name: `Low-Risk GitHub Opportunity Scout`
 - Composite Action interface with documented inputs and outputs
-- Public semantic release: `v0.3.0`
+- Public semantic release: `v0.4.0`
 - GitHub-hosted Ubuntu smoke test passed
 - Release ZIP published with SHA-256 verification
-- README installation example uses `George4177/github-income-scout@v0.3.0`
+- README installation example uses `George4177/github-income-scout@v0.4.0`
 
 The Action can already be consumed by public workflows without a Marketplace listing.
 
@@ -24,7 +24,7 @@ These are account and agreement actions and are intentionally not automated. No 
 
 **Name:** Low-Risk GitHub Opportunity Scout
 
-**Short description:** Score public GitHub issues and export a conservative Markdown, JSON, or CSV opportunity report.
+**Short description:** Score public GitHub issues and export a conservative Markdown, JSON, CSV, or HTML opportunity report.
 
 **Positioning:** A read-only issue research Action for developers and small teams that want a screened shortlist without automated comments, claims, pull requests, or unsafe bounty work.
 
@@ -32,6 +32,6 @@ These are account and agreement actions and are intentionally not automated. No 
 
 ## Verification
 
-- Release: https://github.com/George4177/github-income-scout/releases/tag/v0.3.0
+- Release: https://github.com/George4177/github-income-scout/releases/tag/v0.4.0
 - Smoke run: https://github.com/George4177/github-income-scout/actions/runs/29205709269
-- Action metadata: https://github.com/George4177/github-income-scout/blob/v0.3.0/action.yml
+- Action metadata: https://github.com/George4177/github-income-scout/blob/v0.4.0/action.yml

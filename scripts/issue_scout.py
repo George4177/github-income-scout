@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import html
 import io
 import json
 import os
@@ -438,6 +439,153 @@ def render_csv(results: ScoutResult, include_rejected: bool) -> str:
     return output.getvalue()
 
 
+def render_html(results: ScoutResult, source: str, include_rejected: bool) -> str:
+    def esc(value: Any) -> str:
+        return html.escape(str(value), quote=True)
+
+    def issue_link(item: Opportunity, label: str = "Open issue") -> str:
+        url = item.url if item.url.startswith(("https://", "http://")) else "#"
+        return f'<a href="{esc(url)}" rel="noreferrer">{esc(label)}</a>'
+
+    accepted = sorted(results.accepted, key=lambda item: item.score, reverse=True)
+    rejected = sorted(results.rejected, key=lambda item: item.repository) if include_rejected else []
+    generated = time.strftime("%Y-%m-%d %H:%M:%S")
+
+    accepted_rows = []
+    for item in accepted:
+        accepted_rows.append(
+            "<tr>"
+            f'<td class="score">{item.score}</td>'
+            f"<td><strong>{esc(item.repository)}</strong><br><span>{esc(item.title)}</span></td>"
+            f"<td>{esc(item.task_type)}</td>"
+            f"<td>{esc(item.difficulty)}</td>"
+            f"<td>{esc(item.estimated_time)}</td>"
+            f"<td>{esc(item.worth_doing)}</td>"
+            f"<td>{issue_link(item)}</td>"
+            "</tr>"
+        )
+
+    rejected_rows = []
+    for item in rejected:
+        reason = item.rejection_reason or "below minimum score; requires manual review"
+        rejected_rows.append(
+            "<tr>"
+            f"<td><strong>{esc(item.repository)}</strong><br><span>{esc(item.title)}</span></td>"
+            f"<td>{esc(reason)}</td>"
+            f"<td>{issue_link(item)}</td>"
+            "</tr>"
+        )
+
+    detail_blocks = []
+    for item in accepted:
+        labels = ", ".join(item.labels) if item.labels else "none"
+        detail_blocks.append(
+            '<article class="detail">'
+            f"<h3>{esc(item.repository)}: {esc(item.title)}</h3>"
+            '<dl class="facts">'
+            f"<div><dt>Score</dt><dd>{item.score}</dd></div>"
+            f"<div><dt>Task</dt><dd>{esc(item.task_type)}</dd></div>"
+            f"<div><dt>Difficulty</dt><dd>{esc(item.difficulty)}</dd></div>"
+            f"<div><dt>Time</dt><dd>{esc(item.estimated_time)}</dd></div>"
+            f"<div><dt>Repository health</dt><dd>{esc(item.repo_health)}</dd></div>"
+            f"<div><dt>Labels</dt><dd>{esc(labels)}</dd></div>"
+            "</dl>"
+            f"<p><strong>Acceptance:</strong> {esc(item.acceptance)}</p>"
+            f"<p><strong>Failure risk:</strong> {esc(item.risk)}</p>"
+            f"<p><strong>Decision:</strong> {esc(item.worth_doing)}</p>"
+            f"<p>{issue_link(item, 'Review issue')}</p>"
+            "</article>"
+        )
+
+    rejected_section = ""
+    if rejected:
+        rejected_section = f"""
+    <section>
+      <h2>Rejected or Below Threshold</h2>
+      <p class="section-note">These items require no action until the stated reason is resolved.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Project</th><th>Reason</th><th>Link</th></tr></thead>
+          <tbody>{''.join(rejected_rows)}</tbody>
+        </table>
+      </div>
+    </section>"""
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitHub Opportunity Report</title>
+  <style>
+    :root {{ color-scheme: light; --ink: #182028; --muted: #5f6b76; --line: #d9e0e6; --soft: #f4f7f8; --accent: #087f5b; --warn: #a33a2b; }}
+    * {{ box-sizing: border-box; }}
+    body {{ margin: 0; background: #fff; color: var(--ink); font: 15px/1.55 Arial, sans-serif; letter-spacing: 0; }}
+    header {{ border-bottom: 4px solid var(--accent); background: var(--soft); }}
+    .container {{ width: min(1120px, calc(100% - 32px)); margin: 0 auto; }}
+    header .container {{ padding: 34px 0 28px; }}
+    main {{ padding: 28px 0 52px; }}
+    h1 {{ margin: 0 0 8px; font-size: 32px; }}
+    h2 {{ margin: 34px 0 4px; font-size: 22px; }}
+    h3 {{ margin: 0 0 14px; font-size: 17px; }}
+    p {{ margin: 8px 0; }}
+    .meta, .section-note, td span {{ color: var(--muted); }}
+    .summary {{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 22px; border: 1px solid var(--line); background: var(--line); }}
+    .summary div {{ padding: 14px; background: #fff; }}
+    .summary strong {{ display: block; font-size: 23px; color: var(--accent); }}
+    .table-wrap {{ margin-top: 14px; overflow-x: auto; border: 1px solid var(--line); }}
+    table {{ width: 100%; border-collapse: collapse; min-width: 760px; }}
+    th, td {{ padding: 11px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }}
+    th {{ background: var(--soft); font-size: 12px; text-transform: uppercase; }}
+    tbody tr:last-child td {{ border-bottom: 0; }}
+    .score {{ font-size: 20px; font-weight: 700; color: var(--accent); }}
+    a {{ color: #0563c1; }}
+    .details {{ display: grid; gap: 12px; margin-top: 14px; }}
+    .detail {{ border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 4px; padding: 18px; break-inside: avoid; }}
+    .facts {{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0 0 14px; }}
+    .facts div {{ padding: 9px 10px; background: var(--soft); }}
+    dt {{ color: var(--muted); font-size: 12px; text-transform: uppercase; }}
+    dd {{ margin: 2px 0 0; font-weight: 600; }}
+    footer {{ margin-top: 38px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }}
+    @media (max-width: 700px) {{ .summary, .facts {{ grid-template-columns: 1fr; }} h1 {{ font-size: 26px; }} }}
+    @media print {{ header {{ background: #fff; }} .container {{ width: 100%; }} a {{ color: inherit; text-decoration: none; }} }}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>GitHub Opportunity Report</h1>
+      <p class="meta">Source: {esc(source)}<br>Generated: {esc(generated)}</p>
+      <div class="summary">
+        <div><strong>{len(accepted)}</strong>accepted opportunities</div>
+        <div><strong>{len(rejected)}</strong>rejected or below threshold</div>
+        <div><strong>{accepted[0].score if accepted else 0}</strong>highest score</div>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <section>
+      <h2>Recommended Opportunities</h2>
+      <p class="section-note">Automated scores are a starting point. Recheck assignments, duplicate pull requests, funding, and maintainer activity before acting.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Score</th><th>Project</th><th>Task</th><th>Difficulty</th><th>Time</th><th>Decision</th><th>Link</th></tr></thead>
+          <tbody>{''.join(accepted_rows) if accepted_rows else '<tr><td colspan="7">No opportunities passed the current threshold.</td></tr>'}</tbody>
+        </table>
+      </div>
+    </section>
+    {rejected_section}
+    <section>
+      <h2>Opportunity Details</h2>
+      <div class="details">{''.join(detail_blocks) if detail_blocks else '<p>No accepted opportunities to detail.</p>'}</div>
+    </section>
+    <footer>This report does not guarantee income, bounty payment, merged pull requests, sponsorship, leads, or maintainer responses.</footer>
+  </main>
+</body>
+</html>
+"""
+
+
 def render_report(results: ScoutResult, source: str, output_format: str, include_rejected: bool) -> str:
     if output_format == "markdown":
         return render_markdown(results.accepted, source, results.rejected if include_rejected else None)
@@ -445,6 +593,8 @@ def render_report(results: ScoutResult, source: str, output_format: str, include
         return render_json(results, source, include_rejected)
     if output_format == "csv":
         return render_csv(results, include_rejected)
+    if output_format == "html":
+        return render_html(results, source, include_rejected)
     raise ValueError(f"Unsupported format: {output_format}")
 
 
@@ -501,7 +651,7 @@ def main() -> int:
     )
     parser.add_argument(
         "--format",
-        choices=("markdown", "json", "csv"),
+        choices=("markdown", "json", "csv", "html"),
         default="markdown",
         help="Report format.",
     )

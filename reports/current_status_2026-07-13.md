@@ -15,12 +15,12 @@ No income, lead, or conversion is inferred from repository traffic alone.
 ## Public Conversion Assets
 
 - GitHub Profile displays the USD 29 starting price, three merged contribution examples, and direct request links above the fold.
-- GitHub Income Scout v0.3.0 is available as a public repository, GitHub Pages site, release ZIP, installable Codex skill, and reusable Composite Action.
+- GitHub Income Scout v0.4.0 is prepared as a public repository, GitHub Pages site, release ZIP, installable Codex skill, and reusable Composite Action, with a standalone print-friendly HTML delivery format.
 - Three issue forms accept scoped Starter Audit, Profile + Opportunity Pack, and Custom Automation requests.
 - A USD 29-49 Starter Audit offer is published and pinned as [issue #1](https://github.com/George4177/github-income-scout/issues/1).
 - The current release and public documentation use portable commands and contain no contributor workstation paths.
 - The Composite Action passed a real GitHub-hosted Ubuntu smoke run and emits artifact-ready report outputs.
-- A second consumer smoke run downloaded `George4177/github-income-scout@v0.3.0`, generated valid JSON, and uploaded it as an artifact.
+- The previous consumer smoke run downloaded `George4177/github-income-scout@v0.3.0`, generated valid JSON, and uploaded it as an artifact. The v0.4.0 release gate verifies the new HTML output from the immutable tag.
 - Repository topics now include `github-action`, `composite-action`, `codex-skill`, and `opportunity-scanner` for GitHub-native discovery.
 
 ## External Work Status

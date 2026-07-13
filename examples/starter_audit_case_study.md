@@ -52,7 +52,7 @@ No private tokens, passwords, payment details, or production credentials are nee
 The Starter Audit delivery includes:
 
 - Markdown report with screened opportunities
-- CSV or JSON export when useful
+- CSV, JSON, or print-friendly HTML export when useful
 - top 3 action plan
 - acceptance criteria summary
 - failure-risk notes

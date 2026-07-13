@@ -32,6 +32,7 @@ class BuildAuditBundleTests(unittest.TestCase):
         summary = build_audit_bundle.build_summary(results, "test", Path("out"), include_rejected=True)
 
         self.assertIn("Starter Audit Bundle Summary", summary)
+        self.assertIn("audit_report.html", summary)
         self.assertIn("opportunities.csv", summary)
         self.assertIn("[tool] slugify", summary)
 
@@ -46,4 +47,3 @@ class BuildAuditBundleTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

@@ -16,7 +16,8 @@ def check_example_bundle() -> bool:
     bundle = ROOT / "examples" / "starter_audit_bundle"
     required = {
         "summary.md": "Starter Audit Bundle Summary",
-        "audit_report.md": "Recommended First Action",
+        "audit_report.md": "GitHub Opportunity Report",
+        "audit_report.html": "GitHub Opportunity Report",
         "opportunities.csv": "repo_health",
         "opportunities.json": "\"accepted\"",
     }

@@ -18,9 +18,10 @@ To show rejected high-risk matches:
 python scripts\issue_scout.py --offline examples\sample_issues.json --min-score 60 --include-rejected --output -
 ```
 
-To export client-friendly JSON or CSV:
+To export client-friendly JSON, CSV, or HTML:
 
 ```powershell
 python scripts\issue_scout.py --offline examples\sample_issues.json --min-score 60 --include-rejected --format json --output -
 python scripts\issue_scout.py --offline examples\sample_issues.json --min-score 60 --include-rejected --format csv --output -
+python scripts\issue_scout.py --offline examples\sample_issues.json --min-score 60 --include-rejected --format html --output examples\sample_opportunities.html
 ```

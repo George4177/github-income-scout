@@ -1,5 +1,32 @@
 # Release Notes
 
+## v0.4.0 - Shareable HTML Reports
+
+GitHub Income Scout v0.4.0 adds a standalone HTML report designed for client delivery, browser review, and print-to-PDF workflows without a hosted service or additional dependencies.
+
+### Added
+
+- `html` output format in the CLI and Composite Action
+- responsive, print-friendly opportunity summary and detail views
+- escaped dynamic fields and safe HTTP(S)-only issue links
+- generated HTML example for evaluating the delivery format before running a scan
+- weekly workflow and Action smoke coverage for HTML artifacts
+
+### Improved
+
+- Starter Audit delivery can include Markdown plus optional CSV, JSON, or HTML files
+- public documentation now presents HTML as a supported export format
+- rejected and below-threshold matches remain visible when requested, preserving auditability
+
+### Validation
+
+- 30 zero-dependency unit tests pass
+- HTML rendering tests cover escaping and unsafe-link handling
+- static site, offline report, Starter Audit bundle, client brief, and Action entrypoint checks pass
+- the full local validation suite passes
+
+This release does not guarantee income, bounty payouts, merged pull requests, sponsorships, or client leads. The Action does not post comments, claim work, open pull requests, collect credentials, or perform payment operations.
+
 ## v0.3.0 - Reusable GitHub Action
 
 GitHub Income Scout v0.3.0 adds an installable Composite Action so a repository can generate conservative opportunity reports without copying the scanner scripts.

@@ -13,11 +13,16 @@ See `examples/starter_audit_bundle/` for a static sample bundle.
    - rejected matches and reasons
    - next-step checklist
 
-2. `opportunities.csv`
+2. `audit_report.html`
+   - standalone browser-ready report
+   - responsive and print-friendly presentation
+   - no hosted service or JavaScript dependency
+
+3. `opportunities.csv`
    - spreadsheet-friendly table
    - useful for sorting by score, task type, time, or risk
 
-3. `opportunities.json`
+4. `opportunities.json`
    - automation-friendly export
    - useful for dashboards, follow-up scripts, or recurring reports
 
@@ -25,6 +30,7 @@ See `examples/starter_audit_bundle/` for a static sample bundle.
 
 ```powershell
 python scripts\issue_scout.py --config examples\queries.json --min-score 60 --include-rejected --output reports\audit_report.md
+python scripts\issue_scout.py --config examples\queries.json --min-score 60 --include-rejected --format html --output reports\audit_report.html
 python scripts\issue_scout.py --config examples\queries.json --min-score 60 --include-rejected --format csv --output reports\opportunities.csv
 python scripts\issue_scout.py --config examples\queries.json --min-score 60 --include-rejected --format json --output reports\opportunities.json
 ```

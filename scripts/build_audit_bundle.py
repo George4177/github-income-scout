@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a Starter Audit delivery bundle in Markdown, CSV, and JSON."""
+"""Build a Starter Audit delivery bundle in Markdown, HTML, CSV, and JSON."""
 
 from __future__ import annotations
 
@@ -62,6 +62,7 @@ def build_summary(results, source: str, output_dir: Path, include_rejected: bool
             "## Delivery Files",
             "",
             "- `audit_report.md`: client-readable report",
+            "- `audit_report.html`: browser-ready and print-friendly report",
             "- `opportunities.csv`: spreadsheet-friendly export",
             "- `opportunities.json`: automation-friendly export",
             "",
@@ -104,6 +105,7 @@ def main() -> int:
             print(summary)
             return 0
         write_text(output_dir / "audit_report.md", issue_scout.render_report(results, source, "markdown", include_rejected))
+        write_text(output_dir / "audit_report.html", issue_scout.render_report(results, source, "html", include_rejected))
         write_text(output_dir / "opportunities.csv", issue_scout.render_report(results, source, "csv", include_rejected))
         write_text(output_dir / "opportunities.json", issue_scout.render_report(results, source, "json", include_rejected))
         write_text(output_dir / "summary.md", summary)

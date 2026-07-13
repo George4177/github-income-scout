@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Mapping
 
 
-VALID_FORMATS = {"markdown", "json", "csv"}
+VALID_FORMATS = {"markdown", "json", "csv", "html"}
 VALID_BOOLEANS = {"true": True, "false": False}
 
 

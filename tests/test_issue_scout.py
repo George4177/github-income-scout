@@ -271,6 +271,46 @@ class IssueScoutTests(unittest.TestCase):
         self.assertIn("score,repository,title,url,task_type", report)
         self.assertIn("[tool] slugify", report)
 
+    def test_html_report_is_shareable_and_escapes_issue_content(self):
+        accepted = issue_scout.score_issue(
+            {
+                "title": "Improve <script>alert('x')</script> README",
+                "html_url": "javascript:alert(1)",
+                "repository_url": "https://api.github.com/repos/example/repo",
+                "labels": [{"name": "documentation"}, {"name": "help wanted"}],
+                "comments": 0,
+                "created_at": "2026-01-01T00:00:00Z",
+                "updated_at": "2026-01-01T00:00:00Z",
+                "body": "Add setup instructions.",
+            }
+        )
+        rejected = issue_scout.score_issue(
+            {
+                "title": "Exploit credential bypass",
+                "html_url": "https://github.com/example/repo/issues/5",
+                "repository_url": "https://api.github.com/repos/example/repo",
+                "labels": [{"name": "bounty"}],
+                "comments": 0,
+                "body": "Bypass credential checks.",
+            }
+        )
+
+        report = issue_scout.render_report(
+            issue_scout.ScoutResult(accepted=[accepted], rejected=[rejected]),
+            "client <profile>",
+            "html",
+            include_rejected=True,
+        )
+
+        self.assertIn("<!doctype html>", report)
+        self.assertIn("Recommended Opportunities", report)
+        self.assertIn("Rejected or Below Threshold", report)
+        self.assertIn("client &lt;profile&gt;", report)
+        self.assertIn("&lt;script&gt;", report)
+        self.assertNotIn("<script>alert", report)
+        self.assertNotIn('href="javascript:', report)
+        self.assertIn('href="#"', report)
+
     def test_repo_health_enrichment_affects_score_and_output(self):
         item = {
             "title": "[tool] slugify",

@@ -11,6 +11,7 @@ GitHub Starter Audit is a small, fixed-scope research service for developers who
 - duplicate, assignment, and claim checks for the top candidates
 - rejected high-risk or poor-fit matches
 - one GitHub Profile or README positioning suggestion
+- Markdown delivery plus optional CSV, JSON, or print-friendly HTML export
 
 ## Good Fit
 
@@ -30,7 +31,7 @@ No payment information is requested in a public GitHub issue. Scope is confirmed
 
 ## Delivery Evidence
 
-- [GitHub Income Scout v0.3.0](https://github.com/George4177/github-income-scout/releases/tag/v0.3.0)
+- [GitHub Income Scout v0.4.0](https://github.com/George4177/github-income-scout/releases/tag/v0.4.0)
 - [Sample Starter Audit](https://github.com/George4177/github-income-scout/blob/main/examples/sample_audit.md)
 - [Open-source delivery case study](https://github.com/George4177/github-income-scout/blob/main/examples/open_source_delivery_case_study.md)
 - [Released Action consumer smoke](https://github.com/George4177/github-income-scout/actions/runs/29205875427)
