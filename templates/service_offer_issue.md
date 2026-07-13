@@ -34,7 +34,7 @@ No payment information is requested in a public GitHub issue. Scope is confirmed
 - [GitHub Income Scout v0.4.0](https://github.com/George4177/github-income-scout/releases/tag/v0.4.0)
 - [Sample Starter Audit](https://github.com/George4177/github-income-scout/blob/main/examples/sample_audit.md)
 - [Open-source delivery case study](https://github.com/George4177/github-income-scout/blob/main/examples/open_source_delivery_case_study.md)
-- [Released Action consumer smoke](https://github.com/George4177/github-income-scout/actions/runs/29205875427)
+- [v0.4.0 HTML Action consumer smoke](https://github.com/George4177/github-income-scout/actions/runs/29215009671)
 
 ## Start a Request
 
