@@ -31,6 +31,7 @@ No income, lead, or conversion is inferred from repository traffic alone.
 | --- | --- | --- | --- | --- |
 | [aadi-joshi/cngx#45](https://github.com/aadi-joshi/cngx/pull/45) | Coding-agent documentation | Merged; all reported CI checks passed | Portfolio proof; no direct payout | Reuse as delivery evidence |
 | [Deltares/imod-python#1880](https://github.com/Deltares/imod-python/pull/1880) | Python API documentation and executable example | Open and mergeable; example and Ruff checks passed locally; SonarCloud quality gate passed; review required | Scientific Python portfolio proof; no direct payout | Answer maintainer review |
+| [traceopt-ai/traceml#203](https://github.com/traceopt-ai/traceml/pull/203) | Python subprocess stderr capture | Open and mergeable; 29 focused tests and all pinned pre-commit hooks passed locally; review required | Python reliability portfolio proof; no direct payout | Monitor CI and answer maintainer review |
 | [ComposioHQ/awesome-codex-skills#172](https://github.com/ComposioHQ/awesome-codex-skills/pull/172) | Skill directory submission | Open and mergeable; security checks passed; no maintainer request | Discovery potential; no direct payout | Wait for maintainer review |
 | [kubeflow/website#4431](https://github.com/kubeflow/website/pull/4431) | MCP documentation | Open and mergeable; a member supplied `/ok-to-test`; DCO and Netlify checks passed | Portfolio proof; no direct payout | Wait for owner review and approval |
 | [profit-coders/tg-spam-filter#3](https://github.com/profit-coders/tg-spam-filter/pull/3) | Contribution documentation | Open and mergeable; no review activity | Low portfolio value; no direct payout | Do not ping without new information |
@@ -47,6 +48,10 @@ GitHub's 14-day repository traffic endpoint now reports 2 page views from 1 uniq
 3. Distribute one factual case-study link in a relevant, low-noise channel only when it answers an existing request; do not mass-post or cold-spam maintainers.
 
 Latest implementation PR pack: [`imod_python_issue1879_pr_pack.md`](imod_python_issue1879_pr_pack.md).
+
+Latest opportunity scan: [`opportunity_scan_2026-07-13_round2.md`](opportunity_scan_2026-07-13_round2.md).
+
+Latest subprocess-reliability PR pack: [`traceml_issue200_pr_pack.md`](traceml_issue200_pr_pack.md).
 
 Latest direct-cash scan: [`cash_opportunity_scan_2026-07-13.md`](cash_opportunity_scan_2026-07-13.md). No external candidate passed the funding, duplication, eligibility, scope, and claim checks.
 
