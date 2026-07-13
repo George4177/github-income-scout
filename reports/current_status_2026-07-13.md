@@ -22,6 +22,7 @@ No income, lead, or conversion is inferred from repository traffic alone.
 - The Composite Action passed a real GitHub-hosted Ubuntu smoke run and emits artifact-ready report outputs.
 - The [v0.4.0 consumer smoke run](https://github.com/George4177/github-income-scout/actions/runs/29215009671) downloaded `George4177/github-income-scout@v0.4.0`, generated valid HTML, and uploaded it as an artifact.
 - The v0.4.0 release ZIP SHA-256 is `53e9cc36bf61779792471f4361ed3e1381b35904d64c5b58cf2bcd5b5e732ef6`.
+- GitHub Pages links directly to a browser-ready HTML delivery sample and then to the fixed-scope request form.
 - Repository topics now include `github-action`, `composite-action`, `codex-skill`, and `opportunity-scanner` for GitHub-native discovery.
 
 ## External Work Status
@@ -44,7 +45,7 @@ GitHub's 14-day repository traffic endpoint reported 164 clones from 75 unique c
 2. Get the skill-directory submission merged, because qualified Codex users are closer to the Starter Audit target audience than broad repository traffic.
 3. Distribute one factual case-study link in a relevant, low-noise channel only when it answers an existing request; do not mass-post or cold-spam maintainers.
 
-Latest direct-cash scan: [`cash_bounty_triage_2026-07-13.md`](cash_bounty_triage_2026-07-13.md). No candidate passed the funding, duplication, scope, and claim checks.
+Latest direct-cash scan: [`cash_opportunity_scan_2026-07-13.md`](cash_opportunity_scan_2026-07-13.md). No external candidate passed the funding, duplication, eligibility, scope, and claim checks.
 
 Latest low-noise distribution action: [`distribution_awesome_ai_automations_pr1.md`](distribution_awesome_ai_automations_pr1.md).
 

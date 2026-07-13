@@ -21,6 +21,7 @@ def main() -> int:
     try:
         html = require_file(SITE / "index.html")
         css = require_file(SITE / "styles.css")
+        sample_report = require_file(SITE / "sample-report.html")
         require_file(SITE / "README.md")
         require_file(ROOT / "README.md")
         require_file(ROOT / "SERVICE_MENU.md")
@@ -39,12 +40,14 @@ def main() -> int:
             "profile-opportunity-pack.yml",
             "profile_opportunity_pack_example.md",
             "Recent proof",
-            "live_triage_2026-07-11.md",
+            "cash_opportunity_scan_2026-07-13.md",
             "aadi-joshi/cngx/pull/45",
             "No spam PRs",
             "scripts/issue_scout.py",
             "./styles.css",
             "See delivery proof",
+            "./sample-report.html",
+            "format html",
         ]:
             if text not in html:
                 raise AssertionError(f"Missing expected HTML text: {text}")
@@ -52,6 +55,16 @@ def main() -> int:
         for text in ["@media", ".hero", ".feature-grid", ".proof-grid", ".button.primary"]:
             if text not in css:
                 raise AssertionError(f"Missing expected CSS text: {text}")
+
+        for text in [
+            "<!doctype html>",
+            "GitHub Opportunity Report",
+            "Recommended Opportunities",
+            "Review the Starter Audit scope",
+            "starter-audit.yml",
+        ]:
+            if text not in sample_report:
+                raise AssertionError(f"Missing expected sample report text: {text}")
 
         for text in ["actions/upload-artifact@v7", "weekly-scout-reports", "opportunities.csv"]:
             if text not in weekly_workflow:

@@ -31,6 +31,7 @@
           </p>
           <div class="actions">
             <a class="button primary" href="https://github.com/George4177/github-income-scout/issues/new?template=starter-audit.yml">Request a Starter Audit</a>
+            <a class="button" href="./sample-report.html">View HTML delivery sample</a>
             <a class="button" href="https://github.com/George4177/github-income-scout/blob/main/SERVICE_MENU.md">View service menu</a>
             <a class="button" href="https://github.com/George4177/github-income-scout/blob/main/examples/sample_audit.md">View sample audit</a>
             <a class="button" href="https://github.com/George4177/github-income-scout/blob/main/examples/open_source_delivery_case_study.md">See delivery proof</a>
@@ -67,7 +68,7 @@ Rejected:
           </article>
           <article>
             <h3>Useful exports</h3>
-            <p>Generate Markdown for review, CSV for spreadsheets, and JSON for dashboards or automation.</p>
+            <p>Generate Markdown for review, HTML for sharing or print-to-PDF, CSV for spreadsheets, and JSON for automation.</p>
           </article>
         </div>
       </section>
@@ -90,10 +91,14 @@ Rejected:
             <li>Top 3 recommended actions</li>
             <li>Acceptance criteria and risk notes</li>
             <li>Rejected match summary</li>
+            <li>Print-friendly HTML delivery</li>
             <li>One profile or README positioning note</li>
           </ul>
           <p class="case-link">
             <a href="https://github.com/George4177/github-income-scout/blob/main/examples/starter_audit_case_study.md">See the sample delivery flow</a>
+          </p>
+          <p class="case-link">
+            <a href="./sample-report.html">Open the browser-ready delivery sample</a>
           </p>
           <p class="case-link">
             <a class="button primary" href="https://github.com/George4177/github-income-scout/issues/new?template=starter-audit.yml">Open a Starter Audit request</a>
@@ -118,8 +123,8 @@ Rejected:
         <div class="proof-grid">
           <article>
             <h3>Latest manual triage</h3>
-            <p>Current Python, documentation, and GitHub Actions candidates were rechecked on 2026-07-11, with assigned, duplicate, unsafe, and dependency-blocked work excluded.</p>
-            <p class="case-link"><a href="https://github.com/George4177/github-income-scout/blob/main/reports/live_triage_2026-07-11.md">Read the triage notes</a></p>
+            <p>Current cash, Python, documentation, and GitHub Actions candidates were rechecked on 2026-07-13, with assigned, duplicate, unsafe, ineligible, and mirror-only work excluded.</p>
+            <p class="case-link"><a href="https://github.com/George4177/github-income-scout/blob/main/reports/cash_opportunity_scan_2026-07-13.md">Read the opportunity scan</a></p>
           </article>
           <article>
             <h3>Three accepted contributions</h3>
@@ -152,6 +157,7 @@ Rejected:
       <section id="start" class="start">
         <h2>Run a local audit</h2>
         <pre><code>python scripts/issue_scout.py --config examples/queries.json --min-score 60 --include-rejected --output reports/audit_report.md
+python scripts/issue_scout.py --config examples/queries.json --min-score 60 --include-rejected --format html --output reports/audit_report.html
 python scripts/issue_scout.py --config examples/queries.json --min-score 60 --include-rejected --format csv --output reports/opportunities.csv
 python scripts/issue_scout.py --config examples/queries.json --min-score 60 --include-rejected --format json --output reports/opportunities.json</code></pre>
         <div class="actions">
