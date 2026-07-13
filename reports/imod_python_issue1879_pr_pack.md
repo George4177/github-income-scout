@@ -50,7 +50,8 @@ The example demonstrates:
 - Pull request: [Deltares/imod-python#1880](https://github.com/Deltares/imod-python/pull/1880)
 - Branch: `George4177:docs/well-vs-layeredwell`
 - Commit: `e67d9813 Docs explain Well layer assignment`
-- Initial state: open, mergeable, review required, no checks reported yet.
+- Current state: open, mergeable, and review required.
+- Remote verification: SonarCloud and SonarCloud Code Analysis passed; the quality gate reports zero new issues and zero security hotspots.
 - No bounty, payment, or guaranteed outcome was claimed.
 
 ## Revenue Relevance
