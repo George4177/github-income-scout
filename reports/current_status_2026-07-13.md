@@ -30,8 +30,9 @@ No income, lead, or conversion is inferred from repository traffic alone.
 | Project | Type | Current evidence | Revenue value | Next action |
 | --- | --- | --- | --- | --- |
 | [aadi-joshi/cngx#45](https://github.com/aadi-joshi/cngx/pull/45) | Coding-agent documentation | Merged; all reported CI checks passed | Portfolio proof; no direct payout | Reuse as delivery evidence |
+| [Deltares/imod-python#1880](https://github.com/Deltares/imod-python/pull/1880) | Python API documentation and executable example | Open and mergeable; example and focused Ruff checks passed locally; review required | Scientific Python portfolio proof; no direct payout | Monitor CI and answer maintainer review |
 | [ComposioHQ/awesome-codex-skills#172](https://github.com/ComposioHQ/awesome-codex-skills/pull/172) | Skill directory submission | Open and mergeable; security checks passed; no maintainer request | Discovery potential; no direct payout | Wait for maintainer review |
-| [kubeflow/website#4431](https://github.com/kubeflow/website/pull/4431) | MCP documentation | Open and mergeable; DCO and Netlify checks passed | Portfolio proof; no direct payout | Wait for member `/ok-to-test` and review |
+| [kubeflow/website#4431](https://github.com/kubeflow/website/pull/4431) | MCP documentation | Open and mergeable; a member supplied `/ok-to-test`; DCO and Netlify checks passed | Portfolio proof; no direct payout | Wait for owner review and approval |
 | [profit-coders/tg-spam-filter#3](https://github.com/profit-coders/tg-spam-filter/pull/3) | Contribution documentation | Open and mergeable; no review activity | Low portfolio value; no direct payout | Do not ping without new information |
 | [othmarodev/awesome-ai-automations#1](https://github.com/othmarodev/awesome-ai-automations/pull/1) | Curated directory entry | Open, mergeable, one-line README change | Qualified discovery potential; no direct payout | Wait for checks and maintainer review |
 
@@ -42,8 +43,10 @@ GitHub's 14-day repository traffic endpoint now reports 2 page views from 1 uniq
 ## Highest-Value Next Actions
 
 1. Monitor and respond promptly to a real service-request issue or actionable PR review.
-2. Get the skill-directory submission merged, because qualified Codex users are closer to the Starter Audit target audience than broad repository traffic.
+2. Get the skill-directory submission and iMOD documentation PR reviewed, because both reach users close to the demonstrated services.
 3. Distribute one factual case-study link in a relevant, low-noise channel only when it answers an existing request; do not mass-post or cold-spam maintainers.
+
+Latest implementation PR pack: [`imod_python_issue1879_pr_pack.md`](imod_python_issue1879_pr_pack.md).
 
 Latest direct-cash scan: [`cash_opportunity_scan_2026-07-13.md`](cash_opportunity_scan_2026-07-13.md). No external candidate passed the funding, duplication, eligibility, scope, and claim checks.
 
