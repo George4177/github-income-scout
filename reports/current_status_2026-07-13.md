@@ -37,7 +37,7 @@ No income, lead, or conversion is inferred from repository traffic alone.
 
 ## Traffic Baseline
 
-GitHub's 14-day repository traffic endpoint reported 164 clones from 75 unique cloners and 0 page views through 2026-07-11. Clone traffic may include automated or repeated Git operations, so it is not treated as qualified demand. The authoritative conversion signal remains a new scoped service-request issue.
+GitHub's 14-day repository traffic endpoint now reports 2 page views from 1 unique viewer and 245 clones from 110 unique cloners. The only reported referrer is `github.com`, and the repository overview is the only reported path. This is the first measurable page visit, not a qualified lead. The authoritative conversion signal remains a new scoped service-request issue. See [`traffic_baseline_2026-07-13.md`](traffic_baseline_2026-07-13.md).
 
 ## Highest-Value Next Actions
 
@@ -48,6 +48,8 @@ GitHub's 14-day repository traffic endpoint reported 164 clones from 75 unique c
 Latest direct-cash scan: [`cash_opportunity_scan_2026-07-13.md`](cash_opportunity_scan_2026-07-13.md). No external candidate passed the funding, duplication, eligibility, scope, and claim checks.
 
 Latest low-noise distribution action: [`distribution_awesome_ai_automations_pr1.md`](distribution_awesome_ai_automations_pr1.md).
+
+Latest directory eligibility scan: [`distribution_scan_2026-07-13.md`](distribution_scan_2026-07-13.md). No additional directory met the activity, fit, duplication, and review-queue gates.
 
 ## Account-Owner UI Steps
 
