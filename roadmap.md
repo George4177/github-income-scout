@@ -14,11 +14,11 @@ Status date: 2026-07-16
 - Run as a reusable Composite Action and scheduled GitHub Actions workflow
 - Publish GitHub Pages, public delivery examples, a Profile offer, and release v0.4.0
 - Publish v0.4.0 as Low-Risk GitHub Opportunity Scout in GitHub Marketplace
+- Enable repository Discussions and publish a factual Show and tell case study
 
 ## Now: Discovery and Conversion
 
-- Verify that a normal non-collaborator can open each request form
-- Distribute one factual case study in one relevant, self-promotion-friendly channel
+- Observe the first genuine non-collaborator request-form flow without creating a synthetic test account
 - Monitor open iMOD, Kubeflow, and directory PRs for actionable review
 - Complete the first qualified paid Starter Audit and convert its feedback into evidence-backed improvements
 

@@ -8,6 +8,7 @@ Date: 2026-07-16
 - The Marketplace page identifies `George4177` as the publisher and `v0.4.0` as the latest version.
 - The listing uses the `utilities` and `continuous-integration` categories.
 - The public usage example points to `George4177/github-income-scout@v0.4.0`.
+- Repository Discussions are enabled, and a factual [Show and tell post](https://github.com/George4177/github-income-scout/discussions/5) links the Marketplace listing and Starter Audit case study.
 - Repository status PR [#2](https://github.com/George4177/github-income-scout/pull/2) and Profile PR [#1](https://github.com/George4177/George4177/pull/1) were squash-merged on 2026-07-16.
 - Both local `main` branches are clean and synchronized with their remotes.
 
@@ -21,11 +22,10 @@ Date: 2026-07-16
 
 ## Remaining Conversion Work
 
-1. Test each request form while signed in as a normal non-collaborator account.
-2. Share one factual case-study or Marketplace link in one relevant channel where self-promotion is permitted.
-3. Respond promptly if iMOD or Kubeflow provides actionable review feedback.
-4. Prioritize a qualified service request or verified paid scope over another unpaid feature or PR.
-5. Record the first completed paid Starter Audit as client-approved proof without exposing private information.
+1. Observe the first genuine external requester loading a request form; do not create or borrow an account solely for a synthetic test.
+2. Respond promptly if iMOD or Kubeflow provides actionable review feedback.
+3. Prioritize a qualified service request or verified paid scope over another unpaid feature or PR.
+4. Record the first completed paid Starter Audit as client-approved proof without exposing private information.
 
 ## Current Gap
 
