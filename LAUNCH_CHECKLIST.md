@@ -1,46 +1,41 @@
-# Launch Checklist
+# Launch and Conversion Checklist
 
-Use this checklist to turn the local MVP into a public, service-ready GitHub asset.
+Status date: 2026-07-15
 
-## Before Publishing
+The repository launch is complete. This checklist now tracks the remaining conversion work.
 
-- Run `scripts\check_all.py`.
-- Confirm `README.md`, `pricing.md`, `service_offer.md`, and `site/index.html` do not promise guaranteed income.
-- Confirm no token, API key, payment detail, or private account information is present.
-- Confirm `examples/` and `reports/` only contain safe sample or intentionally public data.
-- Create a release bundle with `scripts\create_release_bundle.ps1`.
+## Completed
 
-## Repository Setup
+- [x] Publish the public `github-income-scout` repository.
+- [x] Publish GitHub Pages and verify the landing page and sample report.
+- [x] Publish release v0.4.0 with a verified release ZIP.
+- [x] Publish the installable Codex skill and reusable Composite Action.
+- [x] Run a GitHub-hosted consumer smoke test for the released Action.
+- [x] Enable three scoped issue forms.
+- [x] Publish and pin the USD 29-49 Starter Audit offer issue.
+- [x] Publish the Profile README and pin `github-income-scout` on the Profile.
+- [x] Publish pricing, service menu, samples, case studies, and HTML delivery proof.
+- [x] Merge four external proof contributions: Bitbox, Orrery, cngx, and TraceML.
 
-- Create a public GitHub repository named `github-income-scout`.
-- Use this repository description:
+## Account-Owner Actions
 
-```text
-Find and score low-risk GitHub issue opportunities for practical open-source contribution.
-```
+- [ ] Publish v0.4.0 to GitHub Marketplace after reviewing any Developer Agreement and completing the normal 2FA step.
+- [ ] Test each request form while signed in as a normal non-collaborator account.
+- [ ] Confirm that the submitted test can be cancelled before creating an issue, or close and label a clearly marked test issue if a full end-to-end test is required.
 
-- Push the local `main` branch.
-- Enable issue forms.
-- Enable GitHub Pages with GitHub Actions as the source.
-- Pin the repository on the GitHub profile.
-- Add the profile README copy from `profile/README.md` where appropriate.
+## Conversion Actions
 
-## v0.1.0 Release
+- [ ] Share one factual case-study link in one relevant channel where self-promotion is explicitly permitted.
+- [ ] Offer at most two discounted Starter Audits to qualified users who have a real public-repository need.
+- [ ] Count conversion only when an external user makes a scoped request; do not count views, clones, stars, or the self-authored offer.
+- [ ] Complete one paid Starter Audit and record client-approved proof without exposing private information.
 
-- Tag the first release as `v0.1.0`.
-- Use `RELEASE_NOTES.md` as the release body.
-- Attach the local release bundle if desired.
-- Keep the release factual: no bounty guarantees, no income guarantees, no fake urgency.
+## Ongoing Quality Gate
 
-## First Week Actions
-
-- Day 1: publish the repository, enable Pages, pin it, and test the public page.
-- Day 2: post one low-pressure community update where self-promotion is allowed.
-- Day 3: run one fresh GitHub opportunity scan and save a public-safe sample report.
-- Day 4: offer 2 discounted Starter Audits to collect feedback.
-- Day 5: convert feedback into README and service copy improvements.
-- Day 6: prepare one small open-source PR candidate, such as Bitbox `seconds_to_hms`, only after verifying it is still open.
-- Day 7: review inbound issues, profile views, stars, and direct replies; adjust the offer if there is no clear interest.
+- Run `python scripts\check_all.py` before each release.
+- Keep public files free of contributor workstation paths, credentials, payment details, and private data.
+- Recheck assignment, competing claims, duplicate PRs, funding, and maintainer activity before recommending work.
+- Respond to actionable review on open PRs; do not post repetitive reminder comments.
 
 ## Revenue Milestone
 
