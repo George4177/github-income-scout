@@ -1,6 +1,6 @@
 # Roadmap
 
-Status date: 2026-07-15
+Status date: 2026-07-16
 
 ## Shipped
 
@@ -13,10 +13,10 @@ Status date: 2026-07-15
 - Build Starter Audit and Profile + Opportunity Pack delivery bundles
 - Run as a reusable Composite Action and scheduled GitHub Actions workflow
 - Publish GitHub Pages, public delivery examples, a Profile offer, and release v0.4.0
+- Publish v0.4.0 as Low-Risk GitHub Opportunity Scout in GitHub Marketplace
 
 ## Now: Discovery and Conversion
 
-- Publish the released Action to GitHub Marketplace through the account-owner flow
 - Verify that a normal non-collaborator can open each request form
 - Distribute one factual case study in one relevant, self-promotion-friendly channel
 - Monitor open iMOD, Kubeflow, and directory PRs for actionable review

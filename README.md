@@ -117,7 +117,7 @@ jobs:
 
 Use `config` for a repository-specific query file, `format` for `markdown`, `json`, `csv`, or `html`, and `enrich-repos: "true"` when repository health metadata is worth the additional API calls. The optional `offline-input` supports deterministic tests without network access.
 
-See [MARKETPLACE.md](MARKETPLACE.md) for the verified release status and the account-owner step required for a Marketplace listing.
+Install or review the published [Low-Risk GitHub Opportunity Scout](https://github.com/marketplace/actions/low-risk-github-opportunity-scout) listing. See [MARKETPLACE.md](MARKETPLACE.md) for publication verification and future release notes.
 
 ## Weekly Scout Workflow
 
@@ -228,12 +228,12 @@ For the mid-tier service format, see [examples/profile_opportunity_pack_example.
 
 The repository includes public-launch assets so the MVP can be published quickly:
 
-- [RELEASE_NOTES.md](RELEASE_NOTES.md): v0.1.0 release body and launch copy
+- [RELEASE_NOTES.md](RELEASE_NOTES.md): current and historical release notes
 - [LAUNCH_CHECKLIST.md](LAUNCH_CHECKLIST.md): first-week publishing and revenue checklist
 - [PUBLISHING.md](PUBLISHING.md): repository setup steps
 - [templates/outreach/launch_sequence.md](templates/outreach/launch_sequence.md): cautious first-launch outreach drafts
 - [docs/weekly_scout_workflow.md](docs/weekly_scout_workflow.md): scheduled report workflow guide
-- [scripts/create_release_bundle.ps1](scripts/create_release_bundle.ps1): local ZIP bundle helper for `v0.1.0`
+- [scripts/create_release_bundle.ps1](scripts/create_release_bundle.ps1): local ZIP bundle helper for an explicit semantic version
 - [scripts/publish_repo.ps1](scripts/publish_repo.ps1): publish helper for `gh` or `GITHUB_TOKEN` environments
 - [scripts/publish_profile_repo.ps1](scripts/publish_profile_repo.ps1): publishes the prepared GitHub Profile README repository
 
@@ -260,7 +260,7 @@ The `templates/outreach/` folder includes low-pressure publishing and reply draf
 Create a local release ZIP:
 
 ```powershell
-.\scripts\create_release_bundle.ps1 -Version v0.1.0
+.\scripts\create_release_bundle.ps1 -Version v0.4.0
 ```
 
 The generated `dist/` folder is intentionally ignored by Git.
@@ -275,6 +275,9 @@ The included `Deploy GitHub Pages` workflow publishes the `site/` folder when Gi
 
 ## Current Release
 
+- [GitHub Marketplace - Low-Risk GitHub Opportunity Scout](https://github.com/marketplace/actions/low-risk-github-opportunity-scout)
+- [v0.4.0 - Shareable HTML Reports](https://github.com/George4177/github-income-scout/releases/tag/v0.4.0)
+- [v0.4.0 Release ZIP](https://github.com/George4177/github-income-scout/releases/download/v0.4.0/github-income-scout-v0.4.0.zip)
 - [v0.2.0 - Installable Codex Skill](https://github.com/George4177/github-income-scout/releases/tag/v0.2.0)
 - [v0.2.0 Release ZIP](https://github.com/George4177/github-income-scout/releases/download/v0.2.0/github-income-scout-v0.2.0.zip)
 - [v0.1.0 - Starter Audit MVP](https://github.com/George4177/github-income-scout/releases/tag/v0.1.0)

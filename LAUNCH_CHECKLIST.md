@@ -19,7 +19,7 @@ The repository launch is complete. This checklist now tracks the remaining conve
 
 ## Account-Owner Actions
 
-- [ ] Publish v0.4.0 to GitHub Marketplace after reviewing any Developer Agreement and completing the normal 2FA step.
+- [x] Publish v0.4.0 to GitHub Marketplace after reviewing the Developer Agreement and completing the normal 2FA step.
 - [ ] Test each request form while signed in as a normal non-collaborator account.
 - [ ] Confirm that the submitted test can be cancelled before creating an issue, or close and label a clearly marked test issue if a full end-to-end test is required.
 
