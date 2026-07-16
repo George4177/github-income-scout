@@ -14,7 +14,7 @@ Status date: 2026-07-16
 - Run as a reusable Composite Action and scheduled GitHub Actions workflow
 - Publish GitHub Pages, public delivery examples, a Profile offer, and release v0.4.0
 - Publish v0.4.0 as Low-Risk GitHub Opportunity Scout in GitHub Marketplace
-- Enable repository Discussions and publish a factual Show and tell case study
+- Enable repository Discussions and publish a template-compliant GitHub Community Actions question
 
 ## Now: Discovery and Conversion
 

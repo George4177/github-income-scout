@@ -25,7 +25,7 @@ The repository launch is complete. This checklist now tracks the remaining conve
 
 ## Conversion Actions
 
-- [x] Share one factual case-study link in the repository's [Show and tell discussion](https://github.com/George4177/github-income-scout/discussions/5).
+- [x] Share one factual case-study link in the template-compliant [GitHub Community Actions discussion](https://github.com/orgs/community/discussions/202085) (`Question`, `Other`, `source:ui`).
 - [ ] Offer at most two discounted Starter Audits to qualified users who have a real public-repository need.
 - [ ] Count conversion only when an external user makes a scoped request; do not count views, clones, stars, or the self-authored offer.
 - [ ] Complete one paid Starter Audit and record client-approved proof without exposing private information.

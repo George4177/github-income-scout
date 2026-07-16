@@ -8,7 +8,7 @@ Date: 2026-07-16
 - The Marketplace page identifies `George4177` as the publisher and `v0.4.0` as the latest version.
 - The listing uses the `utilities` and `continuous-integration` categories.
 - The public usage example points to `George4177/github-income-scout@v0.4.0`.
-- Repository Discussions are enabled, and a factual [Show and tell post](https://github.com/George4177/github-income-scout/discussions/5) links the Marketplace listing and Starter Audit case study.
+- Repository Discussions are enabled, and a template-compliant [GitHub Community Actions question](https://github.com/orgs/community/discussions/202085) links the Marketplace listing and Starter Audit case study. The public page shows `Question`, `Other`, and `source:ui` labels.
 - Repository status PR [#2](https://github.com/George4177/github-income-scout/pull/2) and Profile PR [#1](https://github.com/George4177/George4177/pull/1) were squash-merged on 2026-07-16.
 - Both local `main` branches are clean and synchronized with their remotes.
 
