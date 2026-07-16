@@ -12,6 +12,8 @@ It includes safety filters, Markdown/JSON/CSV exports, a Starter Audit bundle ge
 
 ## Community Post
 
+Use this only in a channel that explicitly permits project showcases. GitHub Community requires its current browser-based discussion template; do not create a Community discussion through the API. For the Actions category, select a truthful discussion type and feature/topic area, then lead with a concrete Actions question rather than a promotional announcement.
+
 ```text
 I released a small open-source tool for developers who want better GitHub contribution leads without spamming maintainers.
 

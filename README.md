@@ -275,7 +275,7 @@ The included `Deploy GitHub Pages` workflow publishes the `site/` folder when Gi
 
 ## Current Release
 
-- [Show & Tell discussion and feedback](https://github.com/George4177/github-income-scout/discussions/5)
+- [GitHub Community discussion and feedback](https://github.com/orgs/community/discussions/202085)
 - [GitHub Marketplace - Low-Risk GitHub Opportunity Scout](https://github.com/marketplace/actions/low-risk-github-opportunity-scout)
 - [v0.4.0 - Shareable HTML Reports](https://github.com/George4177/github-income-scout/releases/tag/v0.4.0)
 - [v0.4.0 Release ZIP](https://github.com/George4177/github-income-scout/releases/download/v0.4.0/github-income-scout-v0.4.0.zip)
