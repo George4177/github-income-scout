@@ -21,12 +21,11 @@ The repository launch is complete. This checklist now tracks the remaining conve
 
 - [x] Publish v0.4.0 to GitHub Marketplace after reviewing the Developer Agreement and completing the normal 2FA step.
 - [x] Verify that all three public request-form routes preserve the intended template and redirect anonymous visitors to GitHub sign-in.
-- [ ] Test each request form while signed in as a normal non-collaborator account.
-- [ ] Confirm that the submitted test can be cancelled before creating an issue, or close and label a clearly marked test issue if a full end-to-end test is required.
+- [ ] Confirm the first genuine external requester can load and cancel or submit a form; do not create, borrow, or share an account solely for this test.
 
 ## Conversion Actions
 
-- [ ] Share one factual case-study link in one relevant channel where self-promotion is explicitly permitted.
+- [x] Share one factual case-study link in the repository's [Show and tell discussion](https://github.com/George4177/github-income-scout/discussions/5).
 - [ ] Offer at most two discounted Starter Audits to qualified users who have a real public-repository need.
 - [ ] Count conversion only when an external user makes a scoped request; do not count views, clones, stars, or the self-authored offer.
 - [ ] Complete one paid Starter Audit and record client-approved proof without exposing private information.
