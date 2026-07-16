@@ -1,6 +1,6 @@
 # Launch and Conversion Checklist
 
-Status date: 2026-07-15
+Status date: 2026-07-16
 
 The repository launch is complete. This checklist now tracks the remaining conversion work.
 
@@ -20,6 +20,7 @@ The repository launch is complete. This checklist now tracks the remaining conve
 ## Account-Owner Actions
 
 - [x] Publish v0.4.0 to GitHub Marketplace after reviewing the Developer Agreement and completing the normal 2FA step.
+- [x] Verify that all three public request-form routes preserve the intended template and redirect anonymous visitors to GitHub sign-in.
 - [ ] Test each request form while signed in as a normal non-collaborator account.
 - [ ] Confirm that the submitted test can be cancelled before creating an issue, or close and label a clearly marked test issue if a full end-to-end test is required.
 
