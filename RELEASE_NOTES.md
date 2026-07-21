@@ -1,5 +1,23 @@
 # Release Notes
 
+## Unreleased - v0.5.0 Candidate
+
+This candidate adds explainable, low-cost confidence signals based on issue content and labels already returned by GitHub issue search.
+
+### Added
+
+- capped bonuses for concrete scope signals such as reproduction steps, expected and actual behavior, acceptance criteria, environment details, and verification steps
+- capped penalties for labels that signal blocked work, missing reproduction details, or unresolved discussion and clarification
+- report risk notes that explain which clarity and status-label signals affected a recommendation
+
+### Validation
+
+- focused unit coverage compares clear and vague versions of the same issue
+- label-penalty coverage verifies alias normalization and the aggregate penalty cap
+- empty issue bodies are downgraded and explained
+
+The new signals do not require additional GitHub API requests. Safety exclusions remain separate from confidence scoring.
+
 ## v0.4.0 - Shareable HTML Reports
 
 GitHub Income Scout v0.4.0 adds a standalone HTML report designed for client delivery, browser review, and print-to-PDF workflows without a hosted service or additional dependencies.

@@ -1,6 +1,6 @@
 # Roadmap
 
-Status date: 2026-07-16
+Status date: 2026-07-21
 
 ## Shipped
 
@@ -16,6 +16,12 @@ Status date: 2026-07-16
 - Publish v0.4.0 as Low-Risk GitHub Opportunity Scout in GitHub Marketplace
 - Enable repository Discussions and publish a template-compliant GitHub Community Actions question
 
+## In Development: v0.5.0 Candidate
+
+- Score issue-body clarity signals such as reproduction steps, expected/actual behavior, acceptance criteria, environment details, and verification steps
+- Apply capped confidence penalties for `blocked`, `needs discussion`, `needs reproduction`, and clarification-needed labels
+- Explain clarity and status-label adjustments in generated opportunity risk notes without adding API requests
+
 ## Now: Discovery and Conversion
 
 - Observe the first genuine non-collaborator request-form flow without creating a synthetic test account
@@ -25,6 +31,7 @@ Status date: 2026-07-16
 ## Next Product Improvements
 
 - Add an automated duplicate-PR and competing-claim precheck for top candidates
+- Cache repository-level metrics within each workflow run and distinguish meaningful maintainer activity from reactions or claim comments
 - Add maintainer response-time and open-PR-volume signals without exhausting API limits
 - Add local historical snapshots and saved accept/reject decisions
 - Add client/profile-specific scoring weights with explicit configuration

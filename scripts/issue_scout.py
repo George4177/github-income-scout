@@ -91,6 +91,17 @@ LOW_VALUE_KEYWORDS = {
     "bonus xp": -20,
 }
 
+STATUS_LABEL_SIGNALS = {
+    "blocked": (-12, ("blocked",)),
+    "needs discussion": (-8, ("needs discussion",)),
+    "needs reproduction": (-8, ("needs reproduction", "needs repro")),
+    "needs clarification": (-8, ("needs clarification",)),
+    "needs information": (-8, ("needs information", "needs info")),
+}
+
+MAX_CLARITY_BONUS = 6
+MAX_STATUS_LABEL_PENALTY = -20
+
 
 @dataclass
 class Opportunity:
@@ -215,6 +226,50 @@ def classify(text: str, labels: list[str]) -> str:
     return "Open-source contribution"
 
 
+def issue_clarity(body: str) -> tuple[int, list[str], str]:
+    """Return a capped score adjustment and explainable issue-body signals."""
+    normalized = " ".join(body.lower().split())
+    if not normalized:
+        return -8, [], "issue body is empty"
+
+    signals = []
+    if re.search(r"\b(?:steps? to reproduce|reproduction steps?)\b", normalized):
+        signals.append("reproduction steps")
+    if "expected behavior" in normalized and "actual behavior" in normalized:
+        signals.append("expected and actual behavior")
+    if "acceptance criteria" in normalized or "definition of done" in normalized:
+        signals.append("acceptance criteria")
+    if "environment" in normalized and re.search(
+        r"\b(?:version|python|operating system|os|browser|platform)\b", normalized
+    ):
+        signals.append("environment details")
+    if re.search(r"\b(?:test plan|how to test|verification steps?|validation steps?)\b", normalized):
+        signals.append("verification steps")
+
+    adjustment = min(MAX_CLARITY_BONUS, len(signals) * 2)
+    concern = ""
+    if len(normalized) < 80:
+        adjustment -= 4
+        concern = "issue body is short and may not establish enough scope"
+    return adjustment, signals, concern
+
+
+def status_label_quality(labels: list[str]) -> tuple[int, list[str]]:
+    """Return a capped confidence penalty for labels that signal blocked or unclear work."""
+    normalized_labels = {
+        " ".join(re.sub(r"[-_:/]+", " ", label.lower()).split()) for label in labels if label.strip()
+    }
+    matched = []
+    penalty = 0
+    for signal, (delta, aliases) in STATUS_LABEL_SIGNALS.items():
+        if any(
+            re.search(rf"\b{re.escape(alias)}\b", label) for alias in aliases for label in normalized_labels
+        ):
+            matched.append(signal)
+            penalty += delta
+    return max(MAX_STATUS_LABEL_PENALTY, penalty), matched
+
+
 def score_issue(item: dict[str, Any], repo: dict[str, Any] | None = None) -> Opportunity:
     labels = [label.get("name", "") for label in item.get("labels", [])]
     assignees = [assignee.get("login", "") for assignee in item.get("assignees", []) if assignee.get("login")]
@@ -223,6 +278,8 @@ def score_issue(item: dict[str, Any], repo: dict[str, Any] | None = None) -> Opp
     haystack = f"{title} {body} {' '.join(labels)}".lower()
     reject_reason = rejection_reason(haystack)
     comments = int(item.get("comments", 0))
+    clarity_adjustment, clarity_signals, clarity_concern = issue_clarity(body)
+    status_label_adjustment, status_label_signals = status_label_quality(labels)
 
     score = 50
     for word, delta in LOW_RISK_KEYWORDS.items():
@@ -234,6 +291,8 @@ def score_issue(item: dict[str, Any], repo: dict[str, Any] | None = None) -> Opp
     for word, delta in LOW_VALUE_KEYWORDS.items():
         if word in haystack:
             score += delta
+    score += clarity_adjustment
+    score += status_label_adjustment
     if assignees:
         score -= 20
     if comments > 20:
@@ -284,10 +343,16 @@ def score_issue(item: dict[str, Any], repo: dict[str, Any] | None = None) -> Opp
         risk_notes.append(f"already assigned to {', '.join(assignees)}")
     if comments >= 4:
         risk_notes.append("multiple comments; may already be claimed or noisy")
+    if clarity_concern:
+        risk_notes.append(f"clarity concern: {clarity_concern}")
+    if status_label_signals:
+        risk_notes.append(f"status labels reduce confidence: {', '.join(status_label_signals)}")
     if reject_reason:
         risk_notes.append(reject_reason)
     if not risk_notes:
         risk_notes.append("Maintainer inactivity, hidden complexity, duplicate PRs, unclear bounty terms")
+    if clarity_signals:
+        risk_notes.append(f"clear scope signals: {', '.join(clarity_signals)}")
     risk = "; ".join(risk_notes)
 
     return Opportunity(

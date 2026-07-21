@@ -397,6 +397,85 @@ class IssueScoutTests(unittest.TestCase):
         self.assertIn("multiple comments", opportunity.risk)
         self.assertLess(opportunity.score, 75)
 
+    def test_clear_issue_body_receives_capped_explainable_bonus(self):
+        base = {
+            "title": "Improve Python export validation",
+            "html_url": "https://github.com/example/repo/issues/14",
+            "repository_url": "https://api.github.com/repos/example/repo",
+            "labels": [{"name": "help wanted"}],
+            "comments": 0,
+            "created_at": "2026-01-01T00:00:00Z",
+            "updated_at": "2026-01-01T00:00:00Z",
+        }
+        clear = {
+            **base,
+            "body": (
+                "Steps to reproduce: export a record with an empty name. "
+                "Expected behavior: validation returns a useful error. "
+                "Actual behavior: the export crashes. Acceptance criteria: add a regression test. "
+                "Environment: Python version 3.12 on Windows. How to test: run the export test suite."
+            ),
+        }
+        vague = {**base, "body": "Please improve export validation."}
+
+        clear_opportunity = issue_scout.score_issue(clear)
+        vague_opportunity = issue_scout.score_issue(vague)
+
+        self.assertGreaterEqual(clear_opportunity.score - vague_opportunity.score, 10)
+        self.assertIn("clear scope signals: reproduction steps", clear_opportunity.risk)
+        self.assertIn("clarity concern: issue body is short", vague_opportunity.risk)
+
+    def test_blocked_and_unclear_labels_have_a_capped_explainable_penalty(self):
+        base = {
+            "title": "Add a small Python automation tool",
+            "html_url": "https://github.com/example/repo/issues/15",
+            "repository_url": "https://api.github.com/repos/example/repo",
+            "labels": [{"name": "help wanted"}, {"name": "good first issue"}],
+            "comments": 0,
+            "created_at": "2026-01-01T00:00:00Z",
+            "updated_at": "2026-01-01T00:00:00Z",
+            "body": (
+                "Acceptance criteria: provide a documented command and tests for invalid input. "
+                "How to test: run the focused unit test module before submitting the pull request."
+            ),
+        }
+        blocked = {
+            **base,
+            "labels": base["labels"]
+            + [
+                {"name": "status: blocked"},
+                {"name": "needs-repro"},
+                {"name": "needs clarification"},
+            ],
+        }
+        unblocked = {**base, "labels": base["labels"] + [{"name": "status: unblocked"}]}
+
+        baseline = issue_scout.score_issue(base)
+        blocked_opportunity = issue_scout.score_issue(blocked)
+        unblocked_opportunity = issue_scout.score_issue(unblocked)
+
+        self.assertEqual(baseline.score - blocked_opportunity.score, 20)
+        self.assertEqual(baseline.score, unblocked_opportunity.score)
+        self.assertIn("status labels reduce confidence: blocked", blocked_opportunity.risk)
+        self.assertIn("needs reproduction", blocked_opportunity.risk)
+
+    def test_empty_issue_body_is_downgraded_and_explained(self):
+        item = {
+            "title": "Improve README",
+            "html_url": "https://github.com/example/repo/issues/16",
+            "repository_url": "https://api.github.com/repos/example/repo",
+            "labels": [{"name": "documentation"}, {"name": "help wanted"}],
+            "comments": 0,
+            "created_at": "2026-01-01T00:00:00Z",
+            "updated_at": "2026-01-01T00:00:00Z",
+            "body": "",
+        }
+
+        opportunity = issue_scout.score_issue(item)
+
+        self.assertIn("clarity concern: issue body is empty", opportunity.risk)
+        self.assertLess(opportunity.score, 70)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -163,6 +163,7 @@ The free version includes:
 
 - configurable GitHub issue queries
 - conservative scoring
+- explainable issue-clarity bonuses plus capped penalties for blocked or clarification-needed labels, using metadata already returned by issue search
 - safety filtering for exploit, fake-engagement, credential, bypass, automated bounty-feed, dependency-dashboard, and generic vulnerability work
 - Markdown report output
 - JSON and CSV export
