@@ -103,7 +103,7 @@ jobs:
         with:
           python-version: "3.12"
       - id: scout
-        uses: George4177/github-income-scout@v0.4.0
+        uses: George4177/github-income-scout@v0.5.0
         with:
           token: ${{ github.token }}
           min-score: "60"
@@ -261,7 +261,7 @@ The `templates/outreach/` folder includes low-pressure publishing and reply draf
 Create a local release ZIP:
 
 ```powershell
-.\scripts\create_release_bundle.ps1 -Version v0.4.0
+.\scripts\create_release_bundle.ps1 -Version v0.5.0
 ```
 
 The generated `dist/` folder is intentionally ignored by Git.
@@ -278,6 +278,8 @@ The included `Deploy GitHub Pages` workflow publishes the `site/` folder when Gi
 
 - [GitHub Community discussion and feedback](https://github.com/orgs/community/discussions/202085)
 - [GitHub Marketplace - Low-Risk GitHub Opportunity Scout](https://github.com/marketplace/actions/low-risk-github-opportunity-scout)
+- [v0.5.0 - Explainable Issue Clarity Scoring](https://github.com/George4177/github-income-scout/releases/tag/v0.5.0)
+- [v0.5.0 Release ZIP](https://github.com/George4177/github-income-scout/releases/download/v0.5.0/github-income-scout-v0.5.0.zip)
 - [v0.4.0 - Shareable HTML Reports](https://github.com/George4177/github-income-scout/releases/tag/v0.4.0)
 - [v0.4.0 Release ZIP](https://github.com/George4177/github-income-scout/releases/download/v0.4.0/github-income-scout-v0.4.0.zip)
 - [v0.2.0 - Installable Codex Skill](https://github.com/George4177/github-income-scout/releases/tag/v0.2.0)

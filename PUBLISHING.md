@@ -11,7 +11,7 @@ python scripts\check_all.py
 Optional release bundle:
 
 ```powershell
-.\scripts\create_release_bundle.ps1 -Version v0.2.0
+.\scripts\create_release_bundle.ps1 -Version v0.5.0
 ```
 
 ## Repository Setup

@@ -15,12 +15,10 @@ Status date: 2026-07-21
 - Publish GitHub Pages, public delivery examples, a Profile offer, and release v0.4.0
 - Publish v0.4.0 as Low-Risk GitHub Opportunity Scout in GitHub Marketplace
 - Enable repository Discussions and publish a template-compliant GitHub Community Actions question
-
-## In Development: v0.5.0 Candidate
-
 - Score issue-body clarity signals such as reproduction steps, expected/actual behavior, acceptance criteria, environment details, and verification steps
 - Apply capped confidence penalties for `blocked`, `needs discussion`, `needs reproduction`, and clarification-needed labels
 - Explain clarity and status-label adjustments in generated opportunity risk notes without adding API requests
+- Release v0.5.0 with explainable issue clarity scoring and focused regression coverage
 
 ## Now: Discovery and Conversion
 

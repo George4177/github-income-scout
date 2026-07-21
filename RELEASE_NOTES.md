@@ -1,8 +1,8 @@
 # Release Notes
 
-## Unreleased - v0.5.0 Candidate
+## v0.5.0 - Explainable Issue Clarity Scoring
 
-This candidate adds explainable, low-cost confidence signals based on issue content and labels already returned by GitHub issue search.
+GitHub Income Scout v0.5.0 adds explainable, low-cost confidence signals based on issue content and labels already returned by GitHub issue search.
 
 ### Added
 
