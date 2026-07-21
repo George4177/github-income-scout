@@ -19,6 +19,7 @@ Status date: 2026-07-21
 - Apply capped confidence penalties for `blocked`, `needs discussion`, `needs reproduction`, and clarification-needed labels
 - Explain clarity and status-label adjustments in generated opportunity risk notes without adding API requests
 - Release v0.5.0 with explainable issue clarity scoring and focused regression coverage
+- Verify v0.5.0 as the Marketplace latest version and pass the released Action consumer smoke test
 
 ## Now: Discovery and Conversion
 
